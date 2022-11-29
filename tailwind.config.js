@@ -1,9 +1,10 @@
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
+const theme = require("tailwindcss/defaultTheme");
 
 
 module.exports = {
-  content: ["./index.html","./src/javascript/*.vue","./src/javascript/components/*.vue"],
+  content: ["./index.html","./src/javascript/*.vue","./src/javascript/**/*.vue"],
   theme: {
     screens: {
       'sm': '500px',
@@ -12,13 +13,14 @@ module.exports = {
       'xlg':  '1200px'
     },
     spacing: {
+      '0':'0',
       '0.125':'0.125rem',
       '0.25':'0.25rem',
       '0.375':'0.375rem',
       '0.5':'0.5rem',
-      '0.625':'0.625rem',
+      '0.65':'0.65rem',
       '0.75':'0.75rem',
-      '0.875':'0.875rem',
+      '0.85':'0.85rem',
       '1':'1rem',
       '1.1':'1.1rem',
       '1.2':'1.2rem',
@@ -121,14 +123,14 @@ module.exports = {
     },
     fontWeight:{
       '100':'100',
-      '200':'100',
-      '300':'100',
-      '400':'100',
-      '500':'100',
-      '600':'100',
-      '700':'100',
-      '800':'100',
-      '900':'100'
+      '200':'200',
+      '300':'300',
+      '400':'400',
+      '500':'500',
+      '600':'600',
+      '700':'700',
+      '800':'800',
+      '900':'900'
     },
     lineHeight:{
       '1':'1',
@@ -170,7 +172,23 @@ module.exports = {
 
     extend:{
         colors:{
+          primary:{
+            indigo:colors.indigo["600"],
+            red:colors.red["500"],
+            sky:colors.sky["500"],
+            green:colors.green["500"],
+            gray:'#6c757d'
+          },
+          secondary:{
+            indigo:colors.indigo["500"],
+            indigoLight:colors.indigo["300"],
+            red:colors.red["300"],
+            sky:colors.sky["300"],
+            green:colors.green["300"],
+            gray:'#adb5bd'
 
+
+          }
         }
     }
   },
