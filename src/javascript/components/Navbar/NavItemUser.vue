@@ -13,11 +13,8 @@
 
 
 <script setup>
-import {ref} from "vue";
-let show=ref(false)
-const toggle = () => {
-  show.value=!show.value
-}
+import useNavbar from "../../composables/useNavbar.js";
+const {toggle,show}=useNavbar()
 window.addEventListener('click',e=>{
   if(!e.target.classList.contains('user-dropdown-btn')){
     show.value=false
