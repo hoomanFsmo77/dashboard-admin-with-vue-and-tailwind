@@ -177,7 +177,8 @@ module.exports = {
             red:colors.red["500"],
             sky:colors.sky["500"],
             green:colors.green["500"],
-            gray:'#6c757d'
+            gray:'#6c757d',
+            dark:'#333'
           },
           secondary:{
             indigo:colors.indigo["500"],

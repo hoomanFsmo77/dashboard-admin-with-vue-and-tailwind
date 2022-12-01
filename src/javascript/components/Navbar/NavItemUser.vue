@@ -1,19 +1,35 @@
 <template>
-  <div @click="toggle" class="w-[50px] h-[50px] shadow-[0_0_17px_rgba(0,0,0,0.2)] rounded-full relative cursor-pointer flex ">
+  <div @click="toggle" class="user-profile">
     <img src="../../../assets/profile_1.svg" width="40" class="m-auto user-dropdown-btn" alt="" >
-
     <Transition name="show">
-      <div v-if="show" class="absolute w-3 h-3 bg-primary-indigo top-[62px]">
-
-      </div>
+      <Dropdown v-if="show" top="62px" width="203px" >
+          <li>
+            <h5 class="text-1 tracking-[2px] font-700 mb-0.5">Hooman Mousavi</h5>
+            <span class="text-1 text-0.875 text-gray-700">Web Developer</span>
+          </li>
+          <div class="divider"></div>
+          <li class="dropdown-hover">
+            <AppLink to="#">Setting</AppLink>
+          </li>
+          <li class="dropdown-hover">
+            <AppLink to="#">Activity log</AppLink>
+          </li>
+         <div class="divider"></div>
+         <li class="dropdown-hover">
+            <AppLink to="#">Logout</AppLink>
+         </li>
+      </Dropdown>
     </Transition>
-
   </div>
 </template>
 
 
 <script setup>
 import useNavbar from "../../composables/useNavbar.js";
+import Dropdown from './Dropdown.vue'
+import AppLink from "../AppLink.vue";
+
+
 const {toggle,show}=useNavbar()
 window.addEventListener('click',e=>{
   if(!e.target.classList.contains('user-dropdown-btn')){
@@ -24,17 +40,20 @@ window.addEventListener('click',e=>{
 
 
 </script>
-<style scoped>
-.show-enter-active,.show-leave-active{
-  transition: all 400ms ease-in-out;
-}
-.show-enter-from,.show-leave-to{
-  opacity: 0;
-  top: 72px;
-}
-.show-enter-to,.show-leave-from{
-  opacity: 1;
-  top: 62px;
+<style scoped lang="scss">
+@import "tailwindcss/components";
+
+@layer components {
+  .show-enter-active,.show-leave-active{
+    @apply transition-all ease-in-out duration-300
+  }
+  .show-enter-from,.show-leave-to{
+    @apply opacity-0 top-[72px];
+  }
+  .show-enter-to,.show-leave-from{
+    @apply opacity-100 top-[62px];
+  }
 
 }
+
 </style>
