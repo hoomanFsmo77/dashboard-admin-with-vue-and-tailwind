@@ -1,7 +1,10 @@
 import {ref} from "vue";
 
-export default ()=>{
+export default (emit)=>{
     let show=ref(false)
+
+    let isSidebarActive=ref(false)
+
     const toggle = () => {
         show.value=!show.value
     }
@@ -12,6 +15,13 @@ export default ()=>{
     const blur = () => {
         show.value=false
     }
+    const showUpSidebar = () => {
+        isSidebarActive.value=!isSidebarActive.value
+        emit('sidebar',{
+            showSidebar:isSidebarActive.value
+        })
+    }
 
-    return {show,toggle,focus,blur}
+
+    return {show,toggle,focus,blur,showUpSidebar}
 }
