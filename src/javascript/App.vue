@@ -4,7 +4,7 @@
        :class="{'!grid-cols-[89px_1fr]':isActive}"
   >
     <Sidebar :is-active="isActive"/>
-    <MainContent/>
+    <router-view></router-view>
   </div>
 
 </template>
@@ -16,13 +16,20 @@ import '../assets/d_logo.png'
 ////////// components
 import Header from './components/Header.vue'
 import Sidebar from "./components/Sidebar/Sidebar.vue";
-import MainContent from "./components/MainContent.vue";
-import {ref} from "vue";
+import {ref,onMounted} from "vue";
+import {useRouter} from 'vue-router'
 const isActive=ref(false)
+const router=useRouter()
 const activeSidebar = e => {
   isActive.value=e.showSidebar
 }
 
+
+onMounted(()=>{
+  router.push({
+    name:'default'
+  })
+})
 
 
 </script>

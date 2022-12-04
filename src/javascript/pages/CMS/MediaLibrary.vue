@@ -1,12 +1,10 @@
 <template>
-  <main>
-
-  </main>
+  MediaLibrary
 </template>
 
 <script>
 export default {
-  name: "MainContent"
+  name: "MediaLibrary"
 }
 </script>
 

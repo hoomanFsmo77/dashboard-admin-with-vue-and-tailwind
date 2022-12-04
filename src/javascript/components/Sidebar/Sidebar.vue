@@ -1,39 +1,43 @@
 <template>
     <aside :class="isUnder1200 && {'translate-x-0':props.isActive}" class="sidebar">
-        <h6 class="text-gray-400 px-2 pt-2 pb-1 font-700">Main</h6>
-        <SidebarItem title="Dashboards"
-                     icon="bi bi-house-door"
-                     :is-open="true" :sub-menu-list="dashboardSubMenuList"
-                     :is-selected="true"
+      <h6 class="text-gray-400 px-1.5 pt-2 pb-1 font-700">Main</h6>
+      <ul>
+        <SidebarItem ref="side_item" v-for="(item,index) in sidebarMainData" :key="index"
+                     :id="item.id"
+                     :title="item.title"
+                     :icon="item.icon"
+                     :is-open="item.isOpen"
+                     :sub-menu-list="item.subMenuList"
+                     :has-sub="item.hasSub ?? true"
+                     :is-active="props.isActive"
+                     @close="closeAll($event)"
         />
-      <SidebarItem title="CMS"
-                     icon="bi bi-book"
-                     :is-open="false"
-                   :sub-menu-list="cmsSubMenuList"
-                   :is-selected="false"
+      </ul>
+      <h6 class="text-gray-400 px-1.5 pt-2 pb-1 font-700">Docs</h6>
+      <ul>
+        <SidebarItem ref="side_item" v-for="(item,index) in sidebarDocsData" :key="index"
+                     :id="item.id"
+                     :title="item.title"
+                     :icon="item.icon"
+                     :is-open="item.isOpen"
+                     :sub-menu-list="item.subMenuList"
+                     :has-sub="item.hasSub"
+                     :link="item.to"
+                     :is-active="props.isActive"
+                     @close="closeAll($event)"
         />
+      </ul>
     </aside>
 </template>
 
 <script setup>
 import SidebarItem from "./SidebarItem.vue";
 import {defineProps} from "vue";
+import {sidebar} from "../../composables/useSidebar.js";
+import {sidebarMainData,sidebarDocsData} from "../../composables/useData.js";
+/////////////////////////////////////////////////////////////
 const props=defineProps(['isActive'])
-const isUnder1200=window.innerWidth < 1200
-const dashboardSubMenuList=[
-   {title:'default',href:'#',isSelected:true},
-  {title:'CMS',href:'#'},
-  {title:'E-commerce',href:'#'},
-  {title:'Projects',href:'#'},
-  {title:'Charts',href:'#'},
-]
-
-const cmsSubMenuList =[
-  {title:'Posts',href:'#'},
-  {title:'Add new post',href:'#'},
-  {title:'Categories',href:'#'},
-  {title:'Media Library',href:'#'},
-]
+const {closeAll,isUnder1200,side_item}=sidebar()
 
 </script>
 

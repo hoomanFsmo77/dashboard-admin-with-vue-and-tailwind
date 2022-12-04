@@ -35,27 +35,21 @@
         </li>
         <li class="dropdown-hover !py-[0.4rem]">
           <AppLink class="dropdown-card" to="#">
-            <div class="user-profile !w-[31px] !h-[29px]">
-              <img src="../../../assets/profile_5.svg" class="m-auto" width="18" alt="">
-            </div>
+            <UserProfile img-class="m-auto" height="29px" width="31px" image-width="18" src="../../../assets/profile_5.svg"/>
             <span class="text-0.875 text-gray-800 mr-auto">Json Doe</span>
           </AppLink>
 
         </li>
         <li class="dropdown-hover !py-[0.4rem]">
           <AppLink class="dropdown-card" to="#">
-            <div class="user-profile !w-[31px] !h-[29px]">
-              <img src="../../../assets/profile_6.svg" class="m-auto" width="18" alt="">
-            </div>
+            <UserProfile img-class="m-auto" height="29px" width="31px" image-width="18" src="../../../assets/profile_6.svg"/>
             <span class="text-0.875 text-gray-800 mr-auto">Frank Williams</span>
           </AppLink>
 
         </li>
         <li class="dropdown-hover !py-[0.4rem]">
           <AppLink class="dropdown-card" to="#">
-            <div class="user-profile !w-[31px] !h-[29px]">
-              <img src="../../../assets/profile_1.svg" class="m-auto" width="18" alt="">
-            </div>
+            <UserProfile img-class="m-auto" height="29px" width="31px" image-width="18" src="../../../assets/profile_1.svg"/>
             <span class="text-0.875 text-gray-800 mr-auto">Ashley Wood</span>
           </AppLink>
 
@@ -92,6 +86,8 @@ import '../../../style/components/Transition.scss'
 import useNavbar from "../../composables/useNavbar.js";
 import Dropdown from "./Dropdown.vue";
 import AppLink from "../AppLink.vue";
+import UserProfile from "../UserProfile.vue";
+///////////////////////////////////////////////////////////////
 const {show,toggle,blur,focus}=useNavbar()
 
 window.addEventListener('click',e=>{

@@ -1,19 +1,72 @@
-import {onMounted, ref} from "vue";
+import {onMounted, ref,watch} from "vue";
+import {useRoute} from "vue-router";
 
-export default (props)=>{
-    const show=ref(props.isOpen)
+const sidebar = () => {
+    const isUnder1200=window.innerWidth < 1200
+    const side_item=ref(null)
 
-    const showSlide = () => {
-      show.value=!show.value
+
+    const closeAll = e => {
+        if(side_item.value[e.id - 1][0]){
+            closeAllItems()
+        }else{
+            closeAllItems()
+            side_item.value[e.id - 1][0] =true
+        }
     }
 
+    const closeAllItems = () => {
+        side_item.value.forEach(item=>{
+            item[0]=false
+        })
+    }
+
+    return {isUnder1200,closeAll,side_item}
+}
+
+
+
+const sidebarItem= (props,emit)=>{
+    const show=ref(true)
     let ulHeight=ref(null)
+    let sub_container=ref(null)
+    let sidebarLink=ref(null)
+    const route=useRoute()
+    const currentRoutePath=ref('')
+
+    const showSlide = e => {
+        emit('close',{id:props.id})
+        currentRoutePath.value=route.path
+    }
 
     onMounted(()=>{
-        let ulStyles=getComputedStyle(document.querySelector('ul'))
-        ulHeight.value=ulStyles.height
+        updateUlHeight()
+        if(!props.hasSub){
+            show.value=false
+        }
     })
 
+    const addActiveClass = () => {
+        document.querySelectorAll('.sidebar-item ').forEach(item=>{item.classList.remove('sidebar-active')})
+        if(!sidebarLink.value.classList.contains('sidebar-active')){
+            sidebarLink.value.classList.add('sidebar-active')
+        }
+    }
+    watch(()=>props.isActive,()=>{
+        updateUlHeight()
+    })
 
-    return {show,showSlide,ulHeight}
+    const updateUlHeight = () => {
+        show.value=true
+        if(props.hasSub){
+            setTimeout(function () {
+                let ulStyles=getComputedStyle(sub_container.value)
+                ulHeight.value=ulStyles.height
+                show.value=props.isOpen
+            },1000)
+        }
+    }
+
+    return {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath}
 }
+export {sidebar,sidebarItem}

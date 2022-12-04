@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <div class="relative " @click="toggle">
+    <div class="relative cursor-pointer" @click="toggle">
       <i class="bi bi-bell-fill text-secondary-gray text-1.5 cursor-pointer notif-dropdown-btn hover:text-gray-700 transition-all"></i>
       <span class="badge ">10</span>
     </div>
@@ -8,9 +8,7 @@
      <Dropdown v-if="show" width="210px" top="54px">
         <li class=" dropdown-hover">
           <AppLink to="#" class="dropdown-card">
-            <div class="user-profile !w-[45px] !h-[43px]">
-              <img src="../../../assets/profile_2.svg" class="m-auto" width="32" alt="">
-            </div>
+            <UserProfile img-class="m-auto" height="43px" width="45px" image-width="32" src="../../../assets/profile_2.svg"/>
             <div>
               <span class="dropdown-card-name">Json Doe</span>
               <span class="dropdown-card-message">Sent you a message</span>
@@ -19,9 +17,7 @@
         </li>
         <li class=" dropdown-hover">
           <AppLink to="#" class="dropdown-card">
-            <div class="user-profile !w-[45px] !h-[43px]">
-              <img src="../../../assets/profile_3.svg" class="m-auto" width="32" alt="">
-            </div>
+            <UserProfile img-class="m-auto" height="43px" width="45px" image-width="32" src="../../../assets/profile_3.svg"/>
             <div>
               <span class="dropdown-card-name">Frank Williams</span>
               <span class="dropdown-card-message">Sent you a message</span>
@@ -30,9 +26,7 @@
         </li>
         <li class=" dropdown-hover">
           <AppLink to="#" class="dropdown-card">
-            <div class="user-profile !w-[45px] !h-[43px]">
-              <img src="../../../assets/profile_4.svg" class="m-auto" width="32" alt="">
-            </div>
+            <UserProfile img-class="m-auto" height="43px" width="45px" image-width="32" src="../../../assets/profile_4.svg"/>
             <div>
               <span class="dropdown-card-name">Ashley Wood</span>
               <span class="dropdown-card-message">Sent you a message</span>
@@ -53,6 +47,8 @@ import useNavbar from "../../composables/useNavbar.js";
 import Dropdown from "./Dropdown.vue";
 import '../../../style/components/Transition.scss'
 import AppLink from "../AppLink.vue";
+import UserProfile from "../UserProfile.vue";
+///////////////////////////////////////////////////
 const {toggle,show}=useNavbar()
 window.addEventListener('click',e=>{
   if(!e.target.classList.contains('notif-dropdown-btn')){
