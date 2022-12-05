@@ -23,5 +23,5 @@ export default (emit)=>{
     }
 
 
-    return {show,toggle,focus,blur,showUpSidebar}
+    return {show,toggle,focus,blur,showUpSidebar,isSidebarActive}
 }

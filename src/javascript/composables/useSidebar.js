@@ -66,7 +66,13 @@ const sidebarItem= (props,emit)=>{
             },1000)
         }
     }
+    const singleLinkItemHandler = () => {
+        document.querySelectorAll('.sidebar-item ').forEach(item=>{item.classList.remove('sidebar-active')})
+        showSlide()
+    }
 
-    return {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath}
+
+
+    return {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath,singleLinkItemHandler}
 }
 export {sidebar,sidebarItem}

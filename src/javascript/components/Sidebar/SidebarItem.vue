@@ -14,6 +14,8 @@
     <router-link
           v-else
           :to="link"
+          @click="singleLinkItemHandler"
+          ref="sidebarLink"
           class="sidebar-item"
           active-class="sidebar-active"
           :class="{'!flex-col !px-0.5 !pt-0.25':isActive}"
@@ -47,7 +49,7 @@ import {sidebarItem} from "../../composables/useSidebar.js";
 /////////////////////////////////////////////////////////////////////
 let props=defineProps(['title','icon','isOpen','subMenuList','id','hasSub','link','isActive'])
 let emit=defineEmits(['close'])
-const {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath}=sidebarItem(props,emit)
+const {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath,singleLinkItemHandler}=sidebarItem(props,emit)
 defineExpose([show])
 
 
