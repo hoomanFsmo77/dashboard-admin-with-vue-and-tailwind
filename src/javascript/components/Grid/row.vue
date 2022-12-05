@@ -13,7 +13,7 @@ export default {
 @tailwind components;
 @layer components {
   .row{
-    @apply flex flex-wrap p-0.5 m-0.5;
+    @apply flex flex-wrap py-0.5 my-0.5;
     column-gap: v-bind(colGap);
     row-gap: v-bind(rowGap);
   }

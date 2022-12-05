@@ -30,9 +30,11 @@ export default {
   methods:{
     focusHandler(){
       this.isFocus=true
+      this.$emit('show',{focus:this.isFocus})
     },
     blurHandler(){
       this.isFocus=false
+      this.$emit('show',{focus:this.isFocus})
     },
     sidebarHandler(){
       this.isFocus=!this.active

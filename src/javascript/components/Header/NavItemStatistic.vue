@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <NavbarButton @click="toggle"
+    <NavbarButton @show="toggleFocus"
                   icon="bi bi-bar-chart-line statistic-dropdown-btn"
                   badge="!w-0.5 !h-0.5 !bg-primary-green !top-[0]"
                   :active="undefined"
@@ -68,12 +68,7 @@ import useNavbar from "../../composables/useNavbar.js";
 import AppLink from "../reusable/AppLink.vue";
 import NavbarButton from "./NavbarButton.vue";
 /////////////////////////////////////////////////////
-const {show, toggle} = useNavbar()
-window.addEventListener('click', e => {
-  if (!e.target.classList.contains('statistic-dropdown-btn')) {
-    show.value = false
-  }
-})
+const {show,toggleFocus} = useNavbar()
 
 
 </script>

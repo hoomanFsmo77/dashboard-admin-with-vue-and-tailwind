@@ -33,6 +33,7 @@ const sidebarItem= (props,emit)=>{
     let sidebarLink=ref(null)
     const route=useRoute()
     const currentRoutePath=ref('')
+    const isFocus=ref(false)
 
     const showSlide = e => {
         emit('close',{id:props.id})
@@ -73,6 +74,6 @@ const sidebarItem= (props,emit)=>{
 
 
 
-    return {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath,singleLinkItemHandler}
+    return {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath,singleLinkItemHandler,isFocus}
 }
 export {sidebar,sidebarItem}

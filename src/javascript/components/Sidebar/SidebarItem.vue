@@ -1,16 +1,18 @@
 <template>
   <li  class="text-primary-gray">
-      <div
+      <button
           v-if="hasSub"
           ref="sidebarLink"
           @click="showSlide"
+          @focus="isFocus=true"
+          @blur="isFocus=false"
           class="sidebar-item "
-          :class="{'sidebar-active':currentRoutePath.includes(title),'sidebar-active':isOpen,'!flex-col !px-0.5 !pt-0.25':isActive}"
+          :class="{'sidebar-active':currentRoutePath.includes(title),'sidebar-active':isOpen,'!flex-col !px-0.5 !pt-0.25':isActive,'!bg-indigo-400 !text-white hover:!bg-indigo-400':isFocus}"
       >
         <i :class="props.icon" class="text-1.5 "></i>
         <span class=" ml-1 text-[0.9rem] font-500" :class="{'!mx-auto !text-[0.75rem]':isActive}">{{title}}</span>
         <i v-if="hasSub" :class="{'rotate-[-90deg]':show,'!mx-auto !rotate-[-90deg]':isActive,'!rotate-[90deg]':show && isActive}" class="bi bi-chevron-left ml-auto text-0.75 transition-all" ></i>
-      </div>
+      </button>
     <router-link
           v-else
           :to="link"
@@ -49,7 +51,7 @@ import {sidebarItem} from "../../composables/useSidebar.js";
 /////////////////////////////////////////////////////////////////////
 let props=defineProps(['title','icon','isOpen','subMenuList','id','hasSub','link','isActive'])
 let emit=defineEmits(['close'])
-const {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath,singleLinkItemHandler}=sidebarItem(props,emit)
+const {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath,singleLinkItemHandler,isFocus}=sidebarItem(props,emit)
 defineExpose([show])
 
 

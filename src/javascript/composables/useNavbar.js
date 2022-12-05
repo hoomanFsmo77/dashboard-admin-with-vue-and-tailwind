@@ -5,11 +5,12 @@ export default (emit)=>{
 
     let isSidebarActive=ref(false)
 
-    const toggle = () => {
-        show.value=!show.value
-    }
     const focus = () => {
         show.value=true
+    }
+
+    const toggleFocus = e => {
+        show.value=e.focus
     }
 
     const blur = () => {
@@ -23,5 +24,5 @@ export default (emit)=>{
     }
 
 
-    return {show,toggle,focus,blur,showUpSidebar,isSidebarActive}
+    return {show,focus,blur,showUpSidebar,isSidebarActive,toggleFocus}
 }

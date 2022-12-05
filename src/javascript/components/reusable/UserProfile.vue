@@ -1,8 +1,8 @@
 <template>
-  <div class="user-profile " :style="{height:height,width:width}">
+  <button class="user-profile " :style="{height:height,width:width}">
     <img :src="src" :class="imgClass"  class="m-auto" :width="imageWidth" alt="">
     <slot/>
-  </div>
+  </button>
 </template>
 
 <script>

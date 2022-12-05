@@ -187,7 +187,134 @@ let sidebarDocsData=[
 
 ]
 
+let defaultPageData=[
+    {
+        icon:'bi bi-speedometer',
+        title:'Earnings',
+        achieve:'$10,500',
+        change:'20%',
+        state:'increase',
+        theme:'red',
+    },{
+        icon:'bi bi-book',
+        title:'Readers',
+        achieve:'584',
+        change:'3%',
+        state:'increase',
+        theme:'blue',
+    },{
+        icon:'bi bi-journal-bookmark',
+        title:'Bookmarks',
+        achieve:'876',
+        change:'10%',
+        state:'increase',
+        theme:'indigo',
+    },{
+        icon:'bi bi-globe-americas',
+        title:'Visitors',
+        achieve:'3,500',
+        change:'5%',
+        state:'increase',
+        theme:'green',
+    },
+]
+
+
+let chartData = {
+
+    series: [{
+        name: 'Total Revenue',
+        type: 'column',
+        data: [23,11,22,27,13,22,37,21,30]
+    }, {
+        name: 'Organic Search',
+        type: 'area',
+        data: [44,41,22,43,21,41,27,43,39]
+    }, {
+        name: 'Facebook Ads',
+        type: 'line',
+        data: [30,25,36,30,45,35,36,49,48]
+    }],
+    chart: {
+        fontFamily:'Montserrat,sans-serif',
+        foreColor:'rgba(108,117,125,1)',
+        height: 350,
+        type: 'line',
+        stacked: false,
+        toolbar:{
+            show:true,
+            tools: {
+                download: true,
+                selection: false,
+                zoom: false,
+                zoomin: true,
+                zoomout: true,
+                pan: false,
+                reset:false,
+                customIcons: [],
+            }
+        }
+    },
+    stroke: {
+        width: [0, 2, 5],
+        curve: 'smooth'
+    },
+    plotOptions: {
+        bar: {
+            columnWidth: '50%'
+        }
+    },
+
+    fill: {
+        opacity: [0.85, 0.25, 1],
+        gradient: {
+            inverseColors: false,
+            shade: 'light',
+            type: "vertical",
+            opacityFrom: 0.85,
+            opacityTo: 0.55,
+            stops: [0, 100, 100, 100]
+        },
+        colors: ['rgba(79,70,229,1)', 'rgba(224,242,254,1)', '#9C27B0']
+    },
+    labels: ['01/01/2003', '02/01/2003', '03/01/2003', '04/01/2003', '05/01/2003', '06/01/2003', '07/01/2003', '08/01/2003','09/01/2003'],
+    markers: {
+        size: 0
+    },
+    xaxis: {
+        type: 'datetime'
+    },
+    yaxis: {
+        title: {
+            text: 'Income',
+        },
+        min: 0
+    },
+    tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+            formatter: function (y) {
+                if (typeof y !== "undefined") {
+                    return y.toFixed(0) + " $";
+                }
+                return y;
+
+            }
+        }
+    },
+    responsive:[
+        {
+            breakpoint:500,
+            options:{
+                width: '200px'
+            }
+        }
+    ]
+
+};
 
 
 
-export {sidebarMainData,sidebarDocsData}
+
+export {sidebarMainData,sidebarDocsData,defaultPageData,chartData}

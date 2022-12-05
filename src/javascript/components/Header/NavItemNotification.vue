@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <NavbarButton :active="undefined" icon="bi bi-bell-fill notif-dropdown-btn" @click="toggle">
+    <NavbarButton :active="undefined" icon="bi bi-bell-fill " @show="toggleFocus">
       10
     </NavbarButton>
    <Transition name="show">
@@ -49,12 +49,7 @@ import AppLink from "../reusable/AppLink.vue";
 import UserProfile from "../reusable/UserProfile.vue";
 import NavbarButton from "./NavbarButton.vue";
 ///////////////////////////////////////////////////
-const {toggle,show}=useNavbar()
-window.addEventListener('click',e=>{
-  if(!e.target.classList.contains('notif-dropdown-btn')){
-    show.value=false
-  }
-})
+const {show,toggleFocus}=useNavbar()
 
 
 </script>

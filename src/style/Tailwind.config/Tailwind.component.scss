@@ -10,6 +10,9 @@
   .divider{
     @apply w-full h-[2px] bg-gray-200 my-0.5;
   }
+  .vertical-divider{
+    @apply h-full w-[2px] bg-gray-200 mx-0.5;
+  }
   .user-profile{
     @apply  shadow-[0_0_17px_rgba(0,0,0,0.2)] rounded-full relative cursor-pointer flex;
   }

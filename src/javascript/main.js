@@ -14,6 +14,8 @@ import '../assets/profile_6.svg'
 
 ////////// Vue
 import {createApp} from "vue";
+import ApexCharts from 'apexcharts';
+import VueApexCharts from "vue3-apexcharts";
 import router from "./router.config.js";
 import App from "./App.vue";
 import row from "./components/Grid/row.vue";
@@ -22,4 +24,6 @@ const app=createApp(App)
 app.component('row',row)
 app.component('column',column)
 app.use(router)
+app.use(VueApexCharts)
+app.config.globalProperties.$apexcharts = ApexCharts;
 app.mount('#app')

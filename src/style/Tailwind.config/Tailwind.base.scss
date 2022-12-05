@@ -3,22 +3,22 @@
 
 @layer base {
     h1{
-        @apply text-2.5
+        @apply p-0.25 md:text-2.5 text-1.7
     }
     h2{
-        @apply text-2
+        @apply md:text-2 text-1.6
     }
     h3{
         @apply text-1.7
     }
     h4{
-        @apply text-1.4
+        @apply md:text-1.4 text-1
     }
     h5{
         @apply text-1.2
     }
     h6{
-        @apply text-1
+        @apply md:text-1 text-[0.9rem]
     }
 
 }
