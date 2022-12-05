@@ -697,6 +697,11 @@ h6 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246/var(--tw-bg-opacity));
 }
+
+.col {
+  flex: 0 1 auto;
+  padding: 0.5rem;
+}
 /*!**************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/style/Tailwind.config/Tailwind.utilities.scss ***!
   \**************************************************************************************************************************************************************************************/
@@ -726,6 +731,10 @@ h6 {
 
 .top-\[62px\] {
   top: 62px;
+}
+
+.m-0 {
+  margin: 0;
 }
 
 .m-auto {
@@ -861,6 +870,10 @@ h6 {
 
 .\!flex-col {
   flex-direction: column !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -1212,7 +1225,7 @@ h6 {
 }
 
 .ring-secondary-indigo\/50 {
-  --tw-ring-color: rgb(99 102 241 / 0.5) ;
+  --tw-ring-color: rgb(99 102 241 / 0.5);
 }
 
 .blur {
@@ -1236,6 +1249,54 @@ h6 {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
 }
 
 .hover\:text-indigo-800:hover {
@@ -1279,10 +1340,82 @@ h6 {
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0, 0, 0, 0)) !important;
   }
+  .sm\:col-1 {
+    width: 8.3333333333%;
+  }
+  .sm\:col-2 {
+    width: 16.6666666667%;
+  }
+  .sm\:col-3 {
+    width: 25%;
+  }
+  .sm\:col-4 {
+    width: 33.3333333333%;
+  }
+  .sm\:col-5 {
+    width: 41.6666666667%;
+  }
+  .sm\:col-6 {
+    width: 50%;
+  }
+  .sm\:col-7 {
+    width: 58.3333333333%;
+  }
+  .sm\:col-8 {
+    width: 66.6666666667%;
+  }
+  .sm\:col-9 {
+    width: 75%;
+  }
+  .sm\:col-10 {
+    width: 83.3333333333%;
+  }
+  .sm\:col-11 {
+    width: 91.6666666667%;
+  }
+  .sm\:col-12 {
+    width: 100%;
+  }
 }
 @media (min-width: 768px) {
   .md\:inline-block {
     display: inline-block;
+  }
+  .md\:col-1 {
+    width: 8.3333333333%;
+  }
+  .md\:col-2 {
+    width: 16.6666666667%;
+  }
+  .md\:col-3 {
+    width: 25%;
+  }
+  .md\:col-4 {
+    width: 33.3333333333%;
+  }
+  .md\:col-5 {
+    width: 41.6666666667%;
+  }
+  .md\:col-6 {
+    width: 50%;
+  }
+  .md\:col-7 {
+    width: 58.3333333333%;
+  }
+  .md\:col-8 {
+    width: 66.6666666667%;
+  }
+  .md\:col-9 {
+    width: 75%;
+  }
+  .md\:col-10 {
+    width: 83.3333333333%;
+  }
+  .md\:col-11 {
+    width: 91.6666666667%;
+  }
+  .md\:col-12 {
+    width: 100%;
   }
 }
 @media (min-width: 968px) {
@@ -1298,10 +1431,82 @@ h6 {
   .lg\:block {
     display: block;
   }
+  .lg\:col-1 {
+    width: 8.3333333333%;
+  }
+  .lg\:col-2 {
+    width: 16.6666666667%;
+  }
+  .lg\:col-3 {
+    width: 25%;
+  }
+  .lg\:col-4 {
+    width: 33.3333333333%;
+  }
+  .lg\:col-5 {
+    width: 41.6666666667%;
+  }
+  .lg\:col-6 {
+    width: 50%;
+  }
+  .lg\:col-7 {
+    width: 58.3333333333%;
+  }
+  .lg\:col-8 {
+    width: 66.6666666667%;
+  }
+  .lg\:col-9 {
+    width: 75%;
+  }
+  .lg\:col-10 {
+    width: 83.3333333333%;
+  }
+  .lg\:col-11 {
+    width: 91.6666666667%;
+  }
+  .lg\:col-12 {
+    width: 100%;
+  }
 }
 @media (min-width: 1200px) {
   .xlg\:grid-cols-\[212px_1fr\] {
     grid-template-columns: 212px 1fr;
+  }
+  .xlg\:col-1 {
+    width: 8.3333333333%;
+  }
+  .xlg\:col-2 {
+    width: 16.6666666667%;
+  }
+  .xlg\:col-3 {
+    width: 25%;
+  }
+  .xlg\:col-4 {
+    width: 33.3333333333%;
+  }
+  .xlg\:col-5 {
+    width: 41.6666666667%;
+  }
+  .xlg\:col-6 {
+    width: 50%;
+  }
+  .xlg\:col-7 {
+    width: 58.3333333333%;
+  }
+  .xlg\:col-8 {
+    width: 66.6666666667%;
+  }
+  .xlg\:col-9 {
+    width: 75%;
+  }
+  .xlg\:col-10 {
+    width: 83.3333333333%;
+  }
+  .xlg\:col-11 {
+    width: 91.6666666667%;
+  }
+  .xlg\:col-12 {
+    width: 100%;
   }
 }
 .\[\&_li\]\:cursor-pointer li {
@@ -1487,4 +1692,41 @@ h6 {
   background-color: rgb(129 140 248/var(--tw-bg-opacity)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255/var(--tw-text-opacity)) !important;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/javascript/components/Grid/row.vue?vue&type=style&index=0&id=fbb4d5fe&lang=scss&scoped=true ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.container[data-v-fbb4d5fe] {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 500px) {
+.container[data-v-fbb4d5fe] {
+    max-width: 500px;
+}
+}
+@media (min-width: 768px) {
+.container[data-v-fbb4d5fe] {
+    max-width: 768px;
+}
+}
+@media (min-width: 968px) {
+.container[data-v-fbb4d5fe] {
+    max-width: 968px;
+}
+}
+@media (min-width: 1200px) {
+.container[data-v-fbb4d5fe] {
+    max-width: 1200px;
+}
+}
+.row[data-v-fbb4d5fe] {
+  margin: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  -moz-column-gap: var(--fbb4d5fe-colGap);
+  column-gap: var(--fbb4d5fe-colGap);
+  row-gap: var(--fbb4d5fe-rowGap);
 }

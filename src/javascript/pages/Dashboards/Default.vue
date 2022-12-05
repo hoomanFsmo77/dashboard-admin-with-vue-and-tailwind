@@ -1,13 +1,8 @@
 <template>
-  default
+
 </template>
 
-<script>
-export default {
-  name: "default"
-}
+<script setup>
+
 </script>
 
-<style scoped>
-
-</style>

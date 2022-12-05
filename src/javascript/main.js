@@ -16,6 +16,10 @@ import '../assets/profile_6.svg'
 import {createApp} from "vue";
 import router from "./router.config.js";
 import App from "./App.vue";
+import row from "./components/Grid/row.vue";
+import column from "./components/Grid/column.vue";
 const app=createApp(App)
+app.component('row',row)
+app.component('column',column)
 app.use(router)
 app.mount('#app')
