@@ -1,7 +1,7 @@
 <template>
     <div class="shadow-card rounded-10 bg-white ">
        <div class="card_title p-2 flex items-center justify-between">
-          <span class="uppercase tracking-widest text-primary-dark text-[0.87rem]">{{title}}</span>
+          <span class="uppercase font-500 tracking-widest text-primary-dark text-[0.87rem]">{{title}}</span>
           <div class="relative">
             <NavbarButton
                           @show="toggleFocus($event)"
@@ -39,8 +39,8 @@
             </Transition>
           </div>
        </div>
-      <div class="divider !mt-0"></div>
-      <div class="card_body px-1">
+      <div class="divider !my-0"></div>
+      <div class="card_body px-1" :class="bodyClass">
           <slot/>
       </div>
     </div>
@@ -52,7 +52,7 @@ import useNavbar from "../../composables/useNavbar.js";
 import Dropdown from "../Header/Dropdown.vue";
 import AppLink from "./AppLink.vue";
 ////////////////////////////////////////////////
-let props=defineProps(['title'])
+let props=defineProps(['title','bodyClass'])
 const {show,toggleFocus} = useNavbar()
 
 

@@ -219,102 +219,378 @@ let defaultPageData=[
     },
 ]
 
-
-let chartData = {
-
-    series: [{
+let chart1={
+    series: [
+        {
         name: 'Total Revenue',
-        type: 'column',
-        data: [23,11,22,27,13,22,37,21,30]
+        data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
     }, {
         name: 'Organic Search',
-        type: 'area',
-        data: [44,41,22,43,21,41,27,43,39]
+        data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
     }, {
         name: 'Facebook Ads',
-        type: 'line',
-        data: [30,25,36,30,45,35,36,49,48]
-    }],
-    chart: {
-        fontFamily:'Montserrat,sans-serif',
-        foreColor:'rgba(108,117,125,1)',
-        height: 350,
-        type: 'line',
-        stacked: false,
-        toolbar:{
-            show:true,
-            tools: {
-                download: true,
-                selection: false,
-                zoom: false,
-                zoomin: true,
-                zoomout: true,
-                pan: false,
-                reset:false,
-                customIcons: [],
-            }
-        }
-    },
-    stroke: {
-        width: [0, 2, 5],
-        curve: 'smooth'
-    },
-    plotOptions: {
-        bar: {
-            columnWidth: '50%'
-        }
-    },
-
-    fill: {
-        opacity: [0.85, 0.25, 1],
-        gradient: {
-            inverseColors: false,
-            shade: 'light',
-            type: "vertical",
-            opacityFrom: 0.85,
-            opacityTo: 0.55,
-            stops: [0, 100, 100, 100]
-        },
-        colors: ['rgba(79,70,229,1)', 'rgba(224,242,254,1)', '#9C27B0']
-    },
-    labels: ['01/01/2003', '02/01/2003', '03/01/2003', '04/01/2003', '05/01/2003', '06/01/2003', '07/01/2003', '08/01/2003','09/01/2003'],
-    markers: {
-        size: 0
-    },
-    xaxis: {
-        type: 'datetime'
-    },
-    yaxis: {
-        title: {
-            text: 'Income',
-        },
-        min: 0
-    },
-    tooltip: {
-        shared: true,
-        intersect: false,
-        y: {
-            formatter: function (y) {
-                if (typeof y !== "undefined") {
-                    return y.toFixed(0) + " $";
+        data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+    }
+    ],
+    chartOptions: {
+        responsive:[
+            {
+                breakpoint:500,
+                options:{
+                    redrawOnWindowResize: true,
+                    width: '200px',
+                    legend:{
+                        fontSize: '12px'
+                    }
                 }
-                return y;
+            }
+        ],
+        chart: {
+            type: 'bar',
+            height: 350,
+            fontFamily:'Montserrat,sans-serif',
+            foreColor:'rgba(108,117,125,1)',
+            stacked: false,
+            toolbar:{
+                show:true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: true,
+                    zoomout: true,
+                    pan: false,
+                    reset:false,
+                    customIcons: [],
+                }
+            }
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '55%',
+                endingShape: 'rounded'
+            },
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent']
+        },
+        xaxis: {
+            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        },
+        yaxis: {
+            title: {
 
+            }
+        },
+        fill: {
+            opacity: 1,
+            colors: ['rgba(79,70,229,0.9)', 'rgba(79,70,229,0.3)', 'rgba(220,38,38,0.9)']
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return "$ " + val + " thousands"
+                }
+            }
+        },
+        legend: {
+            show: true,
+            showForSingleSeries: false,
+            showForNullSeries: true,
+            showForZeroSeries: true,
+            position: 'bottom',
+            horizontalAlign: 'center',
+            floating: false,
+            fontSize: '16px',
+            fontFamily: 'Montserrat,sans-serif',
+            fontWeight: 400,
+            formatter: undefined,
+            inverseOrder: false,
+            width: undefined,
+            height: undefined,
+            tooltipHoverFormatter: undefined,
+            customLegendItems: [],
+            offsetX: 0,
+            offsetY: 0,
+            labels: {
+                colors: undefined,
+                useSeriesColors: false
+            },
+            markers: {
+                width: 12,
+                height: 12,
+                strokeWidth: 0,
+                strokeColor: '#fff',
+                fillColors:['rgba(79,70,229,0.9)', 'rgba(79,70,229,0.3)', 'rgba(220,38,38,0.9)'],
+                radius: 12,
+                customHTML: undefined,
+                onClick: undefined,
+                offsetX: 0,
+                offsetY: 0
+            },
+            itemMargin: {
+                horizontal: 15,
+                vertical: 10
+            },
+            onItemClick: {
+                toggleDataSeries: true
+            },
+            onItemHover: {
+                highlightDataSeries: true
+            },
+        }
+    },
+}
+
+
+let activityData=[
+    {
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'2 min ago',
+        src:'./assets/profile_1.svg',
+    },{
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'4 min ago',
+        src:'./assets/profile_2.svg',
+    },{
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'3 min ago',
+        src:'./assets/profile_3.svg',
+    },{
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'4 min ago',
+        src:'./assets/profile_4.svg',
+    },{
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'5 min ago',
+        src:'./assets/profile_5.svg',
+    },{
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'6 min ago',
+        src:'./assets/profile_6.svg',
+    },{
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'3 min ago',
+        src:'./assets/profile_3.svg',
+    },{
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'5 min ago',
+        src:'./assets/profile_4.svg',
+    },{
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'4 min ago',
+        src:'./assets/profile_5.svg',
+    },{
+        name:'lorem ipsum',
+        activity:'Lorem ipsum dolor',
+        time:'1 min ago',
+        src:'./assets/profile_1.svg',
+        isLast:true
+    },
+
+]
+let tableData1={
+    th:[
+        {title:'name',width:'21%'},
+        {title:'company',width:'10%'},
+        {title:'status',width:'10%'},
+        {title:'contact',width:'10%'},
+        {title:'date',width:'10%'},
+    ],
+    td:[
+        {
+            image:'./assets/profile_1.svg',
+            name:'sorem ipsum',
+            email:'Lorem ipsum dolor',
+            companyName1:'Lorem ipsum',
+            companyName2:'Lorem',
+            status:'On Hold',
+            statusClass:'yellow',
+            progress:'13%',
+            date:'2021/1/1',
+        },
+        {
+            image:'./assets/profile_2.svg',
+            name:'Lorem ipsum',
+            email:'Lorem ipsum dolor',
+            companyName1:'Lorem ipsum',
+            companyName2:'Lorem',
+            status:'Open',
+            statusClass:'indigo',
+            progress:'20%',
+            date:'2021/2/1',
+        },
+        {
+            image:'./assets/profile_3.svg',
+            name:'Lorem ipsum',
+            email:'Lorem ipsum dolor',
+            companyName1:'Lorem ipsum',
+            companyName2:'Lorem',
+            status:'Open',
+            statusClass:'indigo',
+            progress:'48%',
+            date:'2021/1/1',
+        },
+        {
+            image:'./assets/profile_4.svg',
+            name:'norem ipsum',
+            email:'Lorem ipsum dolor',
+            companyName1:'Lorem ipsum',
+            companyName2:'Lorem',
+            status:'Closed',
+            statusClass:'red',
+            progress:'65%',
+            date:'2021/5/1',
+        },
+        {
+            image:'./assets/profile_5.svg',
+            name:'Lorem ipsum',
+            email:'Lorem ipsum dolor',
+            companyName1:'Lorem ipsum',
+            companyName2:'Lorem',
+            status:'Open',
+            statusClass:'indigo',
+            progress:'77%',
+            date:'2021/3/1',
+        },
+        {
+            image:'./assets/profile_6.svg',
+            name:'Lorem ipsum',
+            email:'Lorem ipsum dolor',
+            companyName1:'Lorem ipsum',
+            companyName2:'Lorem',
+            status:'in Progress',
+            statusClass:'green',
+            progress:'100%',
+            date:'2021/1/1',
+        },
+        {
+            image:'./assets/profile_1.svg',
+            name:'Lorem ipsum',
+            email:'Lorem ipsum dolor',
+            companyName1:'Lorem ipsum',
+            companyName2:'Lorem',
+            status:'On Hold',
+            statusClass:'yellow',
+            progress:'13%',
+            date:'2021/1/1',
+        },
+        {
+            image:'./assets/profile_4.svg',
+            name:'Lorem ipsum',
+            email:'Lorem ipsum dolor',
+            companyName1:'Lorem ipsum',
+            companyName2:'Lorem',
+            status:'Open',
+            statusClass:'indigo',
+            progress:'35%',
+            date:'2021/1/1',
+        },
+        {
+            image:'./assets/profile_2.svg',
+            name:'Lorem ipsum',
+            email:'Lorem ipsum dolor',
+            companyName1:'Lorem ipsum',
+            companyName2:'Lorem',
+            status:'Closed',
+            statusClass:'red',
+            progress:'13%',
+            date:'2021/1/1',
+        },
+    ]
+}
+let chart2={
+    series: [44, 55, 41, 17, 15],
+    chartOptions: {
+        chart: {
+            type: 'donut',
+            fontFamily: 'Montserrat,sans-serif',
+
+        },
+        fill:{
+            colors: ['rgba(2,132,199,1)', 'rgba(2,132,199,0.8)', 'rgba(2,132,199,0.6)','rgba(2,132,199,0.5)','rgba(2,132,199,0.4)']
+
+        },
+        legend:{
+          show:false,
+
+        },
+        dataLabels:{
+          enabled:false
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }]
+    }
+}
+
+let chart3={
+    series: [42, 47, 52, 58, 65],
+    chartOptions: {
+        chart: {
+            width: 201,
+            type: 'polarArea'
+        },
+        labels: ['Rose A', 'Rose B', 'Rose C', 'Rose D', 'Rose E'],
+        fill: {
+            opacity: 1,
+            colors:['rgba(79,70,229,1)','rgba(79,70,229,0.9)','rgba(79,70,229,0.8)','rgba(79,70,229,0.7)','rgba(79,70,229,0.6)']
+        },
+        stroke: {
+            width: 1,
+            colors: undefined
+        },
+        yaxis: {
+            show: false
+        },
+        legend: {
+            show:false
+        },
+        dataLabels:{
+            enabled:false
+        },
+        plotOptions: {
+            polarArea: {
+                rings: {
+                    strokeWidth: 0
+                },
+                spokes: {
+                    strokeWidth: 0
+                },
+            }
+        },
+        theme: {
+            monochrome: {
+                enabled: true,
+                shadeTo: 'light',
+                shadeIntensity: 0.6
             }
         }
     },
-    responsive:[
-        {
-            breakpoint:500,
-            options:{
-                width: '200px'
-            }
-        }
-    ]
-
-};
+}
 
 
-
-
-export {sidebarMainData,sidebarDocsData,defaultPageData,chartData}
+export {sidebarMainData,sidebarDocsData,defaultPageData,chart1,activityData,tableData1,chart2,chart3}

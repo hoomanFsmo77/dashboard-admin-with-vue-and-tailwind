@@ -5,7 +5,7 @@
         :class="icon"
         class="text-secondary-gray text-1.5 cursor-pointer hover:text-gray-700 transition-all relative"
     >
-      <span :class="badge" class="badge "><slot/></span>
+      <span  :class="badge" class="badge "><slot/></span>
     </button>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
     return{
       buttonHandlers:{
         focus:this.focusHandler,
-        blur:this.blurHandler
+        blur:this.blurHandler,
       },
       sidebarButtonHandler:{
         click:this.sidebarHandler

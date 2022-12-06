@@ -46,6 +46,28 @@
   .col{
     @apply p-0.5 flex-initial;
   }
-
-
+  .selectBox{
+    @apply p-0.5 bg-white rounded-4 border-[1px] border-gray-400 focus:ring-4 focus:ring-indigo-600/50 transition-all
+  }
+  .selectBox-sm{
+    @apply text-[0.8rem]
+  }
+  .btn-primary{
+    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] border-[1px] border-primary-indigo bg-white text-primary-indigo hover:bg-primary-indigo hover:text-white focus:ring-4 focus:ring-primary-indigo/50 transition-all;
+  }
+  .btn-sm{
+    @apply text-[0.9rem];
+  }
+  .progress-bar{
+    @apply h-[3px] bg-primary-indigo/20 rounded-4 relative w-full overflow-hidden
+  }
+  .progress-bar .inner{
+    @apply absolute left-0 top-0 h-full
+  }
+  .container-fluid{
+    @apply w-full mx-auto px-0.5;
+  }
+  .card{
+    @apply shadow-[0_4px_21px_rgba(0,0,0,0.15)] rounded-10 bg-white;
+  }
 }

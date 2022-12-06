@@ -5,7 +5,13 @@
 <script>
 export default {
   name: "row",
-  props:['colGap','rowGap']
+  props:['colGap','rowGap'],
+  data(){
+    return{
+      columnGaps:this.colGap || 0,
+      rowGaps:this.rowGap || 0,
+    }
+  }
 }
 </script>
 
@@ -14,8 +20,8 @@ export default {
 @layer components {
   .row{
     @apply flex flex-wrap py-0.5 my-0.5;
-    column-gap: v-bind(colGap);
-    row-gap: v-bind(rowGap);
+    column-gap: v-bind(columnGaps);
+    row-gap: v-bind(rowGaps);
   }
 }
 
