@@ -10,7 +10,7 @@ import '../assets/profile_3.svg'
 import '../assets/profile_4.svg'
 import '../assets/profile_5.svg'
 import '../assets/profile_6.svg'
-
+import '../assets/check.svg'
 
 ////////// Vue
 import {createApp} from "vue";

@@ -6,7 +6,7 @@
     <div>
       <span class="font-600 text-[0.9rem] inline-block w-full">{{name}}</span>
       <span class="text-[0.8rem] inline-block w-full ">{{activity}}</span>
-      <span class="text-[0.75rem] inline-block w-full text-gray-600">{{time}}</span>
+      <span v-if="time" class="text-[0.75rem] inline-block w-full text-gray-600">{{time}}</span>
     </div>
   </div>
 </template>

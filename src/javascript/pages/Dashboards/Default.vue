@@ -271,7 +271,7 @@
             <div class="flex justify-center items-center gap-0.75">
               <h4 class="text-primary-dark font-600">625</h4>
               <span class="text-gray-600 text-1">+10</span>
-              <span class="category-card bg-green-200 text-green-700 !py-0.25 !px-[0.3rem] text-[0.7rem] mx-0.25"><i class="bi bi-arrow-up"></i> 19.5% </span>
+              <span class="category-card bg-red-200 text-red-700 !py-0.25 !px-[0.3rem] text-[0.7rem] mx-0.25"><i class="bi bi-arrow-down"></i> -19.5% </span>
             </div>
             <div class="flex gap-1 justify-center mt-1 flex-wrap">
               <div>
@@ -309,7 +309,7 @@
 </template>
 
 <script setup>
-import StaticCard from "../../components/reusable/StaticCard.vue";
+import StaticCard from "../../components/Dashboard page components/DefaultCard.vue";
 import ActivityCard from '../../components/reusable/ActivityCard.vue'
 import Card from "../../components/reusable/Card.vue";
 import SelectBox from '../../components/Form/SelectBox.vue';

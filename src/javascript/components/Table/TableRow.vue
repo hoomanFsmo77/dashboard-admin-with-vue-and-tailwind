@@ -1,52 +1,69 @@
 <template>
   <tr class="table-hover " >
     <td>
-      <div class="p-1 px-1.3 flex items-center gap-1">
-        <UserProfile width="50px" height="50px" image-width="40" :src="data.image"/>
+      <div class="p-1 px-1.3 flex items-center gap-1" v-if="!isPost">
+        <UserProfile width="50px" height="50px" image-width="40" :src="image"/>
         <div>
-          <span class="text-1 font-600">{{data.name}}</span>
+          <span class="text-1 font-600">{{name}}</span>
           <br>
-          <span class="text-[0.85rem] text-gray-600">{{data.email}}</span>
+          <span class="text-[0.85rem] text-gray-600">{{email}}</span>
         </div>
       </div>
-    </td>
-    <td>
-      <div class="p-1 px-1.3">
-        <span class="text-1 font-600">{{data.companyName1}}</span>
-        <br>
-        <span class="text-[0.9rem] text-gray-600">{{ data.companyName2 }}</span>
+      <div  class="flex items-center gap-0.75 p-1 px-1.3" v-else>
+          <input class="checkbox" type="checkbox" >
+          <router-link :to="{name:'newPost'}" class="flex items-center gap-0.75">
+            <img :src="image" width="80" class="rounded-4" alt="">
+            <span class="font-700 text-0.875 ">
+               {{name}}
+            </span>
+          </router-link>
       </div>
     </td>
     <td>
-          <span class="category-card "
+      <div class="p-1 px-1.3" v-if="!isPost">
+        <span class="text-1 font-600">{{companyName1}}</span>
+        <br>
+        <span class="text-[0.9rem] text-gray-600">{{ companyName2 }}</span>
+      </div>
+      <div class="text-center" v-else>
+        <span class="text-0.875 font-600" >{{author}}</span>
+      </div>
+    </td>
+    <td>
+          <span v-if="!isPost" class="category-card "
                 :class="{
-            'bg-yellow-300 text-yellow-700':data.statusClass==='yellow',
-            'bg-indigo-300 text-indigo-700':data.statusClass==='indigo',
-            'bg-red-300 text-red-700':data.statusClass==='red',
-            'bg-green-300 text-green-700':data.statusClass==='green',
+            'bg-yellow-300 text-yellow-700':statusClass==='yellow',
+            'bg-indigo-300 text-indigo-700':statusClass==='indigo',
+            'bg-red-300 text-red-700':statusClass==='red',
+            'bg-green-300 text-green-700':statusClass==='green',
           }">
             <i class="bi bi-circle-fill text-0.5 mr-[0.3rem]"></i>
-            <span class="text-[0.7rem]">{{data.status}}</span>
+            <span class="text-[0.7rem]">{{status}}</span>
           </span>
+           <div class="text-center" v-else>
+             <span >{{category}}</span>
+          </div>
+
     </td>
-    <td>
+    <td v-if="!isPost">
       <div class="flex items-center gap-0.5">
-        <span>{{data.progress}}</span>
-        <div class="progress-bar"><div :style="{width:data.progress}" class="inner  bg-indigo-700"></div></div>
+        <span>{{progress}}%</span>
+        <div class="progress-bar"><div :style="{width:progress+'%'}" class="inner  bg-indigo-700"></div></div>
       </div>
     </td>
-    <td>
+    <td >
       <div class="pl-1 relative flex justify-between items-center pr-1">
             <span>
-            {{data.date}}
+            {{date.year}}/{{date.month}}/{{date.day}}
            </span>
         <NavbarButton
             @show="toggleFocus($event)"
             icon="bi bi-three-dots-vertical !text-1.2 card-btn"
             badge="!w-0 !h-0"
             :active="undefined"
+            v-if="!isPost"
         />
-        <Transition name="show">
+        <Transition name="show" v-if="!isPost">
           <Dropdown v-if="show" width="160px" top="-80px">
             <li class="dropdown-hover !py-[0.45rem]">
               <AppLink to="#" class="dropdown-card">
@@ -81,9 +98,8 @@ import NavbarButton from '../Header/NavbarButton.vue'
 import Dropdown from '../Header/Dropdown.vue'
 import AppLink from '../reusable/AppLink.vue'
 import useNavbar from "../../composables/useNavbar.js";
-let props=defineProps(['data'])
+let props=defineProps(['image','name','email','companyName1','companyName2','statusClass','status','progress','date','isPost','category','author'])
 const {show,toggleFocus} = useNavbar()
-
 
 </script>
 

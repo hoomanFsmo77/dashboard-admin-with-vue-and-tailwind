@@ -64,7 +64,7 @@ const sidebarItem= (props,emit)=>{
                 let ulStyles=getComputedStyle(sub_container.value)
                 ulHeight.value=ulStyles.height
                 show.value=props.isOpen
-            },1000)
+            },500)
         }
     }
     const singleLinkItemHandler = () => {

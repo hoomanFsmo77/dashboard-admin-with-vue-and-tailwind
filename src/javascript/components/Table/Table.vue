@@ -2,31 +2,46 @@
     <table class="w-full" >
       <thead class=" bg-primary-dark text-white text-left font-500">
       <tr class=" w-full">
-        <th @click="toggle($event)" v-for="item in th" colspan="1" class="uppercase tracking-wide text-[0.9rem] cursor-pointer py-1.5 px-1 " :style="{width:item.width}">
-          <div class=" md:w-full w-[210px] flex">
-            <span class="pl-1">{{item.title}}</span>
-            <div  class="flex flex-col !ml-auto  ">
-              <i class="bi bi-caret-up-fill text-0.5 opacity-30" ></i>
-              <i class="bi bi-caret-down-fill text-0.5 opacity-100" ></i>
-            </div>
-          </div>
-        </th>
+        <TableHead
+            v-for="item in th"
+            :title="item.title"
+            :width="item.width"
+            @sort="sortHandler($event)"
+            :table-data="td"
+            :is-post="isPost"
+
+        />
       </tr>
       </thead>
       <tbody>
-        <TableRow v-for="item in finalArray" :data="item"/>
+        <TableRow v-for="item in finalArray"
+                  :image="item.image"
+                  :name="item.name"
+                  :email="item.email"
+                  :company-name1="item.companyName1"
+                  :company-name2="item.companyName2"
+                  :status-class="item.statusClass"
+                  :status="item.status"
+                  :progress="item.progress"
+                  :date="item.date"
+                  :category="item.category"
+                  :author="item.author"
+                  :is-post="isPost"
+        />
       </tbody>
     </table>
 </template>
 
 <script setup>
-import TableRow from './TableRow.vue'
+import TableRow from './TableRow.vue';
+import TableHead from './TableHead.vue'
 import {ref,watch} from "vue";
-let props=defineProps(['th','td','currentPage','itemInOne','searchedText'])
+let props=defineProps(['th','td','currentPage','itemInOne','searchedText','isPost'])
 let finalArray=ref([])
+let target=ref(props.td)
 
 const updatePagination = () => {
-  finalArray.value=[...props.td].slice((props.currentPage*props.itemInOne)-props.itemInOne,props.currentPage*props.itemInOne)
+  finalArray.value=target.value.slice((props.currentPage*props.itemInOne)-props.itemInOne,props.currentPage*props.itemInOne)
 }
 
 
@@ -50,17 +65,9 @@ watch(
     }
 )
 
-
-const toggle=(e)=>{
-  let up=e.target.children[1].children[0]
-  let down=e.target.children[1].children[1]
-  if(down.classList.contains('opacity-100')){
-    down.classList.replace('opacity-100','opacity-30')
-    up.classList.replace('opacity-30','opacity-100')
-  }else{
-    up.classList.replace('opacity-100','opacity-30')
-    down.classList.replace('opacity-30','opacity-100')
-  }
+const sortHandler = e => {
+  target.value=e
+  updatePagination()
 }
 
 

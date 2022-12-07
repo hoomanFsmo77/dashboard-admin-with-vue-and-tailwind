@@ -55,11 +55,17 @@
   .btn-primary{
     @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] border-[1px] border-primary-indigo bg-white text-primary-indigo hover:bg-primary-indigo hover:text-white focus:ring-4 focus:ring-primary-indigo/50 transition-all;
   }
+  .btn-primary-full{
+    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] bg-primary-indigo text-white hover:bg-indigo-700  transition-all;
+  }
   .btn-sm{
     @apply text-[0.9rem];
   }
   .progress-bar{
     @apply h-[3px] bg-primary-indigo/20 rounded-4 relative w-full overflow-hidden
+  }
+  .progress-bar-big{
+    @apply h-[9px] ;
   }
   .progress-bar .inner{
     @apply absolute left-0 top-0 h-full
@@ -69,5 +75,19 @@
   }
   .card{
     @apply shadow-[0_4px_21px_rgba(0,0,0,0.15)] rounded-10 bg-white;
+  }
+  .card-footer{
+    @apply bg-gray-100 p-2;
+  }
+  .icon-wrapper{
+    @apply w-2 h-2 flex justify-center items-center rounded-full bg-sky-200 text-sky-600;
+  }
+  .link{
+    @apply text-blue-500 hover:underline
+  }
+  .checkbox{
+    @apply appearance-none w-[10px] h-[10px] p-[6px] border-[1px] border-gray-400 rounded-2 checked:ring-2 checked:ring-primary-indigo/50 checked:bg-primary-indigo checked:text-white
+      checked:bg-[url("../../assets/check.svg")] checked:bg-center
+    ;
   }
 }
