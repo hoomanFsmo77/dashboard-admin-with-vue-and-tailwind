@@ -1,60 +1,83 @@
 <template>
-  <tr class="table-hover " >
+  <tr class="table-hover ">
     <td>
-      <div class="p-1 px-1.3 flex items-center gap-1" v-if="!isPost">
+      <div class="p-1 px-1.3 flex items-center gap-1" v-if="isPost===false">
         <UserProfile width="50px" height="50px" image-width="40" :src="image"/>
         <div>
-          <span class="text-1 font-600">{{name}}</span>
+          <span class="text-1 font-600">{{ name }}</span>
           <br>
-          <span class="text-[0.85rem] text-gray-600">{{email}}</span>
+          <span class="text-[0.85rem] text-gray-600">{{ email }}</span>
         </div>
       </div>
-      <div  class="flex items-center gap-0.75 p-1 px-1.3" v-else>
-          <input class="checkbox" type="checkbox" >
-          <router-link :to="{name:'newPost'}" class="flex items-center gap-0.75">
-            <img :src="image" width="80" class="rounded-4" alt="">
-            <span class="font-700 text-0.875 ">
-               {{name}}
+      <div class="flex items-center gap-0.75 p-1 px-1.3" v-else-if="isPost===true">
+        <input :class="{'!hidden':!hasHead}" class="checkbox" type="checkbox">
+        <router-link :to="hasHead ? {name:'newPost'} :{name:''}" class="flex items-center gap-0.75">
+          <img :src="image" width="80" class="rounded-4" alt="">
+          <span class="font-700 text-0.875 ">
+               {{ name }}
             </span>
-          </router-link>
+        </router-link>
+      </div>
+      <div v-else class="p-1 px-1.3 flex items-center gap-0.75">
+        <input class="checkbox" type="checkbox">
+        <span>#{{ orderId }}</span>
       </div>
     </td>
     <td>
-      <div class="p-1 px-1.3" v-if="!isPost">
-        <span class="text-1 font-600">{{companyName1}}</span>
+      <div class="p-1 px-1.3" v-if="isPost===false">
+        <span class="text-1 font-600">{{ companyName1 }}</span>
         <br>
         <span class="text-[0.9rem] text-gray-600">{{ companyName2 }}</span>
       </div>
-      <div class="text-center" v-else>
-        <span class="text-0.875 font-600" >{{author}}</span>
+      <div class="text-center" v-else-if="isPost===true">
+        <span class="text-0.875 font-600" :class="{'!text-1':!hasHead}">{{ hasHead ? author : `$${price}` }}</span>
+      </div>
+      <div v-else>
+        <span class="text-1 font-600">{{ name }}</span>
+        <br>
+        <span class="text-[0.85rem] text-gray-600">{{ email }}</span>
       </div>
     </td>
     <td>
-          <span v-if="!isPost" class="category-card "
-                :class="{
+      <span v-if="isPost===false" class="category-card "
+            :class="{
             'bg-yellow-300 text-yellow-700':statusClass==='yellow',
             'bg-indigo-300 text-indigo-700':statusClass==='indigo',
             'bg-red-300 text-red-700':statusClass==='red',
             'bg-green-300 text-green-700':statusClass==='green',
           }">
             <i class="bi bi-circle-fill text-0.5 mr-[0.3rem]"></i>
-            <span class="text-[0.7rem]">{{status}}</span>
+            <span class="text-[0.7rem]">{{ status }}</span>
           </span>
-           <div class="text-center" v-else>
-             <span >{{category}}</span>
-          </div>
+      <div class="text-center" v-else-if="isPost===true">
+        <span>{{ category }}</span>
+      </div>
+      <div v-else class="text-center">
+            <span>
+            {{ date.year }}/{{ date.month }}/{{ date.day }}
+           </span>
+      </div>
 
     </td>
-    <td v-if="!isPost">
+    <td v-if="isPost===false">
       <div class="flex items-center gap-0.5">
-        <span>{{progress}}%</span>
-        <div class="progress-bar"><div :style="{width:progress+'%'}" class="inner  bg-indigo-700"></div></div>
+        <span>{{ progress }}%</span>
+        <div class="progress-bar">
+          <div :style="{width:progress+'%'}" class="inner  bg-indigo-700"></div>
+        </div>
       </div>
     </td>
-    <td >
+    <td v-if="isOrder">
+      <div class="text-center">
+        <span>
+          ${{ price }}
+        </span>
+      </div>
+    </td>
+    <td v-if="!isOrder">
       <div class="pl-1 relative flex justify-between items-center pr-1">
             <span>
-            {{date.year}}/{{date.month}}/{{date.day}}
+            {{ date.year }}/{{ date.month }}/{{ date.day }}
            </span>
         <NavbarButton
             @show="toggleFocus($event)"
@@ -88,6 +111,34 @@
       </div>
 
     </td>
+    <td v-if="isOrder">
+      <div class="text-center">
+        <span class="category-card "
+              :class="{
+                'bg-yellow-300 text-yellow-700':statusClass==='yellow',
+                'bg-indigo-300 text-indigo-700':statusClass==='indigo',
+               'bg-red-300 text-red-700':statusClass==='red',
+                'bg-green-300 text-green-700':statusClass==='green',
+          }">
+            <i class="bi bi-circle-fill text-0.5 mr-[0.3rem]"></i>
+            <span class="text-[0.7rem]">{{ status }}</span>
+          </span>
+      </div>
+
+    </td>
+    <td v-if="isOrder">
+        <div class="flex gap-0.5">
+          <i v-for="i in 5" class="bi bi-star-fill" :class="{'text-yellow-600':i < review+1}"></i>
+        </div>
+    </td>
+    <td v-if="!hasHead">
+      <div>
+        <span v-if="status" class="category-card text-0.7"
+              :class="{'!bg-green-200 text-green-600':status==='hot','text-red-600 !bg-red-200':status==='Soldout','text-indigo-600 !bg-indigo-200':status==='New Arrival'}"
+        >{{ status }}
+        </span>
+      </div>
+    </td>
   </tr>
 
 </template>
@@ -98,25 +149,30 @@ import NavbarButton from '../Header/NavbarButton.vue'
 import Dropdown from '../Header/Dropdown.vue'
 import AppLink from '../reusable/AppLink.vue'
 import useNavbar from "../../composables/useNavbar.js";
-let props=defineProps(['image','name','email','companyName1','companyName2','statusClass','status','progress','date','isPost','category','author'])
-const {show,toggleFocus} = useNavbar()
+
+let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'isPost', 'category', 'author', 'hasHead', 'price', 'orderId', 'review', 'isOrder'])
+const {show, toggleFocus} = useNavbar()
+
 
 </script>
 
 <style scoped>
 @tailwind components;
 @layer components {
-  .table-hover{
+  .table-hover {
     @apply hover:bg-gray-200 transition-all;
   }
-  .show-enter-active,.show-leave-active{
+
+  .show-enter-active, .show-leave-active {
     @apply transition-all ease-in-out duration-300;
   }
-  .show-enter-from,.show-leave-to{
+
+  .show-enter-from, .show-leave-to {
     @apply opacity-0 top-[-70px];
 
   }
-  .show-enter-to,.show-leave-from{
+
+  .show-enter-to, .show-leave-from {
     @apply opacity-100 top-[-80px];
   }
 }

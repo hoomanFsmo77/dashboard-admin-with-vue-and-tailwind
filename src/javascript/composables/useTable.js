@@ -17,6 +17,44 @@ export default (emit,tableData)=>{
         which==='date' && sortDate()
         which==='status' && sortStatus()
         which==='Categories' && sortCategory()
+        which==='total price' && sortPrice()
+        which==='review' && sortReview()
+        which==='order id' && sortOrderId()
+    }
+
+
+    const sortOrderId = () => {
+        if(isActive.value==='down'){
+            sortedData.value=[...tableData].sort(
+                (p1,p2)=> (p1.orderId > p2.orderId) ? 1 : (p1.orderId < p2.orderId) ? -1 : 0)
+
+        }else{
+            sortedData.value=[...tableData].sort(
+                (p1,p2)=> (p1.orderId < p2.orderId) ? 1 : (p1.orderId > p2.orderId) ? -1 : 0)
+        }
+        emit('sort',sortedData.value)
+    }
+    const sortReview = () => {
+        if(isActive.value==='down'){
+            sortedData.value=[...tableData].sort(
+                (p1,p2)=> (p1.review > p2.review) ? 1 : (p1.price < p2.review) ? -1 : 0)
+
+        }else{
+            sortedData.value=[...tableData].sort(
+                (p1,p2)=> (p1.review < p2.review) ? 1 : (p1.price > p2.review) ? -1 : 0)
+        }
+        emit('sort',sortedData.value)
+    }
+    const sortPrice = () => {
+        if(isActive.value==='down'){
+            sortedData.value=[...tableData].sort(
+                (p1,p2)=> (p1.price > p2.price) ? 1 : (p1.price < p2.price) ? -1 : 0)
+
+        }else{
+            sortedData.value=[...tableData].sort(
+                (p1,p2)=> (p1.price < p2.price) ? 1 : (p1.price > p2.price) ? -1 : 0)
+        }
+        emit('sort',sortedData.value)
     }
     const sortCategory = () => {
        if(isActive.value==='up'){
@@ -33,7 +71,6 @@ export default (emit,tableData)=>{
         emit('sort',sortedData.value)
 
     }
-
     const sortContact = () => {
         if(isActive.value==='down'){
             sortedData.value=[...tableData].sort(

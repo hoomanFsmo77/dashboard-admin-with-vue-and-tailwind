@@ -1,6 +1,6 @@
 <template>
     <table class="w-full" >
-      <thead class=" bg-primary-dark text-white text-left font-500">
+      <thead class=" bg-primary-dark text-white text-left font-500" v-if="hasHead">
       <tr class=" w-full">
         <TableHead
             v-for="item in th"
@@ -26,7 +26,13 @@
                   :date="item.date"
                   :category="item.category"
                   :author="item.author"
+                  :price="item.price"
                   :is-post="isPost"
+                  :has-head="hasHead"
+                  :order-id="item.orderId"
+                  :review="item.review"
+                  :is-order="isOrder"
+                  :class="{'even:bg-gray-100':!hasHead}"
         />
       </tbody>
     </table>
@@ -36,7 +42,7 @@
 import TableRow from './TableRow.vue';
 import TableHead from './TableHead.vue'
 import {ref,watch} from "vue";
-let props=defineProps(['th','td','currentPage','itemInOne','searchedText','isPost'])
+let props=defineProps(['th','td','currentPage','itemInOne','searchedText','isPost','hasHead','isOrder'])
 let finalArray=ref([])
 let target=ref(props.td)
 

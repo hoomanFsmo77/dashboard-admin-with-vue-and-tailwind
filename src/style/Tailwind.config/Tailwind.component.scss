@@ -55,6 +55,12 @@
   .btn-primary{
     @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] border-[1px] border-primary-indigo bg-white text-primary-indigo hover:bg-primary-indigo hover:text-white focus:ring-4 focus:ring-primary-indigo/50 transition-all;
   }
+  .btn-white{
+    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] border-[1px] border-white bg-transparent text-white hover:bg-white hover:text-primary-dark focus:ring-4 focus:ring-white/50 transition-all
+  }
+  .btn-white-full{
+    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px]   bg-white text-primary-dark focus:ring-4 focus:ring-white/50 transition-all
+  }
   .btn-primary-full{
     @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] bg-primary-indigo text-white hover:bg-indigo-700  transition-all;
   }

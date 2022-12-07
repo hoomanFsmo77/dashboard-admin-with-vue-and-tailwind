@@ -105,7 +105,7 @@
             </row>
           </div>
           <div class="overflow-x-auto w-0 min-w-full">
-            <Table :current-page="currentPage" :item-in-one="itemInOne" :th="tableData1.th" :td="tableData1.td" :searched-text="searchedText"></Table>
+            <Table :has-head="true" :current-page="currentPage" :item-in-one="itemInOne" :th="tableData1.th" :td="tableData1.td" :searched-text="searchedText" :is-post="false"> </Table>
           </div>
           <div class="bg-gray-100 p-2 flex md:justify-between justify-center items-center items-center md:flex-row flex-col gap-1 md:gap-0">
             <h6 class="text-gray-700">Showing page {{currentPage}} of {{totalPages}}</h6>
