@@ -511,7 +511,7 @@ let chart4={
             enabled: false
         },
         stroke: {
-            curve: 'straight'
+            curve: 'smooth'
         },
         grid: {
             show:false
@@ -626,6 +626,231 @@ let chart6={
         },
 
 }
+let chart7={
+
+        series: [70],
+        chartOptions: {
+            chart: {
+                height: 350,
+                type: 'radialBar',
+                fontFamily:'Montserrat,sans-serif',
+                fontSize:'13px'
+
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        size: '70',
+                    }
+                },
+            },
+            fill: {
+                type: 'gradient',
+                colors: 'rgba(79,70,229,1)',
+            },
+            labels: ['Hours'],
+            colors:['rgba(79,70,229,1)']
+
+
+        },
+}
+let chart8={
+
+        series: [30],
+        chartOptions: {
+            chart: {
+                height: 350,
+                type: 'radialBar',
+                fontFamily:'Montserrat,sans-serif',
+                fontSize:'13px'
+
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        size: '70',
+                    }
+                },
+            },
+            fill: {
+                type: 'gradient',
+                colors: 'rgba(22,163,74,1)',
+            },
+            labels: ['Completed'],
+            colors:['rgba(22,163,74,1)']
+
+
+        },
+}
+
+let chart9={
+    series: [{
+        name: "Cost",
+        data: [10, 41, 56, 90, 50, 62, 70, 89]
+    }],
+    chartOptions: {
+
+        chart: {
+            fontFamily:'Montserrat,sans-serif',
+            height: 350,
+            type: 'line',
+            colors: ['rgba(79,70,229,1)'],
+
+            zoom: {
+                enabled: false
+            },
+            toolbar:{
+                show:false
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        colors: ['rgba(79,70,229,1)'],
+
+        stroke: {
+            colors: ['rgba(79,70,229,1)'],
+
+            curve: 'smooth'
+        },
+        grid: {
+            show:false
+        },
+        xaxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return "$ " + val
+                }
+            }
+        }
+    },
+}
+
+let chart10={
+
+    series: [39],
+    chartOptions: {
+        chart: {
+            height: 350,
+            type: 'radialBar',
+            fontFamily:'Montserrat,sans-serif',
+            fontSize:'13px'
+
+        },
+        responsive:[
+            {
+                breakpoint:500,
+                options:{
+                    redrawOnWindowResize: true,
+                    width: '200px',
+                    legend:{
+                        fontSize: '12px'
+                    }
+                }
+            }
+        ],
+        plotOptions: {
+            radialBar: {
+                hollow: {
+                    size: '70',
+                }
+            },
+        },
+        fill: {
+            type: 'gradient',
+            colors: 'rgba(219,39,119)',
+        },
+        labels: ['Credit Used'],
+        colors:[ 'rgba(219,39,119)']
+
+    },
+}
+let chart11={
+
+    series: [39],
+    chartOptions: {
+        chart: {
+            height: '100%',
+            type: 'radialBar',
+            fontFamily:'Montserrat,sans-serif',
+            fontSize:'13px'
+
+        },
+        plotOptions: {
+            radialBar: {
+                hollow: {
+                    size: '70',
+                }
+            },
+        },
+        fill: {
+            type: 'gradient',
+            colors: 'rgb(13,148,136)',
+        },
+        labels: ['Completed'],
+        colors:[ 'rgb(13,148,136)']
+
+
+    },
+}
+
+let chart12={
+    series: [{
+        name: "Profile Visitor",
+        data: [30, 41, 35, 48, 31, 59, 42, 48]
+    }],
+    chartOptions: {
+
+        chart: {
+            fontFamily:'Montserrat,sans-serif',
+            height: 350,
+            type: 'line',
+            colors: ['rgba(220,38,38,1)'],
+
+            zoom: {
+                enabled: false
+            },
+            toolbar:{
+                show:false
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        colors: ['rgba(220,38,38,1)'],
+
+        stroke: {
+            colors: ['rgba(220,38,38,1)'],
+
+            curve: 'smooth'
+        },
+        grid: {
+            show:false
+        },
+        xaxis: {
+            labels: {
+                show: false,
+            },
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        },
+        yaxis: {
+            labels: {
+                show: false,
+            }
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return "" + val
+                }
+            }
+        }
+    },
+}
+
 
 
 //////////////////////////////////// table data
@@ -1406,4 +1631,4 @@ const tooltipData=[
     },
 ]
 
-export {sidebarMainData,sidebarDocsData,defaultPageData,chart1,activityData,tableData1,chart2,chart3,tableData2,tableData3,tableData4,tableData5,tooltipData,chart4,chart5,chart6,tableData6}
+export {sidebarMainData,sidebarDocsData,defaultPageData,chart1,activityData,tableData1,chart2,chart3,tableData2,tableData3,tableData4,tableData5,tooltipData,chart4,chart5,chart6,tableData6,chart7,chart8,chart9,chart10,chart11,chart12}
