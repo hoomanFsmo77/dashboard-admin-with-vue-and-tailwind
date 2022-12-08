@@ -1,7 +1,7 @@
 <template>
   <tr class="table-hover ">
     <td>
-      <div class="p-1 px-1.3 flex items-center gap-1" v-if="isPost===false">
+      <div class="p-1 px-1.3 flex md:flex-row flex-col items-center gap-1" v-if="isPost===false">
         <UserProfile width="50px" height="50px" image-width="40" :src="image"/>
         <div>
           <span class="text-1 font-600">{{ name }}</span>
@@ -9,16 +9,16 @@
           <span class="text-[0.85rem] text-gray-600">{{ email }}</span>
         </div>
       </div>
-      <div class="flex items-center gap-0.75 p-1 px-1.3" v-else-if="isPost===true">
+      <div class="flex md:flex-row flex-col items-center gap-0.75 p-1 px-1.3" v-else-if="isPost===true">
         <input :class="{'!hidden':!hasHead}" class="checkbox" type="checkbox">
-        <router-link :to="hasHead ? {name:'newPost'} :{name:''}" class="flex items-center gap-0.75">
+        <router-link :to="hasHead ? {name:'newPost'} :{name:''}" class="flex items-center gap-0.75 md:flex-row flex-col">
           <img :src="image" width="80" class="rounded-4" alt="">
           <span class="font-700 text-0.875 ">
                {{ name }}
             </span>
         </router-link>
       </div>
-      <div v-else class="p-1 px-1.3 flex items-center gap-0.75">
+      <div v-else class="p-1 px-1.3 md:flex-row flex-col flex items-center gap-0.75">
         <input class="checkbox" type="checkbox">
         <span>#{{ orderId }}</span>
       </div>
@@ -60,7 +60,7 @@
 
     </td>
     <td v-if="isPost===false">
-      <div class="flex items-center gap-0.5">
+      <div class="flex md:flex-row flex-col items-center gap-0.5">
         <span>{{ progress }}%</span>
         <div class="progress-bar">
           <div :style="{width:progress+'%'}" class="inner  bg-indigo-700"></div>
@@ -75,7 +75,7 @@
       </div>
     </td>
     <td v-if="!isOrder">
-      <div class="pl-1 relative flex justify-between items-center pr-1">
+      <div class="pl-1 relative flex md:flex-row flex-col justify-between items-center pr-1">
             <span>
             {{ date.year }}/{{ date.month }}/{{ date.day }}
            </span>
@@ -127,7 +127,7 @@
 
     </td>
     <td v-if="isOrder">
-        <div class="flex gap-0.5">
+        <div class="flex  gap-0.5">
           <i v-for="i in 5" class="bi bi-star-fill" :class="{'text-yellow-600':i < review+1}"></i>
         </div>
     </td>

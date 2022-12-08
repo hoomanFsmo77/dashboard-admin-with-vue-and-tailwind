@@ -53,16 +53,22 @@
     @apply text-[0.8rem]
   }
   .btn-primary{
-    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] border-[1px] border-primary-indigo bg-white text-primary-indigo hover:bg-primary-indigo hover:text-white focus:ring-4 focus:ring-primary-indigo/50 transition-all;
+    @apply border-[1px] border-primary-indigo bg-white text-primary-indigo hover:bg-primary-indigo hover:text-white  focus:ring-primary-indigo/50 ;
+  }
+  .btn{
+    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] focus:ring-4 transition-all capitalize
   }
   .btn-white{
-    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] border-[1px] border-white bg-transparent text-white hover:bg-white hover:text-primary-dark focus:ring-4 focus:ring-white/50 transition-all
+    @apply  border-[1px] border-white bg-transparent text-white hover:bg-white hover:text-primary-dark focus:ring-4 focus:ring-white/50
   }
   .btn-white-full{
-    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px]   bg-white text-primary-dark focus:ring-4 focus:ring-white/50 transition-all
+    @apply   bg-white text-primary-dark focus:ring-4 focus:ring-white/50
   }
   .btn-primary-full{
-    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] bg-primary-indigo text-white hover:bg-indigo-700  transition-all;
+    @apply  bg-primary-indigo text-white hover:bg-indigo-700  focus:ring-primary-indigo/50 focus:ring-4;
+  }
+  .btn-teal-full{
+    @apply  bg-teal-600 text-white hover:bg-teal-700  focus:ring-teal-600/50 focus:ring-4;
   }
   .btn-sm{
     @apply text-[0.9rem];
@@ -95,5 +101,11 @@
     @apply appearance-none w-[10px] h-[10px] p-[6px] border-[1px] border-gray-400 rounded-2 checked:ring-2 checked:ring-primary-indigo/50 checked:bg-primary-indigo checked:text-white
       checked:bg-[url("../../assets/check.svg")] checked:bg-center
     ;
+  }
+  .shadow-inset{
+    @apply shadow-[inset_0_0px_5px_0_rgba(0,0,0,0.1)];
+  }
+  .table-hover {
+    @apply hover:bg-gray-200 transition-all;
   }
 }

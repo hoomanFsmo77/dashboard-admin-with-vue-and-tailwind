@@ -489,6 +489,143 @@ let chart3={
         }
     },
 }
+let chart4={
+    series: [{
+        name: "Cost",
+        data: [10, 41, 30, 51, 35, 62, 52, 59, 40]
+    }],
+    chartOptions: {
+        chart: {
+
+            fontFamily:'Montserrat,sans-serif',
+            height: 350,
+            type: 'line',
+            zoom: {
+                enabled: false
+            },
+            toolbar:{
+                show:false
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'straight'
+        },
+        grid: {
+            show:false
+        },
+        xaxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return "$ " + val
+                }
+            }
+        }
+    },
+}
+let chart5={
+        series: [67],
+        chartOptions: {
+            chart: {
+                fontFamily:'Montserrat,sans-serif',
+                height: 350,
+                type: 'radialBar',
+                offsetY: -10
+            },
+            plotOptions: {
+                radialBar: {
+                    startAngle: -135,
+                    endAngle: 135,
+                    dataLabels: {
+                        name: {
+                            fontSize: '16px',
+                            color: undefined,
+                            offsetY: 120
+                        },
+                        value: {
+                            offsetY: 76,
+                            fontSize: '22px',
+                            color: undefined,
+                            formatter: function (val) {
+                                return val + " Hours";
+                            }
+                        }
+                    }
+                }
+            },
+            fill: {
+                type: 'gradient',
+                colors: 'rgba(22,163,74,1)',
+                gradient: {
+                    shade: 'dark',
+                    shadeIntensity: 0.15,
+                    inverseColors: false,
+                    opacityFrom: 1,
+                    opacityTo: 1,
+                    stops: [0, 50, 65, 91]
+                },
+            },
+            stroke: {
+                dashArray: 4
+            },
+            labels: ['Median Ratio'],
+        },
+
+}
+let chart6={
+        series: [85],
+        chartOptions: {
+            chart: {
+                fontFamily:'Montserrat,sans-serif',
+                height: 350,
+                type: 'radialBar',
+                offsetY: -10
+            },
+            plotOptions: {
+                radialBar: {
+                    startAngle: -135,
+                    endAngle: 135,
+                    dataLabels: {
+                        name: {
+                            fontSize: '16px',
+                            color: undefined,
+                            offsetY: 120
+                        },
+                        value: {
+                            offsetY: 76,
+                            fontSize: '22px',
+                            color: undefined,
+                            formatter: function (val) {
+                                return val + " Completed";
+                            }
+                        }
+                    }
+                }
+            },
+            fill: {
+                type: 'gradient',
+                colors: 'rgba(79,70,229,1)',
+                gradient: {
+                    shade: 'dark',
+                    shadeIntensity: 0.15,
+                    inverseColors: false,
+                    opacityFrom: 1,
+                    opacityTo: 1,
+                    stops: [0, 50, 65, 91]
+                },
+            },
+            stroke: {
+                dashArray: 4
+            },
+            labels: ['Median Ratio'],
+        },
+
+}
 
 
 //////////////////////////////////// table data
@@ -1136,5 +1273,137 @@ let tableData4={
         },
     ]
 }
+let tableData5={
+    th:['Assigned','Name','due','priority'],
+    td:[
+        {
+            img:'./assets/profile_1.svg',
+            username:'lorem ipsum',
+            alias:'lorem',
+            name:'username 1',
+            due:'January 25',
+            priority:'Medium',
+            theme:'green'
+        },
+        {
+            img:'./assets/profile_2.svg',
+            username:'lorem ipsum',
+            alias:'lorem',
+            name:'username 2',
+            due:'January 25',
+            priority:'High',
+            theme:'red'
+        },
+        {
+            img:'./assets/profile_3.svg',
+            username:'lorem ipsum',
+            alias:'lorem',
+            name:'username 3',
+            due:'January 25',
+            priority:'Low',
+            theme:'indigo'
+        },
+        {
+            img:'./assets/profile_4.svg',
+            username:'lorem ipsum',
+            alias:'lorem',
+            name:'username 4',
+            due:'January 25',
+            priority:'New',
+            theme:'blue'
+        },
+        {
+            img:'./assets/profile_5.svg',
+            username:'lorem ipsum',
+            alias:'lorem',
+            name:'username 5',
+            due:'January 25',
+            priority:'Medium',
+            theme:'green'
+        },
+        {
+            img:'./assets/profile_6.svg',
+            username:'lorem ipsum',
+            alias:'lorem',
+            name:'username 6',
+            due:'January 25',
+            priority:'High',
+            theme:'red'
+        },
+    ]
+}
+let tableData6={
+    th:['due','user','description'],
+    td:[
+        {
+            time:'4 days',
+            img:'./assets/profile_1.svg',
+            name:'lorem ipsum',
+            descriptionTitle:'[#2568] License not recieved',
+            description:'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed in'
 
-export {sidebarMainData,sidebarDocsData,defaultPageData,chart1,activityData,tableData1,chart2,chart3,tableData2,tableData3,tableData4}
+        },
+        {
+            time:'4 days',
+            img:'./assets/profile_2.svg',
+            name:'lorem ipsum',
+            descriptionTitle:'[#3224] License not recieved',
+            description:'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed in'
+
+        },
+        {
+            time:'4 days',
+            img:'./assets/profile_3.svg',
+            name:'lorem ipsum',
+            descriptionTitle:'[#5313] License not recieved',
+            description:'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed in'
+
+        },
+        {
+            time:'4 days',
+            img:'./assets/profile_4.svg',
+            name:'lorem ipsum',
+            descriptionTitle:'[#3412] License not recieved',
+            description:'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed in'
+
+        },
+        {
+            time:'4 days',
+            img:'./assets/profile_5.svg',
+            name:'lorem ipsum',
+            descriptionTitle:'[#2341] License not recieved',
+            description:'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed in'
+
+        },
+    ]
+}
+
+//////////////////////// tooltip data
+const tooltipData=[
+    {
+        img:'./assets/profile_1.svg',
+        title:'lorem ipsum'
+    },
+    {
+        img:'./assets/profile_2.svg',
+        title:'lorem ipsum'
+    },
+    {
+        img:'./assets/profile_3.svg',
+        title:'lorem ipsum'
+    },
+    {
+        img:'./assets/profile_4.svg',
+        title:'lorem ipsum'
+    },
+    {
+        img:'./assets/profile_5.svg',
+        title:'lorem ipsum'
+    },
+    {
+        img:'./assets/profile_6.svg',
+        title:'lorem ipsum'
+    },
+]
+
+export {sidebarMainData,sidebarDocsData,defaultPageData,chart1,activityData,tableData1,chart2,chart3,tableData2,tableData3,tableData4,tableData5,tooltipData,chart4,chart5,chart6,tableData6}

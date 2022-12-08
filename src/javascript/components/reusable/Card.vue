@@ -2,7 +2,7 @@
     <div class="shadow-card rounded-10 bg-white ">
        <div class="card_title p-2 flex items-center justify-between">
           <span class="uppercase font-500 tracking-widest text-primary-dark text-[0.87rem]">{{title}}</span>
-          <div class="relative">
+          <div class="relative" v-if="hasMenu===undefined">
             <NavbarButton
                           @show="toggleFocus($event)"
                           icon="bi bi-three-dots-vertical !text-1.2 card-btn"
@@ -52,7 +52,7 @@ import useNavbar from "../../composables/useNavbar.js";
 import Dropdown from "../Header/Dropdown.vue";
 import AppLink from "./AppLink.vue";
 ////////////////////////////////////////////////
-let props=defineProps(['title','bodyClass'])
+let props=defineProps(['title','bodyClass','hasMenu'])
 const {show,toggleFocus} = useNavbar()
 
 

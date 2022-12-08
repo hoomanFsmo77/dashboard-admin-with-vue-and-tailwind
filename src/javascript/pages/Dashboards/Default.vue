@@ -94,7 +94,7 @@
             <row>
               <column col="12" md="8" class="flex gap-1 items-center flex-wrap">
                 <SelectBox :opt="['lorem ipsum','lorem']"/>
-                <button class="btn-primary btn-sm ">Apply</button>
+                <button class="btn btn-primary btn-sm ">Apply</button>
                 <SelectBox @input="changeItemInOne($event)" :opt="[5,10,15,20,25]"/>
 
                 <span class="text-[0.7rem] text-gray-500">Entries per page</span>
@@ -109,14 +109,14 @@
           </div>
           <div class="bg-gray-100 p-2 flex md:justify-between justify-center items-center items-center md:flex-row flex-col gap-1 md:gap-0">
             <h6 class="text-gray-700">Showing page {{currentPage}} of {{totalPages}}</h6>
-            <div>
-              <button class="btn-primary btn-sm mx-0.5" @click="prevPage">
+            <div class="flex flex-wrap md:gap-0 gap-0.5">
+              <button class="btn btn-primary btn-sm mx-0.5" @click="prevPage">
                 &lt;
               </button>
-              <button :class="{'bg-primary-indigo text-white':currentPage===item}" v-for="item in totalPages" @click="paginationHandler(item)" class="btn-primary btn-sm mx-0.5">
+              <button :class="{'bg-primary-indigo text-white':currentPage===item}" v-for="item in totalPages" @click="paginationHandler(item)" class="btn btn-primary btn-sm mx-0.5">
                 {{item}}
               </button>
-              <button class="btn-primary btn-sm mx-0.5" @click="nextPage">
+              <button class="btn btn-primary btn-sm mx-0.5" @click="nextPage">
                 >
               </button>
             </div>

@@ -58,8 +58,8 @@
                 Sales by channel
               </span>
               <div class="flex flex-col md:flex-row gap-0.5">
-                <button class="btn-white-full btn-sm mx-0.5 ">This week</button>
-                <button class="btn-white btn-sm mx-0.5 ">Last week</button>
+                <button class="btn btn-white-full btn-sm mx-0.5 ">This week</button>
+                <button class="btn btn-white btn-sm mx-0.5 ">Last week</button>
               </div>
             </div>
             <div class="card-body px-1.5 py-1">
@@ -152,14 +152,14 @@
           </div>
           <div class="bg-gray-100 p-2 flex md:justify-between justify-center items-center items-center md:flex-row flex-col gap-1 md:gap-0">
             <h6 class="text-gray-700">Showing page {{currentPage}} of {{totalPages}}</h6>
-            <div>
-              <button class="btn-primary btn-sm mx-0.5" @click="prevPage">
+            <div class="flex flex-wrap md:gap-0 gap-0.5">
+              <button class="btn btn-primary btn-sm mx-0.5" @click="prevPage">
                 &lt;
               </button>
-              <button :class="{'bg-primary-indigo text-white':currentPage===item}" v-for="item in totalPages" @click="paginationHandler(item)" class="btn-primary btn-sm mx-0.5">
+              <button :class="{'bg-primary-indigo text-white':currentPage===item}" v-for="item in totalPages" @click="paginationHandler(item)" class="btn btn-primary btn-sm mx-0.5">
                 {{item}}
               </button>
-              <button class="btn-primary btn-sm mx-0.5" @click="nextPage">
+              <button class="btn btn-primary btn-sm mx-0.5" @click="nextPage">
                 >
               </button>
             </div>

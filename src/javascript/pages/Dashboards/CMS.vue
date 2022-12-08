@@ -67,8 +67,8 @@
             </Card>
           </column>
           <column col="12">
-              <Card title="Site health status" body-class="!px-2 !py-1.5 flex items-center gap-1">
-                    <span class="icon-wrapper !w-16 !h-5 bg-orange-200 text-orange-500">
+              <Card title="Site health status" body-class="!px-2 !py-1.5 flex md:flex-row flex-col items-center gap-1">
+                    <span class="icon-wrapper md:!w-16 md:!h-5 w-4 h-4 bg-orange-200 text-orange-500">
                           <i class="bi bi-bag-heart text-1.8"></i>
                     </span>
                    <div class="text-[0.9rem] text-gray-600">
@@ -93,7 +93,7 @@
             <div class="mt-1.5">
               <AreaBox class="w-full" placeholder="What is in your mind?" label="Content" id="content" hint="The description is not prominent by default; however, some themes may show it." row="6"/>
             </div>
-            <button class="btn-primary-full mt-1.5">Save Draft</button>
+            <button class="btn btn-primary-full mt-1.5">Save Draft</button>
           </div>
           <div class="card-footer">
             <span class="font-700 text-gray-700 text-0.875">Lorem ipsum dolor sit.</span>
@@ -122,7 +122,7 @@
             <row>
               <column col="12"  class="flex gap-1 items-center flex-wrap">
                 <SelectBox :opt="['lorem ipsum','lorem']"/>
-                <button class="btn-primary btn-sm ">Apply</button>
+                <button class="btn btn-primary btn-sm ">Apply</button>
                 <SelectBox @input="changeItemInOne($event)" :opt="[5,10,15,20,25]"/>
 
                 <span class="text-[0.7rem] text-gray-500">Entries per page</span>
@@ -137,14 +137,14 @@
           </div>
           <div class="bg-gray-100 p-2 flex md:justify-between justify-center items-center items-center md:flex-row flex-col gap-1 md:gap-0">
             <h6 class="text-gray-700">Showing page {{currentPage}} of {{totalPages}}</h6>
-            <div>
-              <button class="btn-primary btn-sm mx-0.5" @click="prevPage">
+            <div class="flex flex-wrap md:gap-0 gap-0.5">
+              <button class="btn btn-primary btn-sm mx-0.5" @click="prevPage">
                 &lt;
               </button>
-              <button :class="{'bg-primary-indigo text-white':currentPage===item}" v-for="item in totalPages" @click="paginationHandler(item)" class="btn-primary btn-sm mx-0.5">
+              <button :class="{'bg-primary-indigo text-white':currentPage===item}" v-for="item in totalPages" @click="paginationHandler(item)" class="btn-primary btn btn-sm mx-0.5">
                 {{item}}
               </button>
-              <button class="btn-primary btn-sm mx-0.5" @click="nextPage">
+              <button class="btn-primary btn btn-sm mx-0.5" @click="nextPage">
                 >
               </button>
             </div>
@@ -160,7 +160,7 @@
             <ActivityCard v-for="item in [...activityData].slice(0,7)" :name="item.name" :activity="item.activity"  :src="item.src" :is-last="true"/>
           </div>
           <div class="card-footer text-right">
-            <button class="btn-primary ">View all people</button>
+            <button class="btn btn-primary ">View all people</button>
           </div>
 
         </Card>
