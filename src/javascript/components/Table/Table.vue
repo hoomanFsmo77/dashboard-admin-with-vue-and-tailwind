@@ -67,7 +67,7 @@ watch(
 watch(
     ()=>props.searchedText,
     ()=>{
-      finalArray.value=[...props.td].filter(item=>item.name.toUpperCase().startsWith(props.searchedText.toUpperCase()))
+      finalArray.value=[...props.td].filter(item=>item.name.toUpperCase().startsWith(props.searchedText.toUpperCase())).slice((props.currentPage*props.itemInOne)-props.itemInOne,props.currentPage*props.itemInOne)
     }
 )
 

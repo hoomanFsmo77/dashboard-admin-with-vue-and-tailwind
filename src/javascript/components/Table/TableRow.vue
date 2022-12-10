@@ -24,13 +24,13 @@
       </div>
     </td>
     <td>
-      <div class="p-1 px-1.3" v-if="isPost===false">
+      <div  v-if="isPost===false">
         <span class="text-1 font-600">{{ companyName1 }}</span>
         <br>
         <span class="text-[0.9rem] text-gray-600">{{ companyName2 }}</span>
       </div>
-      <div class="text-center" v-else-if="isPost===true">
-        <span class="text-0.875 font-600" :class="{'!text-1':!hasHead}">{{ hasHead ? author : `$${price}` }}</span>
+      <div class="text-left" v-else-if="isPost===true">
+        <span class="text-0.875 font-600 " :class="{'!text-1':!hasHead}">{{ hasHead ? author : `$${price}` }}</span>
       </div>
       <div v-else>
         <span class="text-1 font-600">{{ name }}</span>
@@ -49,10 +49,10 @@
             <i class="bi bi-circle-fill text-0.5 mr-[0.3rem]"></i>
             <span class="text-[0.7rem]">{{ status }}</span>
           </span>
-      <div class="text-center" v-else-if="isPost===true">
+      <div class="text-left" v-else-if="isPost===true">
         <span>{{ category }}</span>
       </div>
-      <div v-else class="text-center">
+      <div v-else class="text-left">
             <span>
             {{ date.year }}/{{ date.month }}/{{ date.day }}
            </span>
@@ -68,7 +68,7 @@
       </div>
     </td>
     <td v-if="isOrder">
-      <div class="text-center">
+      <div class="text-left">
         <span>
           ${{ price }}
         </span>
@@ -112,7 +112,7 @@
 
     </td>
     <td v-if="isOrder">
-      <div class="text-center">
+      <div class="text-left">
         <span class="category-card "
               :class="{
                 'bg-yellow-300 text-yellow-700':statusClass==='yellow',

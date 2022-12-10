@@ -45,6 +45,7 @@ const sidebarItem= (props,emit)=>{
         if(!props.hasSub){
             show.value=false
         }
+
     })
 
     const addActiveClass = () => {
@@ -58,12 +59,13 @@ const sidebarItem= (props,emit)=>{
     })
 
     const updateUlHeight = () => {
+        currentRoutePath.value=route.path
         show.value=true
         if(props.hasSub){
             setTimeout(function () {
                 let ulStyles=getComputedStyle(sub_container.value)
                 ulHeight.value=ulStyles.height
-                show.value=props.isOpen
+                show.value=currentRoutePath.value.includes(props.title)
             },500)
         }
     }

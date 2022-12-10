@@ -20,6 +20,8 @@ export default (emit,tableData)=>{
         which==='total price' && sortPrice()
         which==='review' && sortReview()
         which==='order id' && sortOrderId()
+        which==='name' && sortName()
+        which==='Author' && sortAuthor()
     }
 
 
@@ -111,6 +113,33 @@ export default (emit,tableData)=>{
                 (p1,p2)=> (p1.statusCode < p2.statusCode) ? 1 : (p1.statusCode > p2.statusCode) ? -1 : 0)
         }
         emit('sort',sortedData.value)
+    }
+    const sortName=()=>{
+        if(isActive.value==='down'){
+            sortedData.value=[...tableData].sort((p1,p2)=> p1.name > p2.name ? 1 : p1.name< p2.name ? -1 :0 )
+            emit('sort',sortedData.value)
+
+            /// a to z
+        }else{
+            sortedData.value=[...tableData].sort((p1,p2)=> p1.name < p2.name ? 1 : p1.name> p2.name ? -1 :0 )
+            emit('sort',sortedData.value)
+
+            /// z to a
+        }
+
+    }
+    const sortAuthor=()=>{
+        if(isActive.value==='down'){
+            sortedData.value=[...tableData].sort((p1,p2)=> p1.author > p2.author ? 1 : p1.author< p2.author ? -1 :0 )
+            emit('sort',sortedData.value)
+
+            /// a to z
+        }else{
+            sortedData.value=[...tableData].sort((p1,p2)=> p1.author < p2.author ? 1 : p1.author> p2.author ? -1 :0 )
+            emit('sort',sortedData.value)
+
+            /// z to a
+        }
     }
 
     return {isActive,toggle}
