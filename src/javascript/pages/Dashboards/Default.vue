@@ -93,9 +93,9 @@
           <div class=" p-2 shadow-[inset_0_0px_5px_0_rgba(0,0,0,0.1)] overflow-hidden">
             <row>
               <column col="12" md="8" class="flex gap-1 items-center flex-wrap">
-                <SelectBox :opt="['lorem ipsum','lorem']"/>
+                <SelectBox value="lorem ipsum" :opt="['lorem ipsum','lorem']"/>
                 <button class="btn btn-primary btn-sm ">Apply</button>
-                <SelectBox @input="changeItemInOne($event)" :opt="[5,10,15,20,25]"/>
+                <SelectBox value="5" @input="changeItemInOne($event)" :opt="[5,10,15,20,25]"/>
 
                 <span class="text-[0.7rem] text-gray-500">Entries per page</span>
               </column>

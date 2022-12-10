@@ -17,7 +17,7 @@
           <div class=" p-1.5 !py-1  overflow-hidden bg-[#f8f9fa]">
             <row>
               <column col="12" md="6"  class="flex gap-1 items-center flex-wrap">
-                <SelectBox :opt="['lorem ipsum','lorem']"/>
+                <SelectBox value="lorem ipsum" :opt="['lorem ipsum','lorem']"/>
                 <button class="btn btn-primary btn-sm ">Apply</button>
                 <SelectBox value="10" @input="changeItemInOne($event)" :opt="[5,10,15,20,25]"/>
 

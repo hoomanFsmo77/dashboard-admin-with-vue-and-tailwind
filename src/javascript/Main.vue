@@ -15,6 +15,8 @@
 /////////// main style
 import '../style/App.scss';
 import '../assets/d_logo.png'
+import 'v-calendar/dist/style.css';
+
 ////////// components
 import Header from './components/Header/Header.vue'
 import Sidebar from "./components/Sidebar/Sidebar.vue";

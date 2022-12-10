@@ -1,5 +1,5 @@
 <template>
-  <select v-bind="$props" class="selectBox selectBox-sm">
+  <select @change="handleInput" ref="selectTag" class="selectBox selectBox-sm">
     <option v-for="item in opt" :value="item">
       {{item}}
     </option>
@@ -9,7 +9,22 @@
 <script>
 export default {
   name: "SelectBox",
-  props:['opt']
+  props:['opt','value'],
+  data(){
+    return{
+
+    }
+  },
+  mounted() {
+    this.$refs.selectTag.value=this.value
+    this.$emit('input',this.$refs.selectTag.value)
+
+  },
+  methods:{
+    handleInput(){
+      this.$emit('input',this.$refs.selectTag.value)
+    }
+  }
 }
 </script>
 

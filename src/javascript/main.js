@@ -16,6 +16,7 @@ import '../assets/check.svg'
 import {createApp} from "vue";
 import ApexCharts from 'apexcharts';
 import VueApexCharts from "vue3-apexcharts";
+import VCalendar from 'v-calendar';
 import router from "./router.config.js";
 import App from "./App.vue";
 import row from "./components/Grid/row.vue";
@@ -25,5 +26,6 @@ app.component('row',row)
 app.component('column',column)
 app.use(router)
 app.use(VueApexCharts)
+app.use(VCalendar)
 app.config.globalProperties.$apexcharts = ApexCharts;
 app.mount('#app')

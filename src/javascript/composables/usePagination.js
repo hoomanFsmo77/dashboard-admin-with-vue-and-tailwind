@@ -2,13 +2,13 @@ import {ref} from "vue";
 
 
 export default (tableData,itemInPage=5)=>{
-    let itemInOne=ref(itemInPage)
+    let itemInOne=ref(itemInPage )
     let totalPages=ref(Math.ceil(tableData.td.length / Number(itemInOne.value)))
     let currentPage=ref(1)
     let searchedText=ref('')
 
     const changeItemInOne = e => {
-        itemInOne.value=Number(e.target.value)
+        itemInOne.value=Number(e)
         totalPages.value=Math.ceil(tableData.td.length / itemInOne.value)
         currentPage.value=1
     }

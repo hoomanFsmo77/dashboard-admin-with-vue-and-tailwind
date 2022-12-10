@@ -55,6 +55,9 @@
   .btn-primary{
     @apply border-[1px] border-primary-indigo bg-white text-primary-indigo hover:bg-primary-indigo hover:text-white  focus:ring-primary-indigo/50 ;
   }
+  .btn-gray{
+    @apply border-[1px] border-gray-500 bg-white text-gray-500 hover:bg-gray-500 hover:text-white  focus:ring-gray-500/50 ;
+  }
   .btn{
     @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] focus:ring-4 transition-all capitalize
   }
@@ -72,6 +75,10 @@
   }
   .btn-sm{
     @apply text-[0.9rem];
+  }
+  .btn-sm-2{
+    @apply text-[0.75rem] font-500;
+
   }
   .progress-bar{
     @apply h-[3px] bg-primary-indigo/20 rounded-4 relative w-full overflow-hidden
@@ -98,8 +105,8 @@
     @apply text-blue-500 hover:underline
   }
   .checkbox{
-    @apply appearance-none w-[10px] h-[10px] p-[6px] border-[1px] border-gray-400 rounded-2 checked:ring-2 checked:ring-primary-indigo/50 checked:bg-primary-indigo checked:text-white
-      checked:bg-[url("../../assets/check.svg")] checked:bg-center
+    @apply appearance-none w-[14px] h-[14px] p-[6px] border-[1px] border-gray-400 rounded-4 focus:ring-4 focus:ring-primary-indigo/50 checked:bg-primary-indigo checked:text-white
+      checked:bg-[url("../../assets/check.svg")] checked:bg-center  checked:rounded-4 outline-0
     ;
   }
   .shadow-inset{
@@ -127,5 +134,12 @@
   .bg-gradient-green{
     @apply before:bg-gradient-to-r before:from-green-700 before:to-green-400;
 
+  }
+  .radio{
+    @apply appearance-none w-[16px] h-[16px] rounded-full border-[1px] border-gray-600 focus:ring-4 focus:ring-indigo-600/50 before:inline-block before:w-[8px] before:h-[8px] before:absolute relative before:top-[4px] checked:border-none before:right-[4px] before:rounded-full before:bg-white
+    checked:bg-indigo-600;
+  }
+  .tag{
+    @apply py-[4px] px-[12px] text-[0.9rem] text-white bg-primary-indigo rounded-[18px] flex gap-0.25 items-center
   }
 }
