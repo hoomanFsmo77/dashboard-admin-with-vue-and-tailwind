@@ -12,7 +12,7 @@
       <div class="flex md:flex-row flex-col items-center gap-0.75 p-1 px-1.3" v-else-if="isPost===true">
         <input :class="{'!hidden':!hasHead}" class="checkbox" type="checkbox">
         <router-link :to="hasHead ? {name:'newPost'} :{name:''}" class="flex items-center gap-0.75 md:flex-row flex-col">
-          <img :src="image" width="80" class="rounded-4" alt="">
+          <img v-if="image!==undefined" :src="image" width="80" class="rounded-4" alt="">
           <span class="font-700 text-0.875 ">
                {{ name }}
             </span>
@@ -76,9 +76,12 @@
     </td>
     <td v-if="!isOrder">
       <div class="pl-1 relative flex md:flex-row flex-col justify-between items-center pr-1">
-            <span>
+            <span v-if="date!==undefined">
             {{ date.year }}/{{ date.month }}/{{ date.day }}
            </span>
+        <span v-else class="text-blue-700">
+          {{count}}
+        </span>
         <NavbarButton
             @show="toggleFocus($event)"
             icon="bi bi-three-dots-vertical !text-1.2 card-btn"
@@ -150,7 +153,7 @@ import Dropdown from '../Header/Dropdown.vue'
 import AppLink from '../reusable/AppLink.vue'
 import useNavbar from "../../composables/useNavbar.js";
 
-let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'isPost', 'category', 'author', 'hasHead', 'price', 'orderId', 'review', 'isOrder'])
+let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'isPost', 'category', 'author', 'hasHead', 'price', 'orderId', 'review', 'isOrder','count'])
 const {show, toggleFocus} = useNavbar()
 
 

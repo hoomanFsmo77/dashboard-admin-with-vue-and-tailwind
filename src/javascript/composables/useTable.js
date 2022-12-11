@@ -13,51 +13,33 @@ export default (emit,tableData)=>{
         }else if(isActive.value==='none'){
             isActive.value='up'
         }
-        which==='contact' && sortContact()
+        which==='contact' && sortData('progress')
         which==='date' && sortDate()
-        which==='status' && sortStatus()
+        which==='status' && sortData('statusCode')
         which==='Categories' && sortCategory()
-        which==='total price' && sortPrice()
-        which==='review' && sortReview()
-        which==='order id' && sortOrderId()
-        which==='name' && sortName()
-        which==='Author' && sortAuthor()
+        which==='total price' && sortData('price')
+        which==='review' && sortData('review')
+        which==='order id' && sortData('orderId')
+        which==='name' && sortData('name')
+        which==='Author' && sortData('author')
+        which==='count' && sortData('count')
+        which==='Slug' && sortData('category')
+        console.log(which)
     }
-
-
-    const sortOrderId = () => {
+    const sortData = prop => {
         if(isActive.value==='down'){
             sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.orderId > p2.orderId) ? 1 : (p1.orderId < p2.orderId) ? -1 : 0)
-
+                (p1,p2)=> p1[prop] > p2[prop] ? 1 :p1[prop] < p2[prop] ? -1 :0
+            )
         }else{
             sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.orderId < p2.orderId) ? 1 : (p1.orderId > p2.orderId) ? -1 : 0)
+                (p1,p2)=> p1[prop] < p2[prop] ? 1 :p1[prop] > p2[prop] ? -1 :0
+            )
         }
         emit('sort',sortedData.value)
     }
-    const sortReview = () => {
-        if(isActive.value==='down'){
-            sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.review > p2.review) ? 1 : (p1.price < p2.review) ? -1 : 0)
 
-        }else{
-            sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.review < p2.review) ? 1 : (p1.price > p2.review) ? -1 : 0)
-        }
-        emit('sort',sortedData.value)
-    }
-    const sortPrice = () => {
-        if(isActive.value==='down'){
-            sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.price > p2.price) ? 1 : (p1.price < p2.price) ? -1 : 0)
 
-        }else{
-            sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.price < p2.price) ? 1 : (p1.price > p2.price) ? -1 : 0)
-        }
-        emit('sort',sortedData.value)
-    }
     const sortCategory = () => {
        if(isActive.value==='up'){
            sortedData.value=[...tableData].sort(
@@ -72,17 +54,6 @@ export default (emit,tableData)=>{
        }
         emit('sort',sortedData.value)
 
-    }
-    const sortContact = () => {
-        if(isActive.value==='down'){
-            sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.progress > p2.progress) ? 1 : (p1.progress < p2.progress) ? -1 : 0)
-
-        }else{
-            sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.progress < p2.progress) ? 1 : (p1.progress > p2.progress) ? -1 : 0)
-        }
-        emit('sort',sortedData.value)
     }
     const sortDate = () => {
         let target=[...tableData]
@@ -103,44 +74,9 @@ export default (emit,tableData)=>{
         }
         emit('sort',sortedData.value)
     }
-    const sortStatus = () => {
-        if(isActive.value==='down'){
-            sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.statusCode > p2.statusCode) ? 1 : (p1.statusCode < p2.statusCode) ? -1 : 0)
 
-        }else{
-            sortedData.value=[...tableData].sort(
-                (p1,p2)=> (p1.statusCode < p2.statusCode) ? 1 : (p1.statusCode > p2.statusCode) ? -1 : 0)
-        }
-        emit('sort',sortedData.value)
-    }
-    const sortName=()=>{
-        if(isActive.value==='down'){
-            sortedData.value=[...tableData].sort((p1,p2)=> p1.name > p2.name ? 1 : p1.name< p2.name ? -1 :0 )
-            emit('sort',sortedData.value)
 
-            /// a to z
-        }else{
-            sortedData.value=[...tableData].sort((p1,p2)=> p1.name < p2.name ? 1 : p1.name> p2.name ? -1 :0 )
-            emit('sort',sortedData.value)
 
-            /// z to a
-        }
-
-    }
-    const sortAuthor=()=>{
-        if(isActive.value==='down'){
-            sortedData.value=[...tableData].sort((p1,p2)=> p1.author > p2.author ? 1 : p1.author< p2.author ? -1 :0 )
-            emit('sort',sortedData.value)
-
-            /// a to z
-        }else{
-            sortedData.value=[...tableData].sort((p1,p2)=> p1.author < p2.author ? 1 : p1.author> p2.author ? -1 :0 )
-            emit('sort',sortedData.value)
-
-            /// z to a
-        }
-    }
 
     return {isActive,toggle}
 }

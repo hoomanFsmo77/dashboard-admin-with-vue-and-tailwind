@@ -1602,6 +1602,28 @@ let tableData6={
         },
     ]
 }
+let tableData7={
+    th:[
+        {title:'name',width:'auto'},
+        {title:'Description',width:'auto'},
+        {title:'Slug',width:'auto'},
+        {title:'count',width:'auto'},
+    ],
+    td:[
+        {image:undefined, name:'Stories', category:'Gear', author:'-', date:undefined, count:5},
+        {image:undefined, name:'Stories', category:'Gear', author:'-', date:undefined, count:5},
+        {image:undefined, name:'Uncategorized', category:'Uncategorized', author:'-', date:undefined, count:2},
+        {image:undefined, name:'Tips & Tricks', category:'Gear', author:'-', date:undefined, count:9},
+        {image:undefined, name:'Tips & Tricks', category:'Gear', author:'-', date:undefined, count:8},
+        {image:undefined, name:'Trips', category:'Trips', author:'-', date:undefined, count:16},
+        {image:undefined, name:'Trips', category:'Trips', author:'-', date:undefined, count:13},
+        {image:undefined, name:'Gear', category:'Gear', author:'-', date:undefined, count:25},
+        {image:undefined, name:'Gear', category:'Gear', author:'-', date:undefined, count:52},
+        {image:undefined, name:'Stories', category:'Gear', author:'-', date:undefined, count:5},
+        {image:undefined, name:'Stories', category:'Gear', author:'-', date:undefined, count:5},
+        {image:undefined, name:'Stories', category:'Gear', author:'-', date:undefined, count:5},
+    ]
+}
 
 //////////////////////// tooltip data
 const tooltipData=[
@@ -1650,4 +1672,4 @@ There had been the first ride at terrible speed without a halt, and then in the 
 
 `
 
-export {sidebarMainData,sidebarDocsData,defaultPageData,chart1,activityData,tableData1,chart2,chart3,tableData2,tableData3,tableData4,tableData5,tooltipData,chart4,chart5,chart6,tableData6,chart7,chart8,chart9,chart10,chart11,chart12,text}
+export {sidebarMainData,sidebarDocsData,defaultPageData,chart1,activityData,tableData1,chart2,chart3,tableData2,tableData3,tableData4,tableData5,tooltipData,chart4,chart5,chart6,tableData6,chart7,chart8,chart9,chart10,chart11,chart12,text,tableData7}

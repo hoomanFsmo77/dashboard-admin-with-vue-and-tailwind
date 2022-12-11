@@ -32,6 +32,7 @@
                   :order-id="item.orderId"
                   :review="item.review"
                   :is-order="isOrder"
+                  :count="item.count"
                   :class="{'even:bg-gray-100':!hasHead}"
         />
       </tbody>

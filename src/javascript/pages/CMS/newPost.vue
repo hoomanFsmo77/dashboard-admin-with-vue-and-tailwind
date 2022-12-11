@@ -153,3 +153,8 @@ import {text} from "../../composables/useData.js";
 const {closeHint,removeTag,addTag,increaseWidth,setValue,openSection,date,show,visibility,status,showHint,tagInput,input,tags}=usePost()
 
 </script>
+<style>
+.o-visible{
+  overflow: visible!important;
+}
+</style>
