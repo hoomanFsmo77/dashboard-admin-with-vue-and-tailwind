@@ -142,4 +142,19 @@
   .tag{
     @apply py-[4px] px-[12px] text-[0.9rem] text-white bg-primary-indigo rounded-[18px] flex gap-0.25 items-center
   }
+  .file{
+    @apply appearance-none absolute w-full h-full left-0 top-0 opacity-0 cursor-pointer
+  }
+  .dz-main{
+    @apply shadow-lg p-[5px]  rounded-6 overflow-hidden relative hover:z-[1000];
+  }
+  .dz-image{
+    @apply h-full w-full group-hover:blur-[8px] group-hover:scale-[0.9] transition-all;
+  }
+  .dz-detail{
+    @apply absolute invisible w-full h-full top-0 left-0 flex flex-col justify-center items-center group-hover:visible group-hover:z-[9999];
+  }
+  .dz-loader{
+    @apply absolute top-0 left-0  w-full h-full  flex justify-center items-center z-[999999]
+  }
 }

@@ -3,7 +3,7 @@
     {{label}}
   </label>
   <select v-bind="$attrs" :id="id" @change="handleInput" ref="selectTag" class="selectBox selectBox-sm">
-    <option v-for="item in opt" :value="item">
+    <option v-for="item in opt" :value="item" class="capitalize">
       {{item}}
     </option>
   </select>
