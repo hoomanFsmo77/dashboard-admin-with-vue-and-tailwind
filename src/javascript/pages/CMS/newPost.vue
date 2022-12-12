@@ -148,7 +148,7 @@ import inputBox from '../../components/Form/inputBox.vue'
 import { Calendar, DatePicker } from 'v-calendar';
 import usePost from "../../composables/usePost.js";
 import Editor from '@tinymce/tinymce-vue'
-import {text} from "../../composables/useData.js";
+import {text} from "../../composables/Data/useExtraData.js";
 
 const {closeHint,removeTag,addTag,increaseWidth,setValue,openSection,date,show,visibility,status,showHint,tagInput,input,tags}=usePost()
 

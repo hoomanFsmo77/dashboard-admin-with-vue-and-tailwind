@@ -186,9 +186,8 @@
                 <span class="text-gray-800 font-700 text-0.875">Lorem ipsum dolor.</span>
                 <span class="ml-auto text-gray-500 text-0.875 ">10 mins ago</span>
               </div>
-              <div class="flex gap-0.5 my-0.65">
-                <UserProfile src="./assets/profile_1.svg" width="45px" height="45px" image-width="37"/>
-                <UserProfile src="./assets/profile_2.svg" width="45px" height="45px" image-width="37"/>
+              <div class="my-1 flex ">
+                <Tooltip v-for="(item,index) in tooltipData.slice(0,2)" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
               </div>
 
             </div>
@@ -197,10 +196,8 @@
                 <span class="text-gray-800 font-700 text-0.875">Lorem ipsum dolor.</span>
                 <span class="ml-auto text-gray-500 text-0.875 ">10 mins ago</span>
               </div>
-              <div class="flex gap-0.5 my-0.65">
-                <UserProfile src="./assets/profile_1.svg" width="45px" height="45px" image-width="37"/>
-                <UserProfile src="./assets/profile_2.svg" width="45px" height="45px" image-width="37"/>
-                <UserProfile src="./assets/profile_3.svg" width="45px" height="45px" image-width="37"/>
+              <div class="my-1 flex ">
+                <Tooltip v-for="(item,index) in tooltipData.slice(0,3)" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
               </div>
 
             </div>
@@ -209,12 +206,10 @@
                 <span class="text-gray-800 font-700 text-0.875">Lorem ipsum dolor.</span>
                 <span class="ml-auto text-gray-500 text-0.875 ">10 mins ago</span>
               </div>
-              <div class="flex gap-0.5 my-0.65">
-                <UserProfile src="./assets/profile_1.svg" width="45px" height="45px" image-width="37"/>
-                <UserProfile src="./assets/profile_2.svg" width="45px" height="45px" image-width="37"/>
-                <UserProfile src="./assets/profile_3.svg" width="45px" height="45px" image-width="37"/>
-                <UserProfile src="./assets/profile_4.svg" width="45px" height="45px" image-width="37"/>
+              <div class="my-1 flex ">
+                <Tooltip v-for="(item,index) in tooltipData" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
               </div>
+
 
             </div>
           </Card>
@@ -309,15 +304,19 @@
 </template>
 
 <script setup>
-import StaticCard from "../../components/Dashboard page components/DefaultCard.vue";
+import StaticCard from "../../components/Widgets/StaticCard1.vue";
 import ActivityCard from '../../components/reusable/ActivityCard.vue'
 import Card from "../../components/reusable/Card.vue";
 import SelectBox from '../../components/Form/SelectBox.vue';
 import inputBox from '../../components/Form/inputBox.vue';
 import Table from '../../components/Table/Table.vue'
-import {defaultPageData,chart1,activityData,tableData1,chart2,chart3} from "../../composables/useData.js";
+import {defaultPageData,activityData} from "../../composables/Data/useStateData.js";
+import {chart1,chart2,chart3} from "../../composables/Data/useChartData.js";
+import {tableData1} from "../../composables/Data/useTableData.js";
+import {tooltipData} from "../../composables/Data/useExtraData.js";
 import usePagination from "../../composables/usePagination.js";
 import UserProfile from '../../components/reusable/UserProfile.vue'
+import Tooltip from '../../components/reusable/Tooltip.vue'
 const {totalPages,paginationHandler,prevPage,nextPage,currentPage,itemInOne,changeItemInOne,searchHandler,searchedText}=usePagination(tableData1)
 
 

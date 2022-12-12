@@ -58,6 +58,16 @@ const sidebarItem= (props,emit)=>{
         updateUlHeight()
     })
 
+    watch(
+        ()=>route.path,
+        ()=>{
+            currentRoutePath.value=route.path
+            show.value=currentRoutePath.value.includes(props.title)
+
+        },{
+            immediate:true
+    })
+
     const updateUlHeight = () => {
         currentRoutePath.value=route.path
         show.value=true
@@ -66,7 +76,7 @@ const sidebarItem= (props,emit)=>{
                 let ulStyles=getComputedStyle(sub_container.value)
                 ulHeight.value=ulStyles.height
                 show.value=currentRoutePath.value.includes(props.title)
-            },500)
+            },700)
         }
     }
     const singleLinkItemHandler = () => {

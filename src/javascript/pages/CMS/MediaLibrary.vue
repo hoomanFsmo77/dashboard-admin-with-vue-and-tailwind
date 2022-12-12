@@ -84,7 +84,8 @@
 import useUploader from "../../composables/useUploader.js";
 import SelectBox from '../../components/Form/SelectBox.vue'
 import inputBox from '../../components/Form/inputBox.vue'
-import {galleryData} from "../../composables/useData.js";
+
+import {galleryData} from "../../composables/Data/useExtraData.js";
 
 const {show,toggleUploader,uploadSection,height,uploadFileHandler,files,removeItem,loader}=useUploader()
 

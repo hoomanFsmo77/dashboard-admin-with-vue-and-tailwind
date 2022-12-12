@@ -56,7 +56,7 @@
 import Card from '../../components/reusable/Card.vue'
 import Table from '../../components/Table/Table.vue'
 import usePagination from "../../composables/usePagination.js";
-import {tableData2} from "../../composables/useData.js";
+import {tableData2} from "../../composables/Data/useTableData.js";
 import SelectBox from '../../components/Form/SelectBox.vue'
 import inputBox from '../../components/Form/inputBox.vue'
 const {paginationHandler,prevPage,nextPage,itemInOne,totalPages,currentPage,searchedText,changeItemInOne,searchHandler}=usePagination(tableData2,10)

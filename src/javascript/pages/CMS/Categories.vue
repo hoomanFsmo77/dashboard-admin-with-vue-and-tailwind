@@ -66,7 +66,7 @@ import SelectBox from '../../components/Form/SelectBox.vue'
 import AreaBox from '../../components/Form/AreaBox.vue'
 import Table from '../../components/Table/Table.vue'
 import usePagination from "../../composables/usePagination.js";
-import {tableData7} from "../../composables/useData.js";
+import {tableData7} from "../../composables/Data/useTableData.js";
 const {paginationHandler,prevPage,nextPage,itemInOne,totalPages,currentPage,searchedText,changeItemInOne,searchHandler}=usePagination(tableData7,10)
 </script>
 

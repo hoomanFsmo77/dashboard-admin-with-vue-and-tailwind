@@ -170,14 +170,15 @@
 </template>
 
 <script setup>
-import CmsCard from '../../components/Dashboard page components/CmsCard.vue';
+import CmsCard from '../../components/Widgets/CmsCard.vue';
 import Card from '../../components/reusable/Card.vue'
 import inputBox from '../../components/Form/inputBox.vue'
 import SelectBox from '../../components/Form/SelectBox.vue';
 import AreaBox from '../../components/Form/AreaBox.vue'
 import ActivityCard from '../../components/reusable/ActivityCard.vue'
 import Table from '../../components/Table/Table.vue'
-import {defaultPageData,activityData,tableData2} from "../../composables/useData.js";
+import {defaultPageData,activityData} from "../../composables/Data/useStateData.js";
+import {tableData2} from "../../composables/Data/useTableData.js";
 import usePagination from "../../composables/usePagination.js";
 
 const {totalPages,paginationHandler,prevPage,nextPage,currentPage,itemInOne,changeItemInOne,searchHandler,searchedText}=usePagination(tableData2)

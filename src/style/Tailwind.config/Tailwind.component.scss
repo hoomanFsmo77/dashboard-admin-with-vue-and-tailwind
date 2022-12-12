@@ -70,6 +70,12 @@
   .btn-primary-full{
     @apply  bg-primary-indigo text-white hover:bg-indigo-700  focus:ring-primary-indigo/50 focus:ring-4;
   }
+  .btn-sky-full{
+    @apply  bg-sky-600 text-white hover:bg-sky-700  focus:ring-sky-600/50 focus:ring-4;
+  }
+  .btn-red-full{
+    @apply  bg-red-600 text-white hover:bg-red-700  focus:ring-red-600/50 focus:ring-4;
+  }
   .btn-teal-full{
     @apply  bg-teal-600 text-white hover:bg-teal-700  focus:ring-teal-600/50 focus:ring-4;
   }

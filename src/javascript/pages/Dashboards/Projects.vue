@@ -3,22 +3,8 @@
     <h1 class="text-primary-dark uppercase tracking-widest">projects dashboard</h1>
     <row>
       <column v-for="item in defaultPageData" col="12" md="3">
-        <div class="card p-1.3">
-            <div class="flex justify-between items-start">
-                  <div>
-                    <span class="font-700 text-[0.9rem] text-primary-dark">{{item.title}}</span>
-                    <h3 class="font-700" :class="textClasses(item.theme)">{{item.achieve}}</h3>
-                  </div>
-                  <span class="icon-wrapper !h-3 !w-3" :class="bgClasses(item.theme)">
-                    <i class="text-1.5" :class="[item.icon,textClasses(item.theme)]"></i>
-                  </span>
-            </div>
-          <div>
-            <span class="text-gray-700 text-0.75">May 23 - June 01 (2018)</span>
-          </div>
-        </div>
+        <ProjectCard :title="item.title" :achieve="item.achieve" :theme="item.theme" :icon="item.icon"/>
       </column>
-
     </row>
     <row>
       <column col="12" md="8">
@@ -240,19 +226,17 @@
 </template>
 
 <script setup>
-import {defaultPageData,activityData,tableData5,tooltipData,chart4,chart5,chart6,tableData6} from "../../composables/useData.js";
+import {tableData5,tableData6} from '../../composables/Data/useTableData.js'
+import {defaultPageData,activityData} from '../../composables/Data/useStateData.js'
+import {tooltipData} from '../../composables/Data/useExtraData.js'
+import {chart4,chart5,chart6} from '../../composables/Data/useChartData.js'
 import Card from '../../components/reusable/Card.vue'
 import ActivityCard from '../../components/reusable/ActivityCard.vue'
 import Tooltip from '../../components/reusable/Tooltip.vue'
 import UserProfile from '../../components/reusable/UserProfile.vue'
-
-const textClasses=(item)=>{
-  return {'text-red-600':item==='red','text-sky-600':item==='blue','text-indigo-600':item==='indigo','text-green-600':item==='green'}
-}
-const bgClasses=(item)=>{
-  return {'bg-red-200':item==='red','bg-sky-200':item==='blue','bg-indigo-200':item==='indigo','bg-green-200':item==='green'}
-}
-
+import ProjectCard from '../../components/Widgets/ProjectCard.vue'
+import useMethods from "../../composables/useMethods.js";
+const {textClasses,bgClasses}=useMethods()
 
 </script>
 

@@ -34,7 +34,7 @@
 import SidebarItem from "./SidebarItem.vue";
 import {defineProps} from "vue";
 import {sidebar} from "../../composables/useSidebar.js";
-import {sidebarMainData,sidebarDocsData} from "../../composables/useData.js";
+import {sidebarMainData,sidebarDocsData} from '../../composables/Data/useSidebarData.js'
 /////////////////////////////////////////////////////////////
 const props=defineProps(['isActive'])
 const {closeAll,isUnder1200,side_item}=sidebar()

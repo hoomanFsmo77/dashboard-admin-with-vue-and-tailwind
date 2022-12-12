@@ -38,12 +38,10 @@
 <script setup>
 import Card from '../reusable/Card.vue'
 import Table from '../Table/Table.vue'
-import {tableData1} from "../../composables/useData.js";
 import usePagination from "../../composables/usePagination.js";
 import SelectBox from '../Form/SelectBox.vue'
 import inputBox from '../Form/inputBox.vue'
-import {tableData4} from "../../composables/useData";
-
+import {tableData4,tableData1} from "../../composables/Data/useTableData.js";
 const {searchHandler,changeItemInOne,searchedText,currentPage,totalPages,itemInOne,nextPage,prevPage,paginationHandler,}=usePagination(tableData4)
 </script>
 
