@@ -1,6 +1,6 @@
 <template>
   <Card title="Latest Orders" body-class="!px-0">
-    <div class=" p-1 shadow-[inset_0_0px_5px_0_rgba(0,0,0,0.1)] overflow-hidden">
+    <div v-if="hasOption!==false" class=" p-1 shadow-[inset_0_0px_5px_0_rgba(0,0,0,0.1)] overflow-hidden">
       <row>
         <column col="12" md="8" class="flex gap-1 items-center flex-wrap">
           <SelectBox value="lorem ipsum" :opt="['lorem ipsum','lorem']"/>
@@ -42,6 +42,7 @@ import usePagination from "../../composables/usePagination.js";
 import SelectBox from '../Form/SelectBox.vue'
 import inputBox from '../Form/inputBox.vue'
 import {tableData4,tableData1} from "../../composables/Data/useTableData.js";
+let props=defineProps(['hasOption'])
 const {searchHandler,changeItemInOne,searchedText,currentPage,totalPages,itemInOne,nextPage,prevPage,paginationHandler,}=usePagination(tableData4)
 </script>
 

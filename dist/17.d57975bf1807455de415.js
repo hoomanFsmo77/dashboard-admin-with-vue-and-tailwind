@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[17],{8017:(e,t,l)=>{l.r(t),l.d(t,{default:()=>a});const n={name:"Gallery"};const a=(0,l(3744).Z)(n,[["render",function(e,t,l,n,a,r){return" Gallery "}]])}}]);

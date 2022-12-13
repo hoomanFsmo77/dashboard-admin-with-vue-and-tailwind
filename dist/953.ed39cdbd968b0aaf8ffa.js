@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[953],{5348:(e,n,t)=>{t.r(n),t.d(n,{default:()=>u});const s={name:"Login2"};const u=(0,t(3744).Z)(s,[["render",function(e,n,t,s,u,a){return" login 2 "}]])}}]);

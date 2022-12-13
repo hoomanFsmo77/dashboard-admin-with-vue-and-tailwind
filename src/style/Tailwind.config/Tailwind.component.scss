@@ -53,10 +53,13 @@
     @apply text-[0.8rem]
   }
   .btn-primary{
-    @apply border-[1px] border-primary-indigo bg-white text-primary-indigo hover:bg-primary-indigo hover:text-white  focus:ring-primary-indigo/50 ;
+    @apply border-[1px] border-primary-indigo bg-transparent text-primary-indigo hover:bg-primary-indigo hover:text-white  focus:ring-primary-indigo/50 ;
+  }
+  .btn-dark{
+    @apply border-[1px] border-primary-dark bg-transparent text-primary-dark hover:bg-primary-dark hover:text-white  focus:ring-primary-dark/50 ;
   }
   .btn-gray{
-    @apply border-[1px] border-gray-500 bg-white text-gray-500 hover:bg-gray-500 hover:text-white  focus:ring-gray-500/50 ;
+    @apply border-[1px] border-gray-500 bg-transparent text-gray-500 hover:bg-gray-500 hover:text-white  focus:ring-gray-500/50 ;
   }
   .btn{
     @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] focus:ring-4 transition-all capitalize
@@ -162,5 +165,8 @@
   }
   .dz-loader{
     @apply absolute top-0 left-0  w-full h-full  flex justify-center items-center z-[999999]
+  }
+  .table-responsive{
+    @apply overflow-x-auto w-0 min-w-full;
   }
 }

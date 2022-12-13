@@ -4,14 +4,21 @@ import '../style/Tailwind.config/Tailwind.component.scss'
 import '../style/Tailwind.config/Tailwind.utilities.scss'
 
 ////////// images
-import '../assets/profile_1.svg'
-import '../assets/profile_2.svg'
-import '../assets/profile_3.svg'
-import '../assets/profile_4.svg'
-import '../assets/profile_5.svg'
-import '../assets/profile_6.svg'
+import '../assets/profiles/profile_1.svg'
+import '../assets/profiles/profile_2.svg'
+import '../assets/profiles/profile_3.svg'
+import '../assets/profiles/profile_4.svg'
+import '../assets/profiles/profile_5.svg'
+import '../assets/profiles/profile_6.svg'
 import '../assets/check.svg'
-
+import '../assets/country/america.svg'
+import '../assets/country/austria.svg'
+import '../assets/country/england.svg'
+import '../assets/country/france.svg'
+import '../assets/country/india.svg'
+import '../assets/country/germany.svg'
+import '../assets/country/spain.svg'
+import '../assets/country/thailand.svg'
 ////////// Vue
 import {createApp} from "vue";
 import ApexCharts from 'apexcharts';
