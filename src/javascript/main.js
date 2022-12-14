@@ -19,6 +19,7 @@ import '../assets/country/india.svg'
 import '../assets/country/germany.svg'
 import '../assets/country/spain.svg'
 import '../assets/country/thailand.svg'
+import '../assets/circle.svg'
 ////////// Vue
 import {createApp} from "vue";
 import ApexCharts from 'apexcharts';

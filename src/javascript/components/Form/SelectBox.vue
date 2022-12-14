@@ -1,9 +1,9 @@
 <template>
-  <label v-if="label" :for="id" class="block mb-0.5 text-gray-700 font-500 text-1">
+  <label v-if="label" :for="id" class="block mb-0.5 text-gray-700 font-500 text-[0.9rem]">
     {{label}}
   </label>
-  <select v-bind="$attrs" :id="id" @change="handleInput" ref="selectTag" class="selectBox selectBox-sm">
-    <option v-for="item in opt" :value="item" class="capitalize">
+  <select v-bind="$attrs" :id="id"  @change="handleInput" ref="selectTag" class="selectBox selectBox-sm">
+    <option v-for="item in opt" :value="item" class="capitalize" >
       {{item}}
     </option>
   </select>

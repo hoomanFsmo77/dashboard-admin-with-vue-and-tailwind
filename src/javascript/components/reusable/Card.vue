@@ -1,6 +1,6 @@
 <template>
     <div class="shadow-card rounded-10 bg-white ">
-       <div class="card_title p-2 flex items-center justify-between">
+       <div class="card_title p-2 flex items-center justify-between shadow-[0_0.125rem_0.25rem_rgba(0,0,0,.075)]">
           <span class="uppercase font-500 tracking-widest text-primary-dark text-[0.87rem]">{{title}}</span>
           <div class="relative" v-if="hasMenu===undefined">
             <NavbarButton
@@ -39,7 +39,6 @@
             </Transition>
           </div>
        </div>
-      <div class="divider !my-0"></div>
       <div class="card_body px-1" :class="bodyClass">
           <slot/>
       </div>

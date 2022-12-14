@@ -118,7 +118,7 @@
           </div>
         </Card>
         <Card class="my-1.3" :has-menu="null" title="Tags" body-class="!p-2 flex flex-wrap gap-0.5">
-            <div class="border-[1px] border-gray-500 bg-gray-100 px-1 py-0.5 w-full relative min-h-[100px]">
+            <div class="border-[1px] border-gray-300 bg-gray-100 px-1 py-0.5 w-full relative min-h-[100px]">
                 <ul class="flex flex-wrap gap-0.25">
                   <li v-for="(tag,index) in tags" class="tag">
                       {{tag}}
@@ -153,8 +153,3 @@ import {text} from "../../composables/Data/useExtraData.js";
 const {closeHint,removeTag,addTag,increaseWidth,setValue,openSection,date,show,visibility,status,showHint,tagInput,input,tags}=usePost()
 
 </script>
-<style>
-.o-visible{
-  overflow: visible!important;
-}
-</style>

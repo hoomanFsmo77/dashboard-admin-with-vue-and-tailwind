@@ -172,5 +172,10 @@
   .tab-item{
     @apply capitalize text-blue-600 font-500 text-[0.9rem] cursor-pointer p-0.75 transition-all hover:text-blue-800 text-center md:block flex items-center;
   }
+  .input-toggle{
+    @apply appearance-none w-[25px] h-[12px] rounded-full border-[1px]
+    border-[#D1D5DB] focus:ring-4 focus:ring-primary-indigo/50 transition-all  bg-[url("../../assets/circle.svg")] bg-no-repeat bg-[length:9px] bg-[position:2px_1px] focus:border-primary-indigo/50 checked:bg-[position:13px_1px]  checked:bg-primary-indigo checked:border-primary-indigo;
+
+  }
 
 }

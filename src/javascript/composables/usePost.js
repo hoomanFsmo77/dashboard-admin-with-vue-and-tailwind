@@ -14,7 +14,7 @@ export default ()=>{
     const showHint=ref(false)
 
     const openSection = (e) => {
-        e.target.parentElement.parentElement.nextElementSibling.classList.toggle('h-full')
+        e.target.parentElement.parentElement.nextElementSibling.classList.toggle('h-100')
         e.target.parentElement.parentElement.nextElementSibling.classList.toggle('o-visible')
     }
 
