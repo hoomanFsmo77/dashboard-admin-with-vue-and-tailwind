@@ -1,5 +1,5 @@
 <template>
-  <tr class="table-hover ">
+  <tr class="table-hover " v-if="isProduct===undefined">
     <td>
       <div class="p-1 px-1.3 flex md:flex-row flex-col items-center gap-1" v-if="isPost===false">
         <UserProfile width="50px" height="50px" image-width="40" :src="image"/>
@@ -143,7 +143,29 @@
       </div>
     </td>
   </tr>
-
+  <tr class="table-hover" v-if="isProduct">
+    <td class=" text-[0.9rem] text-primary-dark px-1">#{{productId}}</td>
+    <td >
+      <router-link class="flex gap-0.5 flex-col md:flex-row items-center pr-1 py-1 " :to="{name:'Products_New'}">
+        <img class="rounded-4" :src="image" width="100" alt="">
+        <span class="text-primary-dark font-700">{{name}}</span>
+      </router-link>
+    </td>
+    <td class="text-[0.9rem] text-center">${{price}}</td>
+    <td class="text-[0.9rem] text-center">{{inStock}}</td>
+    <td class="text-[0.9rem] text-gray-600 text-center">{{date.year}}/{{date.month}}/{{date.day}}</td>
+    <td class="text-center">
+      <span v-if="status" class="category-card " :class="{'!bg-green-200 text-green-600':status==='hot','text-red-600 !bg-red-200':status==='Soldout','text-indigo-600 !bg-indigo-200':status==='New Arrival'}">{{status}}</span>
+    </td>
+    <td >
+      <div class="flex justify-between items-center px-1">
+        <i class="bi bi-trash3-fill text-red-600 cursor-pointer text-1.3"></i>
+        <router-link :to="{name:'Products_New'}">
+          <i class="bi bi-pencil-square text-sky-600 cursor-pointer text-1.3"></i>
+        </router-link>
+      </div>
+    </td>
+  </tr>
 </template>
 
 <script setup>
@@ -153,7 +175,7 @@ import Dropdown from '../Header/Dropdown.vue'
 import AppLink from '../reusable/AppLink.vue'
 import useNavbar from "../../composables/useNavbar.js";
 
-let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'isPost', 'category', 'author', 'hasHead', 'price', 'orderId', 'review', 'isOrder','count'])
+let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'isPost', 'category', 'author', 'hasHead', 'price', 'orderId', 'review', 'isOrder','count','inStock','productId','isProduct'])
 const {show, toggleFocus} = useNavbar()
 
 

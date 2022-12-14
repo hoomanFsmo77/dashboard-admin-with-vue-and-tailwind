@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[256],{4256:(e,t,r)=>{r.r(t),r.d(t,{default:()=>c});const u={name:"Directory-structure"};const c=(0,r(3744).Z)(u,[["render",function(e,t,r,u,c,n){return" Directory structure "}]])}}]);

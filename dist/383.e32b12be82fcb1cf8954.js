@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[383],{383:(e,t,s)=>{s.r(t),s.d(t,{default:()=>u});const n={name:"Customers"};const u=(0,s(3744).Z)(n,[["render",function(e,t,s,n,u,r){return" Customers "}]])}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[499],{3499:(e,n,t)=>{t.r(n),t.d(n,{default:()=>s});const c={name:"Invoice"};const s=(0,t(3744).Z)(c,[["render",function(e,n,t,c,s,u){return" Invoice "}]])}}]);

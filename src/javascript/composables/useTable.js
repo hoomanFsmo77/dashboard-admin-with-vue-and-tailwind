@@ -24,7 +24,10 @@ export default (emit,tableData)=>{
         which==='Author' && sortData('author')
         which==='count' && sortData('count')
         which==='Slug' && sortData('category')
-        console.log(which)
+        which==='product id' && sortData('productId')
+        which==='price' && sortData('price')
+        which==='in stock' && sortData('inStock')
+        which==='last ordered' && sortDate()
     }
     const sortData = prop => {
         if(isActive.value==='down'){

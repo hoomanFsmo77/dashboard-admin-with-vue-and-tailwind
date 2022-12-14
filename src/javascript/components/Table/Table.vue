@@ -33,6 +33,9 @@
                   :review="item.review"
                   :is-order="isOrder"
                   :count="item.count"
+                  :product-id="item.productId"
+                  :in-stock="item.inStock"
+                  :is-product="isProduct"
                   :class="{'even:bg-gray-100':!hasHead}"
         />
       </tbody>
@@ -43,7 +46,7 @@
 import TableRow from './TableRow.vue';
 import TableHead from './TableHead.vue'
 import {ref,watch} from "vue";
-let props=defineProps(['th','td','currentPage','itemInOne','searchedText','isPost','hasHead','isOrder'])
+let props=defineProps(['th','td','currentPage','itemInOne','searchedText','isPost','hasHead','isOrder','isProduct'])
 let finalArray=ref([])
 let target=ref(props.td)
 

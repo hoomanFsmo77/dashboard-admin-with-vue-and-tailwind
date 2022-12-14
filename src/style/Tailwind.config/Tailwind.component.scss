@@ -169,4 +169,8 @@
   .table-responsive{
     @apply overflow-x-auto w-0 min-w-full;
   }
+  .tab-item{
+    @apply capitalize text-blue-600 font-500 text-[0.9rem] cursor-pointer p-0.75 transition-all hover:text-blue-800 text-center md:block flex items-center;
+  }
+
 }

@@ -26,7 +26,7 @@ export default {
   },
   methods:{
     isExternal(){
-      return typeof this.to==='string' && this.to.startsWith('http')
+      return typeof this.to==='string' && (this.to.startsWith('http') || this.to.startsWith('#'))
     }
   }
 }

@@ -351,13 +351,13 @@
               <thead class="bg-primary-dark text-white ">
               <tr >
                 <th v-for="item in tableData3.th"  class="uppercase tracking-wide text-[0.9rem] py-1.5  text-left" >
-                  <span class="text-white px-0.5">{{item}}</span>
+                  <span class="text-white px-0.5">{{item.title}}</span>
                 </th>
               </tr>
               </thead>
               <tbody>
               <tr class="table-hover " v-for="item in tableData3.td.slice(0,6)">
-                <td class=" text-[0.9rem] text-primary-dark px-1">{{item.productId}}</td>
+                <td class=" text-[0.9rem] text-primary-dark px-1">#{{item.productId}}</td>
                 <td class="flex gap-0.5 flex-col md:flex-row items-center p-1">
                   <img class="rounded-4" :src="item.image" width="100" alt="">
                   <span class="text-primary-dark font-700">{{item.name}}</span>
