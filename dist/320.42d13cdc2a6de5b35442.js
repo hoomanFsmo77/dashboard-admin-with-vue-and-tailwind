@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[320],{4320:(e,n,t)=>{t.r(n),t.d(n,{default:()=>a});const s={name:"knowledgeBase-Topic"};const a=(0,t(3744).Z)(s,[["render",function(e,n,t,s,a,c){return" knowledge base-Topic "}]])}}]);

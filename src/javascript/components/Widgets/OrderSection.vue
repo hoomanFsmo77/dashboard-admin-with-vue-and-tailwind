@@ -15,7 +15,7 @@
       </row>
     </div>
     <div class="overflow-x-auto w-0 min-w-full">
-      <Table :has-head="true" :current-page="currentPage" :item-in-one="itemInOne" :th="tableData4.th" :td="tableData4.td" :searched-text="searchedText" :is-order="true" :is-post="null"></Table>
+      <Table :has-head="true" :current-page="currentPage" :item-in-one="itemInOne" :th="tableData4.th" :td="tableData4.td" type="order" :searched-text="searchedText" :is-order="true" :is-post="null"></Table>
     </div>
     <div class="bg-gray-100 p-2 flex md:justify-between justify-center items-center items-center md:flex-row flex-col gap-1 md:gap-0">
       <h6 class="text-gray-700">Showing page {{currentPage}} of {{totalPages}}</h6>
@@ -49,7 +49,7 @@
 
       </div>
     <div class="overflow-x-auto w-0 min-w-full">
-      <Table :has-head="true" :current-page="currentPage" :item-in-one="itemInOne" :th="tableData4.th" :td="tableData4.td" :searched-text="searchedText" :is-order="true" :is-post="null" :has-link="hasLink" :link="link"></Table>
+      <Table type="order" :has-head="true" :current-page="currentPage" :item-in-one="itemInOne" :th="tableData4.th" :td="tableData4.td" :searched-text="searchedText"  :has-link="hasLink" :link="link"></Table>
     </div>
     <div class="bg-gray-100 p-2 flex md:justify-between justify-center items-center items-center md:flex-row flex-col gap-1 md:gap-0">
       <h6 class="text-gray-700">Showing page {{currentPage}} of {{totalPages}}</h6>
@@ -76,6 +76,6 @@ import SelectBox from '../Form/SelectBox.vue'
 import inputBox from '../Form/inputBox.vue'
 import {tableData4,tableData1} from "../../composables/Data/useTableData.js";
 let props=defineProps(['hasOption','items','hasLink','hasCard','link'])
-const {searchHandler,changeItemInOne,searchedText,currentPage,totalPages,itemInOne,nextPage,prevPage,paginationHandler,}=usePagination(tableData4)
+const {searchHandler,changeItemInOne,searchedText,currentPage,totalPages,itemInOne,nextPage,prevPage,paginationHandler,}=usePagination(tableData4,)
 </script>
 

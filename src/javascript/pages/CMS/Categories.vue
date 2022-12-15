@@ -38,7 +38,7 @@
             </row>
           </div>
           <div class="overflow-x-auto w-0 min-w-full">
-            <Table :has-head="true" :current-page="currentPage" :item-in-one="itemInOne" :th="tableData7.th" :td="tableData7.td" :searched-text="searchedText" :is-post="true"></Table>
+            <Table :has-head="true" :current-page="currentPage" :item-in-one="itemInOne" :th="tableData7.th" :td="tableData7.td" :searched-text="searchedText" type="category"></Table>
           </div>
           <div class="bg-gray-100 p-2 flex md:justify-between justify-center items-center items-center md:flex-row flex-col gap-1 md:gap-0">
             <h6 class="text-gray-700">Showing page {{currentPage}} of {{totalPages}}</h6>

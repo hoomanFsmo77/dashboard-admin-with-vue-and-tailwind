@@ -148,7 +148,7 @@
       <column col="12" md="8">
         <Card class="overflow-hidden" title="Bestsellers this month" body-class="!px-0">
           <div class="overflow-x-auto w-0 min-w-full">
-            <Table :current-page="currentPage" :item-in-one="itemInOne" :td="tableData3.td" :searched-text="searchedText" :has-head="false" :is-post="true"></Table>
+            <Table :current-page="currentPage" :item-in-one="itemInOne" :td="tableData3.td" :searched-text="searchedText" :has-head="false" type="ecommerce"></Table>
           </div>
           <div class="bg-gray-100 p-2 flex md:justify-between justify-center items-center items-center md:flex-row flex-col gap-1 md:gap-0">
             <h6 class="text-gray-700">Showing page {{currentPage}} of {{totalPages}}</h6>
@@ -169,7 +169,7 @@
     </row>
     <row>
       <column col="12">
-        <OrderSection :has-card="true"/>
+        <OrderSection :items="10" :has-card="true"/>
       </column>
     </row>
   </div>

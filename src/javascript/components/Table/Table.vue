@@ -8,13 +8,13 @@
             :width="item.width"
             @sort="sortHandler($event)"
             :table-data="td"
-            :is-post="isPost"
 
         />
       </tr>
       </thead>
       <tbody>
         <TableRow v-for="item in finalArray"
+                  :type="type"
                   :image="item.image"
                   :name="item.name"
                   :email="item.email"
@@ -27,16 +27,16 @@
                   :category="item.category"
                   :author="item.author"
                   :price="item.price"
-                  :is-post="isPost"
                   :has-head="hasHead"
                   :order-id="item.orderId"
                   :review="item.review"
-                  :is-order="isOrder"
                   :count="item.count"
                   :product-id="item.productId"
                   :in-stock="item.inStock"
-                  :is-product="isProduct"
+                  :city="item.city"
+                  :phone="item.phone"
                   :has-link="hasLink"
+                  :orders="item.orders"
                   :link="link"
                   :class="{'even:bg-gray-100':!hasHead}"
         />
@@ -48,7 +48,7 @@
 import TableRow from './TableRow.vue';
 import TableHead from './TableHead.vue'
 import {ref,watch} from "vue";
-let props=defineProps(['th','td','currentPage','itemInOne','searchedText','isPost','hasHead','isOrder','isProduct','hasLink','link'])
+let props=defineProps(['th','td','currentPage','itemInOne','searchedText','hasHead','hasLink','link','type'])
 let finalArray=ref([])
 let target=ref(props.td)
 

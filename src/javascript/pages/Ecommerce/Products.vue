@@ -54,7 +54,7 @@
             </div>
             <div class="table-responsive">
 
-              <Table :has-head="true" :current-page="currentPage" :item-in-one="itemInOne" :th="tableData3.th" :td="tableData3.td" :searched-text="searchedText" :is-product="true"></Table>
+              <Table :has-head="true" :current-page="currentPage" :item-in-one="itemInOne" :th="tableData3.th" :td="tableData3.td" :searched-text="searchedText" type="product"></Table>
 
             </div>
             <div class="bg-gray-100 p-2 flex md:justify-between justify-center items-center items-center md:flex-row flex-col gap-1 md:gap-0">
