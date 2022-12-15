@@ -29,6 +29,7 @@ const Stats=()=>import('./pages/Widgets/Stats.vue')
 import EcommerceIndex from  './pages/Ecommerce/index.vue';
 const Products=()=>import('./pages/Ecommerce/Products.vue')
 const Products_New=()=>import('./pages/Ecommerce/Products-New.vue')
+const orders=()=>import('./pages/Ecommerce/Orders.vue')
 const Order_details=()=>import('./pages/Ecommerce/Order-details.vue')
 const Customers=()=>import('./pages/Ecommerce/Customers.vue')
 
@@ -178,6 +179,10 @@ const routes=[
                         path:'Products_New',
                         name:'Products_New',
                         component:Products_New,
+                    },{
+                        path:'Orders',
+                        name:'Orders',
+                        component:orders,
                     },{
                         path:'Order_details',
                         name:'Order_details',

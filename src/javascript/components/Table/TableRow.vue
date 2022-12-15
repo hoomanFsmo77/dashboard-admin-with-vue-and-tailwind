@@ -32,10 +32,10 @@
       <div class="text-left" v-else-if="isPost===true">
         <span class="text-0.875 font-600 " :class="{'!text-1':!hasHead}">{{ hasHead ? author : `$${price}` }}</span>
       </div>
-      <div v-else>
+      <div v-else :class="{'hover:underline cursor-pointer':hasLink}" @click="redirectToDetail">
         <span class="text-1 font-600">{{ name }}</span>
         <br>
-        <span class="text-[0.85rem] text-gray-600">{{ email }}</span>
+        <span  class="text-[0.85rem] text-gray-600">{{ email }}</span>
       </div>
     </td>
     <td>
@@ -173,11 +173,18 @@ import UserProfile from '../reusable/UserProfile.vue'
 import NavbarButton from '../Header/NavbarButton.vue'
 import Dropdown from '../Header/Dropdown.vue'
 import AppLink from '../reusable/AppLink.vue'
+import {useRouter} from 'vue-router'
 import useNavbar from "../../composables/useNavbar.js";
-
-let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'isPost', 'category', 'author', 'hasHead', 'price', 'orderId', 'review', 'isOrder','count','inStock','productId','isProduct'])
+let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'isPost', 'category', 'author', 'hasHead', 'price', 'orderId', 'review', 'isOrder','count','inStock','productId','isProduct','link','hasLink'])
 const {show, toggleFocus} = useNavbar()
-
+const router=useRouter()
+const redirectToDetail = () => {
+  if(props.hasLink){
+    router.push({
+      name:props.link
+    })
+  }
+}
 
 </script>
 

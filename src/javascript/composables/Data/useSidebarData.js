@@ -47,6 +47,7 @@ const sidebarMainData=[
         subMenuList:[
             {title:'Products',to:{name:'Products'}},
             {title:'Products_New',to:{name:'Products_New'}},
+            {title:'Orders',to:{name:'Orders'}},
             {title:'Order_details',to:{name:'Order_details'}},
             {title:'Customers',to:{name:'Customers'}},
         ]

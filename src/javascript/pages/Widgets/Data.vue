@@ -389,7 +389,7 @@
     </row>
     <row>
       <column col="12">
-        <OrderSection :has-option="false"/>
+        <OrderSection :has-card="true" :has-option="false"/>
       </column>
     </row>
 
@@ -413,7 +413,7 @@ import Tooltip from '../../components/reusable/Tooltip.vue'
 import {tooltipData} from "../../composables/Data/useExtraData.js";
 import {tableData6,tableData9,tableData3} from "../../composables/Data/useTableData.js";
 import UserProfile from '../../components/reusable/UserProfile.vue'
-import OrderSection from '../../components/Dashboard page components/OrderSection.vue'
+import OrderSection from '../../components/Widgets/OrderSection.vue'
 const {textClasses,bgClasses}=useMethods();
 const searchText=ref('')
 const todos=ref([])
