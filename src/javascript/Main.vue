@@ -4,7 +4,7 @@
        :class="{'!grid-cols-[89px_1fr]':isActive}"
   >
     <Sidebar :is-active="isActive"/>
-    <div>
+    <div class="flex flex-col justify-between">
     <router-view></router-view>
       <Footer/>
     </div>

@@ -65,17 +65,19 @@
     @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] focus:ring-4 transition-all capitalize
   }
   .btn-white{
-    @apply  border-[1px] border-white bg-transparent text-white hover:bg-white hover:text-primary-dark focus:ring-4 focus:ring-white/50
+    @apply  border-[1px] border-white bg-transparent text-white hover:bg-white hover:text-primary-dark focus:ring-4 focus:ring-white/50;
   }
+  .btn-sky-full{
+    @apply bg-sky-600 text-white hover:bg-sky-700  focus:ring-sky-600/50 focus:ring-4;
+  }
+
   .btn-white-full{
     @apply   bg-white text-primary-dark focus:ring-4 focus:ring-white/50
   }
   .btn-primary-full{
     @apply  bg-primary-indigo text-white hover:bg-indigo-700  focus:ring-primary-indigo/50 focus:ring-4;
   }
-  .btn-sky-full{
-    @apply  bg-sky-600 text-white hover:bg-sky-700  focus:ring-sky-600/50 focus:ring-4;
-  }
+
   .btn-red-full{
     @apply  bg-red-600 text-white hover:bg-red-700  focus:ring-red-600/50 focus:ring-4;
   }
@@ -186,6 +188,9 @@
   }
   .card-title{
     @apply p-2 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,.075)];
+  }
+  .card-status{
+    @apply absolute top-0 w-full h-[8px] bg-primary-indigo left-0
   }
 
 }
