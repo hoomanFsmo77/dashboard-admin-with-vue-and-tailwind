@@ -7,7 +7,7 @@
     <input
         :id="id"
         v-bind="$attrs"
-        type="text"
+        :type="type ?? 'text'"
         :class="{'!rounded-l-[0px]':icon}"
         class="input group-focus/item:ring-4 peer-focus:ring-4 "
         :placeholder="placeholder"
@@ -19,7 +19,7 @@
 <script>
 export default {
   name: "inputBox",
-  props:['placeholder','label','id','hint','icon']
+  props:['placeholder','label','id','hint','icon','type']
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="input-group flex gap-0 items-stretch">
-    <input :value="modelValue" @input="inputHandler($event)" type="text" class="input w-full" :placeholder="placeholder" />
-    <button @click="sendText" class="btn btn-primary-full h-full !rounded-l-[0]">
+    <input :value="modelValue" @input="inputHandler($event)" type="text" class="input w-full" :placeholder="placeholder" :class="{'!rounded-r-[0px]':type==='outline'}"/>
+    <button @click="sendText" class="btn  h-full !rounded-l-[0]" :class="{'!btn-primary':type==='outline','btn-primary-full':type==='full'}">
       <i :class="icon"></i>
     </button>
   </div>
@@ -11,7 +11,7 @@
 import {defineEmits,ref} from "vue";
 
 let searchText=ref('')
-let props=defineProps(['icon','placeholder','modelValue'])
+let props=defineProps(['icon','placeholder','modelValue','type'])
 let emits=defineEmits(['update:modelValue','call'])
 
 const sendText = () => {

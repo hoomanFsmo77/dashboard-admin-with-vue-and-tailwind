@@ -83,7 +83,7 @@
             </div>
           </div>
           <div class="my-1 flex">
-            <Tooltip v-for="(item,index) in [...tooltipData].slice(0,3)" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
+            <Tooltip type="profile" v-for="(item,index) in [...tooltipData].slice(0,3)" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
           </div>
           <div class="progress-bar progress-bar-big">
             <div class="inner w-[50%] bg-primary-indigo"></div>
@@ -115,7 +115,7 @@
             </div>
           </div>
           <div class="my-1 flex">
-            <Tooltip v-for="(item,index) in tooltipData" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
+            <Tooltip type="profile" v-for="(item,index) in tooltipData" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
           </div>
           <div class="progress-bar progress-bar-big">
             <div class="inner w-[80%] bg-teal-600"></div>

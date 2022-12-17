@@ -26,6 +26,24 @@ const tooltipData=[
         title:'lorem ipsum'
     },
 ]
+const tooltipData2=[
+    {
+        icon:'bi bi-twitter',
+        title:'@nathans_andrew'
+    },
+    {
+        icon:'bi bi-facebook',
+        title:"Nathan's facebook"
+    },
+    {
+        icon:'bi bi-instagram',
+        title:'+49856321789'
+    },
+    {
+        icon:'bi bi-linkedin',
+        title:'@nathans_andrew'
+    },
+]
 
 let text=`
 <h1>Minas Tirith</h1>
@@ -189,4 +207,4 @@ let  galleryData=[
 ]
 
 
-export {tooltipData,text,galleryData}
+export {tooltipData,text,galleryData,tooltipData2}

@@ -187,7 +187,7 @@
                 <span class="ml-auto text-gray-500 text-0.875 ">10 mins ago</span>
               </div>
               <div class="my-1 flex ">
-                <Tooltip v-for="(item,index) in tooltipData.slice(0,2)" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
+                <Tooltip type="profile" v-for="(item,index) in tooltipData.slice(0,2)" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
               </div>
 
             </div>
@@ -197,7 +197,7 @@
                 <span class="ml-auto text-gray-500 text-0.875 ">10 mins ago</span>
               </div>
               <div class="my-1 flex ">
-                <Tooltip v-for="(item,index) in tooltipData.slice(0,3)" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
+                <Tooltip type="profile" v-for="(item,index) in tooltipData.slice(0,3)" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
               </div>
 
             </div>
@@ -207,7 +207,7 @@
                 <span class="ml-auto text-gray-500 text-0.875 ">10 mins ago</span>
               </div>
               <div class="my-1 flex ">
-                <Tooltip v-for="(item,index) in tooltipData" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
+                <Tooltip type="profile" v-for="(item,index) in tooltipData" :index="index" :title="item.title" :src="item.img" width="6.5rem"/>
               </div>
 
 

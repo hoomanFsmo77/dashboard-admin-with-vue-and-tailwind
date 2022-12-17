@@ -47,7 +47,7 @@
     @apply p-0.5 flex-initial;
   }
   .selectBox{
-    @apply p-0.5 bg-white rounded-4 border-[1px] border-gray-400 focus:ring-4 focus:ring-indigo-600/50 transition-all
+    @apply p-0.5 bg-white rounded-4 border-[1px] border-gray-400 focus:ring-4 focus:ring-indigo-600/50 transition-all bg-gray-200 border-none;
   }
   .selectBox-sm{
     @apply text-[0.8rem]
@@ -84,6 +84,9 @@
   }
   .btn-sm{
     @apply text-[0.9rem];
+  }
+  .btn-xsm{
+    @apply !py-[0.3rem] !px-[0.4rem] !text-[0.8rem];
   }
   .btn-sm-2{
     @apply text-[0.75rem] font-500;
@@ -176,6 +179,13 @@
     @apply appearance-none w-[25px] h-[13px] rounded-full border-[1px]
     border-[#D1D5DB] focus:ring-4 focus:ring-primary-indigo/50 transition-all  bg-[url("../../assets/circle.svg")] bg-no-repeat bg-[length:9px] bg-[position:2px_2px] focus:border-primary-indigo/50 checked:bg-[position:13px_2px]  checked:bg-primary-indigo checked:border-primary-indigo;
 
+  }
+  .card-image{
+    @apply   h-[160px]
+    bg-[url("https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111-1500x1000.jpg")] w-full bg-no-repeat  object-cover  bg-cover;
+  }
+  .card-title{
+    @apply p-2 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,.075)];
   }
 
 }
