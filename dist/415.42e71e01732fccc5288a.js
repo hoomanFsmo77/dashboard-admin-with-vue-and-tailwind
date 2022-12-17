@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[415],{6415:(e,t,n)=>{n.r(t),n.d(t,{default:()=>l});const r={name:"Profile"};const l=(0,n(3744).Z)(r,[["render",function(e,t,n,r,l,s){return" Profile "}]])}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[407],{2407:(t,e,n)=>{n.r(e),n.d(e,{default:()=>u});const s={name:"LoadingButtons"};const u=(0,n(3744).Z)(s,[["render",function(t,e,n,s,u,a){return" Loading buttons "}]])}}]);

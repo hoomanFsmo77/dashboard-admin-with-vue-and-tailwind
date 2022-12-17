@@ -1,0 +1,19 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/javascript/pages/CMS/MediaLibrary.vue?vue&type=style&index=0&id=600e187e&scoped=true&lang=css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************/
+
+.slide-enter-active[data-v-600e187e],.slide-leave-active[data-v-600e187e]{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 350ms;
+  transition-timing-function: linear;
+}
+.slide-enter-from[data-v-600e187e],.slide-leave-to[data-v-600e187e]{
+  height: 0;
+}
+.slide-enter-to[data-v-600e187e],.slide-leave-from[data-v-600e187e]{
+  height: var(--600e187e-height);
+}
+
+
+

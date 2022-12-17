@@ -1,52 +1,25 @@
 import {onMounted, ref,watch} from "vue";
 import {useRoute} from "vue-router";
 
-const sidebar = () => {
-    const isUnder1200=window.innerWidth < 1200
-    const side_item=ref(null)
 
-
-    const closeAll = e => {
-        if(side_item.value[e.id - 1][0]){
-            closeAllItems()
-        }else{
-            closeAllItems()
-            side_item.value[e.id - 1][0] =true
-        }
-    }
-
-    const closeAllItems = () => {
-        side_item.value.forEach(item=>{
-            item[0]=false
-        })
-    }
-
-    return {isUnder1200,closeAll,side_item}
-}
-
-
-
-const sidebarItem= (props,emit)=>{
-    const show=ref(true)
-    let ulHeight=ref(null)
-    let sub_container=ref(null)
+export default (props,emit)=>{
+    const show=ref(false)
     let sidebarLink=ref(null)
     const route=useRoute()
     const currentRoutePath=ref('')
-    const isFocus=ref(false)
+    const collapseFlag=ref(false)
+
+
 
     const showSlide = e => {
-        emit('close',{id:props.id})
         currentRoutePath.value=route.path
+        collapseFlag.value=!collapseFlag.value
     }
 
     onMounted(()=>{
-        updateUlHeight()
-        if(!props.hasSub){
-            show.value=false
-        }
-
+        collapseFlag.value=currentRoutePath.value.includes(props.title)
     })
+
 
     const addActiveClass = () => {
         document.querySelectorAll('.sidebar-item ').forEach(item=>{item.classList.remove('sidebar-active')})
@@ -54,30 +27,19 @@ const sidebarItem= (props,emit)=>{
             sidebarLink.value.classList.add('sidebar-active')
         }
     }
-    watch(()=>props.isActive,()=>{
-        updateUlHeight()
-    })
 
     watch(
         ()=>route.path,
         ()=>{
             currentRoutePath.value=route.path
-            show.value=currentRoutePath.value.includes(props.title)
+            collapseFlag.value=currentRoutePath.value.includes(props.title)
         },{
             immediate:true
     })
 
-    const updateUlHeight = () => {
-        currentRoutePath.value=route.path
-        show.value=true
-        if(props.hasSub){
-            setTimeout(function () {
-                let ulStyles=getComputedStyle(sub_container.value)
-                ulHeight.value=ulStyles.height
-                show.value=currentRoutePath.value.includes(props.title)
-            },450)
-        }
-    }
+
+
+
     const singleLinkItemHandler = () => {
         document.querySelectorAll('.sidebar-item ').forEach(item=>{item.classList.remove('sidebar-active')})
         showSlide()
@@ -85,6 +47,5 @@ const sidebarItem= (props,emit)=>{
 
 
 
-    return {show,showSlide,ulHeight,sub_container,addActiveClass,sidebarLink,currentRoutePath,singleLinkItemHandler,isFocus}
+    return {show,showSlide,addActiveClass,sidebarLink,currentRoutePath,singleLinkItemHandler,collapseFlag}
 }
-export {sidebar,sidebarItem}

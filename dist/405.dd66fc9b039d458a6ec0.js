@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[405],{8405:(t,e,n)=>{n.r(e),n.d(e,{default:()=>a});const s={name:"Contacts"};const a=(0,n(3744).Z)(s,[["render",function(t,e,n,s,a,c){return" Contacts "}]])}}]);

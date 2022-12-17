@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[830],{1830:(e,t,n)=>{n.r(t),n.d(t,{default:()=>c});const a={name:"PricingTable"};const c=(0,n(3744).Z)(a,[["render",function(e,t,n,a,c,r){return" Pricing table "}]])}}]);
