@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[896],{1896:(t,e,n)=>{n.r(e),n.d(e,{default:()=>c});const a={name:"Notifications"};const c=(0,n(3744).Z)(a,[["render",function(t,e,n,a,c,i){return" notification "}]])}}]);

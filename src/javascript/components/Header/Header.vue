@@ -1,5 +1,5 @@
 <template>
-  <header class="shadow-lg">
+  <header class="shadow-lg relative">
     <div class="container flex justify-between items-center py-1.2 px-1 sm:px-0">
       <button :class="{'ring-4 ring-secondary-indigo/50 rounded-4':isSidebarActive && isUnder1200}" @click="showUpSidebar"  class="text-secondary-gray text-1.5 cursor-pointer hover:text-gray-700 transition-all sm:p-0 p-0.5 px-0.65">
         <i class="fa-solid fa-align-justify"></i>
