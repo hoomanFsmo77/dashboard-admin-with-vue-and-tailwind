@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[447],{9447:(e,t,n)=>{n.r(t),n.d(t,{default:()=>r});const s={name:"Register"};const r=(0,n(3744).Z)(s,[["render",function(e,t,n,s,r,u){return" Register "}]])}}]);

@@ -145,4 +145,70 @@ let staticData2=[
     },
 ]
 
-export {defaultPageData,activityData,staticData1,staticData2}
+let contactData=[
+    {
+        image:'https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc=',
+        name:'Nielsen Cobb',
+        email:'nielsencobb@memora.com',
+        phone:'+1 (851) 552-2735',
+        job:'Memora'
+    },
+    {
+        image:'https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
+        name:'Margret Cote',
+        email:'margretcote@zilidium.com',
+        phone:'+1 (851) 552-2735',
+        job:'Zilidium'
+    },
+    {
+        image:'https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?b=1&s=170667a&w=0&k=20&c=TXCiY7rYEvIBd6ibj2bE-VbJu0rRGy3MlHwxt2LHt9w=',
+        name:'Rachel Vinson',
+        email:'rachelvinson@chorizon.com',
+        phone:'+1 (851) 552-2735',
+        job:'Chorizon'
+    },
+    {
+        image:'https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg?fit=640,427',
+        name:'Gabrielle Aguirre',
+        email:'gabrielleaguirre@comverges.com',
+        phone:'+1 (851) 552-2735',
+        job:'Comverges'
+    },
+    {
+        image:'https://miro.medium.com/max/1400/0*0fClPmIScV5pTLoE.jpg',
+        name:'Spears Collier',
+        email:'spearscollier@remold.com',
+        phone:'+1 (851) 552-2735',
+        job:'Remold'
+    },
+    {
+        image:'https://www.elitesingles.co.uk/wp-content/uploads/sites/59/2019/11/2b_en_articleslide_sm2-350x264.jpg',
+        name:'Keisha Thomas',
+        email:'keishathomas@euron.com',
+        phone:'+1 (851) 552-2735',
+        job:'Euron'
+    },
+    {
+        image:'https://buffer.com/library/content/images/2022/03/sigmund-MQ2xYBHImKM-unsplash--1--1.jpg',
+        name:'Elisabeth Key',
+        email:'elisabethkey@netagy.com',
+        phone:'+1 (851) 552-2735',
+        job:'Netagy'
+    },
+    {
+        image:'https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+        name:'Patel Mack',
+        email:'patelmack@zedalis.com',
+        phone:'+1 (851) 552-2735',
+        job:'Zedalis'
+    },
+    {
+        image:'https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg',
+        name:'Erika Whitaker',
+        email:'erikawhitaker@uniworld.com',
+        phone:'+1 (851) 552-2735',
+        job:'Uniworld'
+    },
+]
+
+export {defaultPageData,activityData,staticData1,staticData2,contactData}
