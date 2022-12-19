@@ -62,7 +62,7 @@
     @apply border-[1px] border-gray-500 bg-transparent text-gray-500 hover:bg-gray-500 hover:text-white  focus:ring-gray-500/50 ;
   }
   .btn{
-    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] focus:ring-4 transition-all capitalize
+    @apply px-[0.7rem] py-[0.4rem]  rounded-[5px] focus:ring-4 transition-all capitalize font-500
   }
   .btn-white{
     @apply  border-[1px] border-white bg-transparent text-white hover:bg-white hover:text-primary-dark focus:ring-4 focus:ring-white/50;
@@ -104,7 +104,7 @@
     @apply absolute left-0 top-0 h-full
   }
   .container-fluid{
-    @apply w-full mx-auto px-0.5;
+    @apply w-full mx-auto md:p-2.5 p-0.5 ;
   }
   .card{
     @apply shadow-[0_4px_21px_rgba(0,0,0,0.15)] rounded-10 bg-white;

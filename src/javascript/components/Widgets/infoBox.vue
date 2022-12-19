@@ -1,0 +1,22 @@
+<template>
+    <div class="bg-white p-2 rounded-14 shadow-[0_2px_10px_rgba(0,0,0,0.1)] transition-all hover:translate-y-[-5px] relative flex flex-col justify-center items-center gap-1">
+        <span class="icon-wrapper !w-5 !h-5" :class="[textClasses(theme),bgClasses(theme)]">
+          <i class="text-2" :class="icon"></i>
+        </span>
+      <div>
+        <h5 class="text-center font-700 text-primary-dark ">{{title}}</h5>
+        <p class="text-[0.8rem] text-center text-gray-500 font-500 mt-0.25">
+          {{description}}
+        </p>
+      </div>
+
+      <router-link :to="{name:'knowledgeBase_Topic'}" class="link-stretch"></router-link>
+    </div>
+</template>
+
+<script setup>
+import useMethods from "../../composables/useMethods.js";
+const {bgClasses,textClasses}=useMethods()
+const props=defineProps(['icon','theme','title','description'])
+
+</script>

@@ -4,10 +4,10 @@
        :class="{'!grid-cols-[89px_1fr]':isActive}"
   >
     <Sidebar :is-active="isActive"/>
-    <div class="flex flex-col justify-between bg-[#f8f9fa]">
+    <main class="flex flex-col justify-between bg-[#f8f9fa]">
       <router-view></router-view>
       <Footer/>
-    </div>
+    </main>
   </div>
 </template>
 

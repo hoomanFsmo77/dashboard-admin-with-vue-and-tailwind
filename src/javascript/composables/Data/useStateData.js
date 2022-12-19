@@ -144,7 +144,6 @@ let staticData2=[
         link:'Stats'
     },
 ]
-
 let contactData=[
     {
         image:'https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc=',
@@ -211,4 +210,32 @@ let contactData=[
     },
 ]
 
-export {defaultPageData,activityData,staticData1,staticData2,contactData}
+let infoData=[
+    {
+        icon:'fa-solid fa-map-location-dot',
+        theme:'indigo',
+        title:'Help & Documentation',
+        description:'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in hi.'
+    },
+    {
+        icon:'fa-solid fa-laptop',
+        theme:'green',
+        title:'Developer Resources',
+        description:'The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit'
+    },
+    {
+        icon:'fa-solid fa-comment',
+        theme:'red',
+        title:'Chat With Us',
+        description:'His room, a proper human room although a little too small, lay peacefully between its four familiar '
+    },
+    {
+        icon:'fa-solid fa-bullseye',
+        theme:'blue',
+        title:'FAQ',
+        description:'Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of '
+    },
+]
+
+
+export {defaultPageData,activityData,staticData1,staticData2,contactData,infoData}
