@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[969],{5969:(e,t,n)=>{n.r(t),n.d(t,{default:()=>r});const l={name:"Preloaders"};const r=(0,n(3744).Z)(l,[["render",function(e,t,n,l,r,s){return null}]])}}]);

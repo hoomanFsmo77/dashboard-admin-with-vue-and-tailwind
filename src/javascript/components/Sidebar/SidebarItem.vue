@@ -4,12 +4,12 @@
         v-if="hasSub"
         ref="sidebarLink"
         @click="showSlide"
-        class="sidebar-item focus:bg-indigo-400 focus:text-white focus:hover:bg-indigo-400"
+        class="sidebar-item focus:bg-indigo-400 focus:text-white focus:hover:bg-indigo-400 "
         :class="{'sidebar-active':currentRoutePath.includes(title),'!flex-col !px-0.5 !pt-0.25':isActive}"
     >
       <i :class="props.icon" class="text-1.5 "></i>
       <span class=" ml-1 text-[0.9rem] font-500" :class="{'!mx-auto !text-[0.75rem]':isActive}">{{title}}</span>
-      <i v-if="hasSub" :class="{'rotate-[-90deg]':show,'!mx-auto !rotate-[-90deg]':isActive,'!rotate-[90deg]':show && isActive}" class="bi bi-chevron-left ml-auto text-0.75 transition-all" ></i>
+      <i v-if="hasSub" :class="{'rotate-[-90deg]':collapseFlag,'!mx-auto !rotate-[-90deg]':isActive,'!rotate-[90deg]':collapseFlag && isActive}" class="bi bi-chevron-left ml-auto  text-0.75 transition-all  " ></i>
     </button>
     <router-link
         v-else
@@ -22,7 +22,7 @@
     >
       <i :class="props.icon" class="text-1.5 "></i>
       <span class=" ml-1 text-[0.9rem] font-500" :class="{'!mx-auto !text-[0.75rem] !text-center':isActive}">{{title}}</span>
-      <i v-if="hasSub" :class="{'rotate-[-90deg]':show}" class="bi bi-chevron-left ml-auto text-0.75 transition-all"></i>
+      <i v-if="hasSub" :class="{'rotate-[-90deg]':collapseFlag}" class="bi bi-chevron-left ml-auto text-0.75 transition-all"></i>
     </router-link>
     <ul
         v-collapsible="collapseFlag"
