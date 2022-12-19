@@ -32,7 +32,7 @@
                       <span class="text-[0.9rem]">{{item.due}}</span>
                     </td>
                     <td class="text-center">
-                      <span class="category-card  " :class="[bgClasses(item.theme),textClasses(item.theme)]">{{item.priority}}</span>
+                      <span class="category-card  " :class="[$bgColor(item.theme),$textColor(item.theme)]">{{item.priority}}</span>
                     </td>
                   </tr>
                   </tbody>
@@ -235,8 +235,8 @@ import ActivityCard from '../../components/reusable/ActivityCard.vue'
 import Tooltip from '../../components/reusable/Tooltip.vue'
 import UserProfile from '../../components/reusable/UserProfile.vue'
 import ProjectCard from '../../components/Widgets/ProjectCard.vue'
-import useMethods from "../../composables/useMethods.js";
-const {textClasses,bgClasses}=useMethods()
+
+
 
 </script>
 

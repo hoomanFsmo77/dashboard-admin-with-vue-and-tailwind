@@ -180,9 +180,7 @@ import NavbarButton from '../../components/Header/NavbarButton.vue'
 import Dropdown from '../../components/Header/Dropdown.vue'
 import Card from '../../components/reusable/Card.vue'
 import {tableData5,tableData10} from "../../composables/Data/useTableData.js";
-import useMethods from "../../composables/useMethods.js";
 import ActivityCard from '../../components/reusable/ActivityCard.vue'
 const {toggleFocus,show}=useNavbar()
-const {bgClasses,textClasses}=useMethods()
 </script>
 

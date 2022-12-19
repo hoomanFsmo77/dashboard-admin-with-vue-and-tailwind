@@ -7,7 +7,7 @@
       </column>
     </row>
     <row>
-      <column col="12" sm="6" md="8">
+      <column col="12"  md="8">
         <div class="card overflow-hidden">
           <div class="p-2.5">
             <p class="article">
@@ -21,7 +21,7 @@
               <li >Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
               <li >Aliquam tincidunt mauris eu risus.</li>
             </ol>
-            <CodeEditor :read_only="true" :value="codeEditorValue"></CodeEditor>
+            <CodeEditor width="0" min_width="100%" :read_only="true" :value="codeEditorValue"></CodeEditor>
             <div class="my-2 bg-gray-100 p-2">
               <p class="text-1.2 leading-1.6 text-primary-dark font-500">
                 The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream.
@@ -50,7 +50,7 @@
         </div>
 
       </column>
-      <column col="12" sm="6" md="4">
+      <column col="12"  md="4">
         <row class="!pt-0 !mt-0" >
           <column class="!pt-0" col="12">
             <div class="card ">

@@ -294,12 +294,12 @@
     </row>
     <row class="!my-1">
       <column v-for="item in defaultPageData" col="12" md="3">
-        <div class="card p-2 flex justify-between items-center" :class="bgClasses(item.theme)">
+        <div class="card p-2 flex justify-between items-center" :class="$bgColor(item.theme)">
               <div >
                 <span class="text-primary-dark font-700 text-[0.9rem]">{{item.title}}</span>
-                <h3 class="font-700" :class="textClasses(item.theme)">{{item.achieve}}</h3>
+                <h3 class="font-700" :class="$textColor(item.theme)">{{item.achieve}}</h3>
               </div>
-          <i class="text-2" :class="[item.icon,textClasses(item.theme)]"></i>
+          <i class="text-2" :class="[item.icon,$textColor(item.theme)]"></i>
         </div>
       </column>
     </row>
@@ -374,8 +374,6 @@ import Tooltip from '../../components/reusable/Tooltip.vue'
 import {tooltipData} from "../../composables/Data/useExtraData.js";
 import Card from '../../components/reusable/Card.vue'
 import CmsCard from '../../components/Widgets/CmsCard.vue'
-import useMethods from "../../composables/useMethods.js";
 import ProjectCard from '../../components/Widgets/ProjectCard.vue'
-const {bgClasses,textClasses}=useMethods()
 </script>
 

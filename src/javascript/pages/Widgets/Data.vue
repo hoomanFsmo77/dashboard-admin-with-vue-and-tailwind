@@ -21,7 +21,7 @@
               <tbody>
               <tr class="table-hover text-center " v-for="item in tableData8.td">
                 <td class="p-1">
-                  <span class="category-card block" :class="[bgClasses(item.statusTheme),textClasses(item.statusTheme)]">{{item.status}}</span>
+                  <span class="category-card block" :class="[$bgColor(item.statusTheme),$textColor(item.statusTheme)]">{{item.status}}</span>
                 </td>
                 <td >
                   <span class="font-700 text-[0.9rem] text-primary-dark">{{item.subject}}</span>
@@ -159,7 +159,7 @@
                   <span class="text-[0.9rem]">{{item.due}}</span>
                 </td>
                 <td class="text-center">
-                  <span class="category-card  " :class="[bgClasses(item.theme),textClasses(item.theme)]">{{item.priority}}</span>
+                  <span class="category-card  " :class="[$bgColor(item.theme),$textColor(item.theme)]">{{item.priority}}</span>
                 </td>
               </tr>
               </tbody>
@@ -327,7 +327,7 @@
             <ul class="flex flex-col gap-1.6">
               <li class="flex justify-between items-center" v-for="item in tableData8.td">
                 <div class="flex gap-1 items-center">
-                <span class="icon-wrapper" :class="[bgClasses(item.statusTheme),textClasses(item.statusTheme)]">
+                <span class="icon-wrapper" :class="[$bgColor(item.statusTheme),$textColor(item.statusTheme)]">
                   <i :class="item.icon"></i>
                 </span>
                   <span class="text-primary-dark text-[0.9rem] font-500">{{item.subject}}</span>
@@ -406,7 +406,6 @@ import Card from '../../components/reusable/Card.vue'
 import {tableData8,tableData5} from "../../composables/Data/useTableData.js";
 import ActivityCard from '../../components/reusable/ActivityCard.vue'
 import {activityData} from "../../composables/Data/useStateData.js";
-import useMethods from "../../composables/useMethods.js";
 import TodoItem from '../../components/reusable/TodoItem.vue'
 import inputGroup from '../../components/Form/inputGroup.vue'
 import Tooltip from '../../components/reusable/Tooltip.vue'
@@ -414,7 +413,6 @@ import {tooltipData} from "../../composables/Data/useExtraData.js";
 import {tableData6,tableData9,tableData3} from "../../composables/Data/useTableData.js";
 import UserProfile from '../../components/reusable/UserProfile.vue'
 import OrderSection from '../../components/Widgets/OrderSection.vue'
-const {textClasses,bgClasses}=useMethods();
 const searchText=ref('')
 const todos=ref([])
 

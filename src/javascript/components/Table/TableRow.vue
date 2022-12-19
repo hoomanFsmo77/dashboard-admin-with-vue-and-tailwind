@@ -259,7 +259,7 @@
     </td>
     <td>
        <span  class="category-card "
-              :class="[bgClasses(statusClass),textClasses(statusClass)]">
+              :class="[$bgColor(statusClass),$textColor(statusClass)]">
             <span class="text-[0.7rem]">{{ status }}</span>
           </span>
     </td>
@@ -280,11 +280,9 @@ import Dropdown from '../Header/Dropdown.vue'
 import AppLink from '../reusable/AppLink.vue'
 import {useRouter} from 'vue-router'
 import useNavbar from "../../composables/useNavbar.js";
-import useMethods from "../../composables/useMethods.js";
 let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'category', 'author', 'hasHead', 'price', 'orderId', 'review','count','inStock','productId','link','hasLink','type','city','orders','phone']);
 const {show, toggleFocus} = useNavbar();
 const router=useRouter();
-const {textClasses,bgClasses}=useMethods()
 const redirectToDetail = () => {
   if(props.hasLink){
     router.push({
