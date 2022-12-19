@@ -207,4 +207,21 @@ let  galleryData=[
 ]
 
 
-export {tooltipData,text,galleryData,tooltipData2}
+const codeEditorValue=`
+//// how to create app in Vue.js
+
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>>
+import App from "./App.vue";
+import router from "./router.config.js";
+
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>>
+const app=createApp(App);
+app.component('row',row);
+app.component('column',column);
+app.use(router);
+app.directive('collapsible',vCollapsible)
+app.mount('#app')
+`
+
+
+export {tooltipData,text,galleryData,tooltipData2,codeEditorValue}

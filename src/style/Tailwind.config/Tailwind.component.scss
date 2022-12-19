@@ -81,6 +81,9 @@
   .btn-red-full{
     @apply  bg-red-600 text-white hover:bg-red-700  focus:ring-red-600/50 focus:ring-4;
   }
+  .btn-green-full{
+    @apply  bg-green-600 text-white hover:bg-green-700  focus:ring-green-600/50 focus:ring-4;
+  }
   .btn-teal-full{
     @apply  bg-teal-600 text-white hover:bg-teal-700  focus:ring-teal-600/50 focus:ring-4;
   }
@@ -191,6 +194,9 @@
   }
   .card-status{
     @apply absolute top-0 w-full h-[8px] bg-primary-indigo left-0
+  }
+  .article{
+    @apply text-[0.9rem] leading-1.6 text-gray-500 font-500 mb-1.5;
   }
 
 }

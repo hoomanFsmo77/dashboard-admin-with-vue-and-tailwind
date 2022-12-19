@@ -26,5 +26,8 @@
     tr{
         @apply border-b-[1px] border-b-gray-300
     }
+    code{
+        @apply text-pink-600 text-[0.85rem];
+    }
 
 }
