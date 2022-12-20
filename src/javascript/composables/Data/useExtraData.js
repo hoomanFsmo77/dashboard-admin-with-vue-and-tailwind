@@ -221,5 +221,142 @@ app.directive('collapsible',vCollapsible)
 app.mount('#app')
 `
 
+const codeEditorValue2="<template>\n" +
+    "  <vue-cal style=\"height: 800px\"\n" +
+    "           ref=\"vuecal\"\n" +
+    "           selected-date=\"2022-11-21\"\n" +
+    "           :time-from=\"9 * 60\"\n" +
+    "           :time-to=\"23 * 60\"\n" +
+    "           :disable-views=\"['years', 'year', 'month']\"\n" +
+    "           :events=\"events\"\n" +
+    "           :editable-events=\"{ title: true, drag: true, resize: true, delete: true, create: true }\"\n" +
+    "           @cell-dblclick=\"$refs.vuecal.createEvent(\n" +
+    "    $event,\n" +
+    "    120,\n" +
+    "    { title: 'New Event', class: 'blue-event' }\n" +
+    "  )\"\n" +
+    "  />\n" +
+    "</template>\n" +
+    "\n" +
+    "<script setup>\n" +
+    "import 'vue-cal/dist/vuecal.css'\n" +
+    "import VueCal from 'vue-cal'\n" +
+    "\n" +
+    "const events = [\n" +
+    "  {\n" +
+    "    start: '2022-11-21 14:00',\n" +
+    "    end: '2022-11-21 18:00',\n" +
+    "    title: 'Need to go shopping',\n" +
+    "    content: '<i class=\"fa-solid fa-cart-shopping\"></i>',\n" +
+    "    class: 'leisure'\n" +
+    "  },\n" +
+    "  {\n" +
+    "    start: '2022-11-22 19:00',\n" +
+    "    end: '2022-11-22 22:00',\n" +
+    "    title: 'Golf with John',\n" +
+    "    content: '<i class=\"fa-solid fa-golf-ball-tee\"></i>',\n" +
+    "    class: 'sport'\n" +
+    "  },\n" +
+    "  {\n" +
+    "    start: '2022-11-23 10:00',\n" +
+    "    end: '2022-11-23 13:00',\n" +
+    "    title: 'Dad\\'s birthday!',\n" +
+    "    content: '<i class=\"fa-solid fa-cake-candles\"></i>',\n" +
+    "    class: 'event'\n" +
+    "  },\n" +
+    "  {\n" +
+    "    start: '2022-11-24 21:00',\n" +
+    "    end: '2022-11-24 24:00',\n" +
+    "    title: 'Do Homework',\n" +
+    "    content: '<i class=\"fa-solid fa-house-laptop\"></i>',\n" +
+    "    class: 'duty'\n" +
+    "  },\n" +
+    "  {\n" +
+    "    start: '2022-11-25 15:00',\n" +
+    "    end: '2022-11-25 18:00',\n" +
+    "    title: 'Meeting at work',\n" +
+    "    content: '<i class=\"fa-solid fa-handshake\"></i>',\n" +
+    "    class: 'meet'\n" +
+    "  },\n" +
+    "  {\n" +
+    "    start: '2022-11-26 9:00',\n" +
+    "    end: '2022-11-26 14:00',\n" +
+    "    title: 'Hiking',\n" +
+    "    content: '<i class=\"fa-solid fa-person-hiking\"></i>',\n" +
+    "    class: 'sport'\n" +
+    "  }, {\n" +
+    "    start: '2022-11-27 17:00',\n" +
+    "    end: '2022-11-27 23:00',\n" +
+    "    title: 'Party at Frank house',\n" +
+    "    content: '<i class=\"fa-solid fa-gift\"></i>',\n" +
+    "    class: 'event'\n" +
+    "  },\n" +
+    "]\n" +
+    "\n" +
+    "\n" +
+    "</script>\n" +
+    "\n" +
+    "<style lang=\"scss\">\n" +
+    "@import \"vue-cal/dist/vuecal.css\";\n" +
+    "\n" +
+    ".vuecal__menu, .vuecal__cell-events-count {\n" +
+    "  background-color: #42b983;\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__title-bar {\n" +
+    "  background-color: #e4f5ef;\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__cell--today, .vuecal__cell--current {\n" +
+    "  background-color: rgba(240, 240, 255, 0.4);\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal:not(.vuecal--day-view) .vuecal__cell--selected {\n" +
+    "  background-color: rgba(235, 255, 245, 0.4);\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__cell--selected:before {\n" +
+    "  border-color: rgba(66, 185, 131, 0.5);\n" +
+    "}\n" +
+    "\n" +
+    "/* Cells and buttons get highlighted when an event is dragged over it. */\n" +
+    ".vuecal__cell--highlighted:not(.vuecal__cell--has-splits),\n" +
+    ".vuecal__cell-split--highlighted {\n" +
+    "  background-color: rgba(195, 255, 225, 0.5);\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__arrow.vuecal__arrow--highlighted,\n" +
+    ".vuecal__view-btn.vuecal__view-btn--highlighted {\n" +
+    "  background-color: rgba(136, 236, 191, 0.25)\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__view-btn {\n" +
+    "  color: white !important;\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__event.leisure {\n" +
+    "  background-color: rgba(253, 156, 66, 0.9);\n" +
+    "  border: 1px solid rgb(233, 136, 46);\n" +
+    "  color: #fff;\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__event.sport {\n" +
+    "  background-color: rgba(255, 102, 102, 0.9);\n" +
+    "  border: 1px solid rgb(235, 82, 82);\n" +
+    "  color: #fff;\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__event.duty {\n" +
+    "  @apply bg-indigo-700 text-white;\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__event.event {\n" +
+    "  @apply bg-sky-700 text-white;\n" +
+    "}\n" +
+    "\n" +
+    ".vuecal__event.meet {\n" +
+    "  @apply bg-red-700 text-white;\n" +
+    "}\n" +
+    "</style>"
 
-export {tooltipData,text,galleryData,tooltipData2,codeEditorValue}
+export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2}

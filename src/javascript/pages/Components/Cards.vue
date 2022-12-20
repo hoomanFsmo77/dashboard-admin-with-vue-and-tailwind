@@ -386,7 +386,7 @@ import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import {galleryData} from "../../composables/Data/useExtraData.js";
 import Card from '../../components/reusable/Card.vue'
 import TabCard from '../../components/Widgets/TabCard.vue'
-import useTab from "../../composables/useTab.js";
-const {changeTab,activeTab}=useTab()
+
+
 </script>
 

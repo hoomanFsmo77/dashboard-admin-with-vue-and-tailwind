@@ -17,7 +17,6 @@ import '../style/App.scss';
 import '../assets/d_logo.png'
 import 'v-calendar/dist/style.css';
 import 'vue3-photo-preview/dist/index.css';
-
 ////////// components
 import Header from './components/Header/Header.vue'
 import Sidebar from "./components/Sidebar/Sidebar.vue";
