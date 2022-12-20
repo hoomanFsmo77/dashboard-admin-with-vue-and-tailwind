@@ -1,7 +1,6 @@
 <template>
   <template v-if="form===undefined">
-    <label v-if="label" :for="id" class="block mb-0.5 text-gray-700 font-500 text-1">
-      {{label}}
+    <label v-if="label" :for="id" class="block mb-0.5 text-gray-700 font-500 text-[0.9rem]" v-html="label">
     </label>
     <div :class="{'flex gap-0 items-center':icon}">
       <i v-if="icon" class="py-[4px] px-[8px] bg-gray-700 text-white rounded-l-4" :class="icon"></i>

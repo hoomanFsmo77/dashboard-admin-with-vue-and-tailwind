@@ -1073,6 +1073,15 @@ code {
   text-decoration-line: underline;
 }
 
+.\!link {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246/var(--tw-text-opacity));
+}
+
+.\!link:hover {
+  text-decoration-line: underline;
+}
+
 .checkbox {
   height: 14px;
   width: 14px;
@@ -1530,6 +1539,10 @@ code {
   margin: auto;
 }
 
+.\!m-0 {
+  margin: 0 !important;
+}
+
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
@@ -1789,6 +1802,14 @@ code {
 
 .mb-0\.75 {
   margin-bottom: 0.75rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mb-1\.5 {
+  margin-bottom: 1.5rem;
 }
 
 .block {
@@ -2831,6 +2852,16 @@ code {
   padding-bottom: 0.25rem;
 }
 
+.py-2\.5 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.\!py-\[0\.35rem\] {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+}
+
 .\!pt-1\.2 {
   padding-top: 1.2rem !important;
 }
@@ -3643,6 +3674,9 @@ code {
 }
 
 @media (min-width: 500px) {
+  .sm\:block {
+    display: block;
+  }
   .sm\:inline-block {
     display: inline-block;
   }
@@ -3712,6 +3746,9 @@ code {
   }
   .md\:mb-0 {
     margin-bottom: 0;
+  }
+  .md\:block {
+    display: block;
   }
   .md\:inline-block {
     display: inline-block;
