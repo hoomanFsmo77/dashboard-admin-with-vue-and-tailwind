@@ -70,6 +70,12 @@
   .btn-sky-full{
     @apply bg-sky-600 text-white hover:bg-sky-700  focus:ring-sky-600/50 focus:ring-4;
   }
+  .btn-dark-full{
+    @apply bg-primary-dark text-white hover:bg-[#444]  focus:ring-primary-dark/50 focus:ring-4;
+  }
+  .btn-gray-full{
+    @apply bg-gray-600 text-white hover:bg-gray-700  focus:ring-gray-600/50 focus:ring-4;
+  }
 
   .btn-white-full{
     @apply   bg-white text-primary-dark focus:ring-4 focus:ring-white/50
@@ -110,7 +116,7 @@
     @apply w-full mx-auto md:p-2.5 p-0.5 ;
   }
   .card{
-    @apply shadow-[0_4px_21px_rgba(0,0,0,0.15)] rounded-10 bg-white;
+    @apply shadow-[0_4px_21px_rgba(0,0,0,0.15)] rounded-10 bg-white overflow-hidden;
   }
   .card-footer{
     @apply bg-gray-100 p-2;
@@ -194,6 +200,18 @@
   }
   .card-status{
     @apply absolute top-0 w-full h-[8px] bg-primary-indigo left-0
+  }
+  .card-text{
+    @apply text-primary-dark text-[0.9rem] my-1 font-500;
+  }
+  .card-header{
+    @apply text-primary-dark font-700 ;
+  }
+  .card-body{
+    @apply p-1.5;
+  }
+  .card-sub{
+    @apply block text-gray-500 text-[0.9rem] font-700
   }
   .article{
     @apply text-[0.9rem] leading-1.6 text-gray-500 font-500 mb-1.5;
