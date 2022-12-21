@@ -3182,14 +3182,6 @@ code {
   font-size: 1.4rem;
 }
 
-.\!text-2\.5 {
-  font-size: 2.5rem !important;
-}
-
-.\!text-2 {
-  font-size: 2rem !important;
-}
-
 .\!text-\[0\.8rem\] {
   font-size: 0.8rem !important;
 }
@@ -3220,6 +3212,10 @@ code {
 
 .\!text-\[0\.9rem\] {
   font-size: 0.9rem !important;
+}
+
+.\!text-2 {
+  font-size: 2rem !important;
 }
 
 .text-1\.2 {

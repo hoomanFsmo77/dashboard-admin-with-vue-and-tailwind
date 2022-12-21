@@ -359,4 +359,6 @@ const codeEditorValue2="<template>\n" +
     "}\n" +
     "</style>"
 
-export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2}
+let codeEditorValue3="<template>\n  <div class=\"container-fluid\">\n     <row>\n      <photo-provider>\n        <column v-for=\"(item,index) in galleryData\" col=\"6\"  md=\"4\" xlg=\"3\">\n          <photo-consumer  :intro=\"item.name\" :key=\"index\" :src=\"item.image\">\n            <div class=\"card overflow-hidden cursor-pointer\">\n              <img :src=\"item.image\" class=\"view-box\"  alt=\"\">\n              <div class=\"py-0.5 px-0.75\">\n                <span class=\"text-0.875 text-primary-dark font-700 \">{{item.name}}</span>\n                <span class=\"block my-0.5 text-[0.8rem] text-gray-500\">Image sample text</span>\n              </div>\n            </div>\n          </photo-consumer>\n        </column>\n      </photo-provider>\n    </row>\n  </div>  \n</template>  \n<script >\nconst galleryData=[\n    {\n        image:'./img1.jpg',        \n        name:'Image 1'\n    },\n    {\n        image:'./img2.jpg',        \n        name:'Image 2'\n    },\n    {\n        image:'./img3.jpg',        \n        name:'Image 3'\n    },\n]\n\n</script>"
+
+export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3}
