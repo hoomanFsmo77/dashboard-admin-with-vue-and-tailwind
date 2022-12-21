@@ -20,8 +20,7 @@ import '../assets/country/germany.svg'
 import '../assets/country/spain.svg'
 import '../assets/country/thailand.svg'
 import '../assets/circle.svg'
-
-
+import '../assets/marker-icon.png'
 ////////// Vue
 
 ///// app

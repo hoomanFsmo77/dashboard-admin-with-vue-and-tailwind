@@ -361,4 +361,38 @@ const codeEditorValue2="<template>\n" +
 
 let codeEditorValue3="<template>\n  <div class=\"container-fluid\">\n     <row>\n      <photo-provider>\n        <column v-for=\"(item,index) in galleryData\" col=\"6\"  md=\"4\" xlg=\"3\">\n          <photo-consumer  :intro=\"item.name\" :key=\"index\" :src=\"item.image\">\n            <div class=\"card overflow-hidden cursor-pointer\">\n              <img :src=\"item.image\" class=\"view-box\"  alt=\"\">\n              <div class=\"py-0.5 px-0.75\">\n                <span class=\"text-0.875 text-primary-dark font-700 \">{{item.name}}</span>\n                <span class=\"block my-0.5 text-[0.8rem] text-gray-500\">Image sample text</span>\n              </div>\n            </div>\n          </photo-consumer>\n        </column>\n      </photo-provider>\n    </row>\n  </div>  \n</template>  \n<script >\nconst galleryData=[\n    {\n        image:'./img1.jpg',        \n        name:'Image 1'\n    },\n    {\n        image:'./img2.jpg',        \n        name:'Image 2'\n    },\n    {\n        image:'./img3.jpg',        \n        name:'Image 3'\n    },\n]\n\n</script>"
 
-export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3}
+let codeEditorValue4="<template>\n" +
+    "  <div id=\"map\" class=\"h-[400px]\"></div>\n" +
+    "</template>\n" +
+    "\n" +
+    "<script setup>\n" +
+    "import L from 'leaflet'\n" +
+    "import {onMounted} from \"vue\";\n" +
+    "\n" +
+    "onMounted(()=>{\n" +
+    "  let map = L.map('map').setView([51.505, -0.09], 13);\n" +
+    "\n" +
+    "  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {\n" +
+    "    attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors'\n" +
+    "  }).addTo(map);\n" +
+    "\n" +
+    "  L.marker([51.5, -0.09]).addTo(map)\n" +
+    "      .bindPopup('<h5 class=\"card-header\">info window content</h5><p class=\"article\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloribus ea earum, iure laborum rerum similique? Accusamus, debitis dolor ea iure laudantium necessitatibus officiis, quibusdam quisquam quos recusandae similique totam!</p>')\n" +
+    "      .openPopup();\n" +
+    "})\n" +
+    "\n" +
+    "\n" +
+    "</script>\n" +
+    "<style lang=\"scss\">\n" +
+    ".leaflet-container a.leaflet-popup-close-button{\n" +
+    "  display: flex!important;\n" +
+    "  align-items: center!important;\n" +
+    "  justify-content: center!important;\n" +
+    "  width: 35px!important;\n" +
+    "  height: 35px!important;\n" +
+    "  background: #333!important;\n" +
+    "  color: white!important;\n" +
+    "}\n" +
+    "</style>\n"
+
+export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3,codeEditorValue4}
