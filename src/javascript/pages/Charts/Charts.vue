@@ -88,8 +88,8 @@
       <column col="12" md="6">
         <Card title="Donut chart Example" :has-menu="false" body-class="!p-2">
           <div class="mb-1">
-            <button @click="collapseFlag[4]=!collapseFlag[4]" class="link font-500 !text-[0.9rem]">Show code example</button>
-            <CodeEditor class="v-collapse mt-2" v-collapsible="collapseFlag[4]" width="0" min_width="100%" :read_only="true" :value="codeEditorValue7"></CodeEditor>
+            <button @click="collapseFlag[5]=!collapseFlag[5]" class="link font-500 !text-[0.9rem]">Show code example</button>
+            <CodeEditor class="v-collapse mt-2" v-collapsible="collapseFlag[5]" width="0" min_width="100%" :read_only="true" :value="codeEditorValue7"></CodeEditor>
           </div>
           <div>
             <apexchart type="donut" height="250" :options="chart18.chartOptions" :series="chart18.series"></apexchart>
@@ -120,7 +120,7 @@ import Breadcrumb from '../../components/Breadcrumb.vue'
 import Card from '../../components/Card/Card.vue'
 import CodeEditor from 'simple-code-editor';
 import {codeEditorValue7} from "../../composables/Data/useExtraData.js";
-const collapseFlag=ref([false,false,false,false,false])
+const collapseFlag=ref([false,false,false,false,false,false])
 
 </script>
 <style scoped lang="scss">

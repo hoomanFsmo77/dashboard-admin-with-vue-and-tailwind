@@ -103,8 +103,8 @@ const sidebarMainData=[
         isOpen:false,
         hasSub:true,
         subMenuList:[
-            {title:'Charts',to:{name:'Charts'}},
-            {title:'Gauge + Sparkline',to:{name:'charts-gauge-sparkline'}},
+            {title:'Charts',to:{name:'Chart'}},
+            {title:'speedometer + Sparkline',to:{name:'charts-speedometer-sparkline'}},
         ]
     },
     {

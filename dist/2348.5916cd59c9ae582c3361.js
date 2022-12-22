@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[2348],{2348:(e,t,n)=>{n.r(t),n.d(t,{default:()=>s});const r={name:"Text-editor"};const s=(0,n(3744).Z)(r,[["render",function(e,t,n,r,s,u){return" Text editor "}]])}}]);

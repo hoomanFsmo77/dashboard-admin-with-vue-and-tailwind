@@ -263,17 +263,17 @@ const routes=[
                 ]
             },
             {
-                path:'/Chart',
-                name:'Chart',
+                path:'/Charts',
+                name:'Charts',
                 component: ChartsIndex,
                 children: [
                     {
-                        path:'Charts',
-                        name:'Charts',
+                        path:'Chart',
+                        name:'Chart',
                         component:Charts,
                     },{
-                        path:'charts-gauge-sparkline',
-                        name:'charts-gauge-sparkline',
+                        path:'charts-speedometer-sparkline',
+                        name:'charts-speedometer-sparkline',
                         component:charts_gauge_sparkline,
                     }
                 ]
