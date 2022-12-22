@@ -39,6 +39,7 @@
     "@tinymce/tinymce-vue": "^5.0.0",
     "apexcharts": "^3.36.3",
     "core-js": "^3.26.0",
+    "epic-spinners": "^2.0.0",
     "ladda": "^2.0.3",
     "leaflet": "^1.9.3",
     "postcss-flexbugs-fixes": "^5.0.2",

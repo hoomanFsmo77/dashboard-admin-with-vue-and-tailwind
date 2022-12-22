@@ -461,5 +461,5 @@ let codeEditorValue5="<template>\n" +
     "</script>\n" +
     "\n"
 
-
-export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3,codeEditorValue4,codeEditorValue5}
+let codeEditorValue6="<template>\n    <spring-spinner\n              :animation-duration=\"3000\"\n              :size=\"60\"\n              color=\"#ff1d5e\"\n          />\n</template>\n<script >\nimport {SpringSpinner  } from 'epic-spinners'\n</script>"
+export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3,codeEditorValue4,codeEditorValue5,codeEditorValue6}
