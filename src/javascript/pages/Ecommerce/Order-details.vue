@@ -173,14 +173,14 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
-import AppLink from '../../components/reusable/AppLink.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
+import AppLink from '../../components/AppLink.vue'
 import useNavbar from "../../composables/useNavbar.js";
 import NavbarButton from '../../components/Header/NavbarButton.vue'
 import Dropdown from '../../components/Header/Dropdown.vue'
-import Card from '../../components/reusable/Card.vue'
+import Card from '../../components/Card/Card.vue'
 import {tableData5,tableData10} from "../../composables/Data/useTableData.js";
-import ActivityCard from '../../components/reusable/ActivityCard.vue'
+import ActivityCard from '../../components/ActivityCard.vue'
 const {toggleFocus,show}=useNavbar()
 </script>
 

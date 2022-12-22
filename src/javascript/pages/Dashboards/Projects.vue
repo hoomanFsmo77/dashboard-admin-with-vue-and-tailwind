@@ -230,11 +230,11 @@ import {tableData5,tableData6} from '../../composables/Data/useTableData.js'
 import {defaultPageData,activityData} from '../../composables/Data/useStateData.js'
 import {tooltipData} from '../../composables/Data/useExtraData.js'
 import {chart4,chart5,chart6} from '../../composables/Data/useChartData.js'
-import Card from '../../components/reusable/Card.vue'
-import ActivityCard from '../../components/reusable/ActivityCard.vue'
-import Tooltip from '../../components/reusable/Tooltip.vue'
-import UserProfile from '../../components/reusable/UserProfile.vue'
-import ProjectCard from '../../components/Widgets/ProjectCard.vue'
+import Card from '../../components/Card/Card.vue'
+import ActivityCard from '../../components/ActivityCard.vue'
+import Tooltip from '../../components/Tooltip.vue'
+import UserProfile from '../../components/UserProfile.vue'
+import ProjectCard from '../../components/Card/ProjectCard.vue'
 
 
 

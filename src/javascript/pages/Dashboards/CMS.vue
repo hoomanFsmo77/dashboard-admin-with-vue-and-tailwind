@@ -170,12 +170,12 @@
 </template>
 
 <script setup>
-import CmsCard from '../../components/Widgets/CmsCard.vue';
-import Card from '../../components/reusable/Card.vue'
+import CmsCard from '../../components/Card/CmsCard.vue';
+import Card from '../../components/Card/Card.vue'
 import inputBox from '../../components/Form/inputBox.vue'
 import SelectBox from '../../components/Form/SelectBox.vue';
 import AreaBox from '../../components/Form/AreaBox.vue'
-import ActivityCard from '../../components/reusable/ActivityCard.vue'
+import ActivityCard from '../../components/ActivityCard.vue'
 import Table from '../../components/Table/Table.vue'
 import {defaultPageData,activityData} from "../../composables/Data/useStateData.js";
 import {tableData2} from "../../composables/Data/useTableData.js";

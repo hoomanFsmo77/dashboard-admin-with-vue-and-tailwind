@@ -236,11 +236,11 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
-import UserProfile from '../../components/reusable/UserProfile.vue'
-import Tooltip from '../../components/reusable/Tooltip.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
+import UserProfile from '../../components/UserProfile.vue'
+import Tooltip from '../../components/Tooltip.vue'
 import {tooltipData2} from "../../composables/Data/useExtraData.js";
-import Card from '../../components/reusable/Card.vue'
+import Card from '../../components/Card/Card.vue'
 import inputBox from '../../components/Form/inputBox.vue'
 import AreaBox from '../../components/Form/AreaBox.vue'
 import inputGroup from '../../components/Form/inputGroup.vue'

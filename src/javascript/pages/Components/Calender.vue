@@ -35,12 +35,12 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
-import Card from '../../components/reusable/Card.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
+import Card from '../../components/Card/Card.vue'
 import {ref} from "vue";
 import CodeEditor from 'simple-code-editor';
 import {codeEditorValue2} from "../../composables/Data/useExtraData.js";
-import Calender from '../../components/Widgets/Calender.vue'
+import Calender from '../../components/Calender.vue'
 const collapseFlag=ref(false)
 </script>
 <style scoped lang="scss">

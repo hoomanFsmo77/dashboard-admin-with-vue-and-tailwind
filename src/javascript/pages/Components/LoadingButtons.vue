@@ -84,9 +84,9 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
-import Card from '../../components/reusable/Card.vue'
-import btnLoader from '../../components/Widgets/btnLoader.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
+import Card from '../../components/Card/Card.vue'
+import btnLoader from '../../components/btnLoader.vue'
 
 
 

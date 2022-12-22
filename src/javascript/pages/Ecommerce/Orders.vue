@@ -26,9 +26,9 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
-import AppLink from '../../components/reusable/AppLink.vue'
-import OrderSection from '../../components/Widgets/OrderSection.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
+import AppLink from '../../components/AppLink.vue'
+import OrderSection from '../../components/Table/OrderSection.vue'
 
 </script>
 

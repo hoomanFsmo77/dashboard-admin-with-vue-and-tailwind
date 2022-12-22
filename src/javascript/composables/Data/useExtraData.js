@@ -394,5 +394,72 @@ let codeEditorValue4="<template>\n" +
     "  color: white!important;\n" +
     "}\n" +
     "</style>\n"
+let codeEditorValue5="<template>\n" +
+    "  <button v-on=\"type==='success' ? {click:success} : type==='error' ? {click:error} : type==='info' ? {click:info} : null\" :class=\"buttonClass\"><slot></slot></button>\n" +
+    "\n" +
+    "</template>\n" +
+    "\n" +
+    "<script setup>\n" +
+    "let props=defineProps(['type','buttonClass'])\n" +
+    "import { useToast } from \"vue-toastification\";\n" +
+    "import \"vue-toastification/dist/index.css\";\n" +
+    "import ToastContent from './ToastContent.vue'\n" +
+    "const toast = useToast();\n" +
+    "\n" +
+    "const success = () => {\n" +
+    "  toast.success(ToastContent, {\n" +
+    "    timeout: 3000,\n" +
+    "    position: \"bottom-right\",\n" +
+    "    closeOnClick: true,\n" +
+    "    pauseOnFocusLoss: true,\n" +
+    "    pauseOnHover: false,\n" +
+    "    draggable: true,\n" +
+    "    draggablePercent: 0.6,\n" +
+    "    showCloseButtonOnHover: false,\n" +
+    "    hideProgressBar: false,\n" +
+    "    closeButton: \"button\",\n" +
+    "    icon: true,\n" +
+    "    rtl: false\n" +
+    "  });\n" +
+    "\n" +
+    "}\n" +
+    "const error = () => {\n" +
+    "  toast.error(ToastContent, {\n" +
+    "    timeout: 3000,\n" +
+    "    position: \"bottom-right\",\n" +
+    "    closeOnClick: true,\n" +
+    "    pauseOnFocusLoss: true,\n" +
+    "    pauseOnHover: false,\n" +
+    "    draggable: true,\n" +
+    "    draggablePercent: 0.6,\n" +
+    "    showCloseButtonOnHover: false,\n" +
+    "    hideProgressBar: false,\n" +
+    "    closeButton: \"button\",\n" +
+    "    icon: true,\n" +
+    "    rtl: false\n" +
+    "  });\n" +
+    "}\n" +
+    "const info = () => {\n" +
+    "  toast.info(ToastContent, {\n" +
+    "    timeout: 3000,\n" +
+    "    position: \"bottom-right\",\n" +
+    "    closeOnClick: true,\n" +
+    "    pauseOnFocusLoss: true,\n" +
+    "    pauseOnHover: false,\n" +
+    "    draggable: true,\n" +
+    "    draggablePercent: 0.6,\n" +
+    "    showCloseButtonOnHover: false,\n" +
+    "    hideProgressBar: false,\n" +
+    "    closeButton: \"button\",\n" +
+    "    icon: true,\n" +
+    "    rtl: false\n" +
+    "  });\n" +
+    "}\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "</script>\n" +
+    "\n"
 
-export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3,codeEditorValue4}
+
+export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3,codeEditorValue4,codeEditorValue5}

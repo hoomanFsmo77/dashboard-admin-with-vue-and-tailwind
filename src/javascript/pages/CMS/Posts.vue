@@ -53,7 +53,7 @@
 </template>
 
 <script setup>
-import Card from '../../components/reusable/Card.vue'
+import Card from '../../components/Card/Card.vue'
 import Table from '../../components/Table/Table.vue'
 import usePagination from "../../composables/usePagination.js";
 import {tableData2} from "../../composables/Data/useTableData.js";

@@ -364,16 +364,16 @@
 
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
-import StaticCard from '../../components/Widgets/StaticCard1.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
+import StaticCard from '../../components/Card/StaticCard1.vue'
 import {defaultPageData,staticData1,staticData2} from "../../composables/Data/useStateData.js";
-import StaticCard2 from '../../components/Widgets/StaticCard2.vue'
-import StaticCard3 from '../../components/Widgets/StaticCard3.vue'
-import StaticCard4 from '../../components/Widgets/StaticCard4.vue'
-import Tooltip from '../../components/reusable/Tooltip.vue'
+import StaticCard2 from '../../components/Card/StaticCard2.vue'
+import StaticCard3 from '../../components/Card/StaticCard3.vue'
+import StaticCard4 from '../../components/Card/StaticCard4.vue'
+import Tooltip from '../../components/Tooltip.vue'
 import {tooltipData} from "../../composables/Data/useExtraData.js";
-import Card from '../../components/reusable/Card.vue'
-import CmsCard from '../../components/Widgets/CmsCard.vue'
-import ProjectCard from '../../components/Widgets/ProjectCard.vue'
+import Card from '../../components/Card/Card.vue'
+import CmsCard from '../../components/Card/CmsCard.vue'
+import ProjectCard from '../../components/Card/ProjectCard.vue'
 </script>
 

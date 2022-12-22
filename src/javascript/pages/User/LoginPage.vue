@@ -50,7 +50,7 @@
 </template>
 
 <script setup>
-import Card from '../../components/reusable/Card.vue'
+import Card from '../../components/Card/Card.vue'
 import inputBox from '../../components/Form/inputBox.vue'
 
 

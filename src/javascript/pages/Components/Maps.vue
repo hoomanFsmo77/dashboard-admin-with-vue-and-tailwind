@@ -39,9 +39,9 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
-import Card from '../../components/reusable/Card.vue'
-import Map from '../../components/Widgets/Map.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
+import Card from '../../components/Card/Card.vue'
+import Map from '../../components/Map.vue'
 
 
 </script>

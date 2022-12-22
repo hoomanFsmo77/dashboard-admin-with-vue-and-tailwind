@@ -95,14 +95,14 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
-import AppLink from '../../components/reusable/AppLink.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
+import AppLink from '../../components/AppLink.vue'
 import useTab from "../../composables/useTab.js";
 import {tableData3} from "../../composables/Data/useTableData.js";
 import SelectBox from '../../components/Form/SelectBox.vue'
 import inputBox from '../../components/Form/inputBox.vue'
 import TableHead from '../../components/Table/TableHead.vue'
-import Card from '../../components/reusable/Card.vue'
+import Card from '../../components/Card/Card.vue'
 import Table from '../../components/Table/Table.vue'
 import usePagination from "../../composables/usePagination.js";
 const {tabList,activeTab,changeTab}=useTab()

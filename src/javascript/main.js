@@ -55,8 +55,10 @@ import ApexCharts from 'apexcharts';
 import VueApexCharts from "vue3-apexcharts";
 import VCalendar from 'v-calendar';
 import vue3PhotoPreview from 'vue3-photo-preview';
+import Toast from "vue-toastification";
 app.use(VueApexCharts);
 app.use(VCalendar);
 app.use(vue3PhotoPreview);
+app.use(Toast)
 app.config.globalProperties.$apexcharts = ApexCharts;
 app.mount('#app')

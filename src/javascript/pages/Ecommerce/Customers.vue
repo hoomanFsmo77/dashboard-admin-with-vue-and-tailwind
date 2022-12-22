@@ -59,8 +59,8 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
-import AppLink from '../../components/reusable/AppLink.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
+import AppLink from '../../components/AppLink.vue'
 import Table from '../../components/Table/Table.vue'
 import SelectBox from '../../components/Form/SelectBox.vue'
 import inputBox from '../../components/Form/inputBox.vue'

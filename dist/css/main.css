@@ -1813,6 +1813,14 @@ code {
   margin-top: 2rem;
 }
 
+.\!mt-0\.5 {
+  margin-top: 0.5rem !important;
+}
+
+.\!mt-0 {
+  margin-top: 0 !important;
+}
+
 .ml-0\.5 {
   margin-left: 0.5rem;
 }
@@ -1843,10 +1851,6 @@ code {
 
 .\!mt-3 {
   margin-top: 3rem !important;
-}
-
-.\!mt-0 {
-  margin-top: 0 !important;
 }
 
 .mt-0\.75 {
@@ -1899,10 +1903,6 @@ code {
 
 .mb-0\.75 {
   margin-bottom: 0.75rem;
-}
-
-.\!mt-0\.5 {
-  margin-top: 0.5rem !important;
 }
 
 .block {
@@ -3201,16 +3201,16 @@ code {
   font-size: 0.94rem;
 }
 
+.\!text-\[0\.8rem\] {
+  font-size: 0.8rem !important;
+}
+
 .text-1\.4 {
   font-size: 1.4rem;
 }
 
 .\!text-\[0\.9rem\] {
   font-size: 0.9rem !important;
-}
-
-.\!text-\[0\.8rem\] {
-  font-size: 0.8rem !important;
 }
 
 .text-\[2\.3rem\] {
@@ -3447,11 +3447,6 @@ code {
   color: rgb(2 132 199/var(--tw-text-opacity));
 }
 
-.text-blue-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235/var(--tw-text-opacity));
-}
-
 .\!text-gray-500 {
   --tw-text-opacity: 1 !important;
   color: rgb(107 114 128/var(--tw-text-opacity)) !important;
@@ -3515,6 +3510,11 @@ code {
 .\!text-gray-600 {
   --tw-text-opacity: 1 !important;
   color: rgb(75 85 99/var(--tw-text-opacity)) !important;
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235/var(--tw-text-opacity));
 }
 
 .\!text-primary-dark {
@@ -5424,48 +5424,48 @@ svg.leaflet-image-layer.leaflet-interactive path {
     opacity: 1
 }
 
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/javascript/components/reusable/Tooltip.vue?vue&type=style&index=0&id=3a53bd0f&scoped=true&lang=css ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.container[data-v-3a53bd0f]{
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/javascript/components/Tooltip.vue?vue&type=style&index=0&id=16670a7a&scoped=true&lang=css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+.container[data-v-16670a7a]{
   width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
 @media (min-width: 500px){
-.container[data-v-3a53bd0f]{
+.container[data-v-16670a7a]{
     max-width: 500px;
 }
 }
 @media (min-width: 768px){
-.container[data-v-3a53bd0f]{
+.container[data-v-16670a7a]{
     max-width: 768px;
 }
 }
 @media (min-width: 968px){
-.container[data-v-3a53bd0f]{
+.container[data-v-16670a7a]{
     max-width: 968px;
 }
 }
 @media (min-width: 1200px){
-.container[data-v-3a53bd0f]{
+.container[data-v-16670a7a]{
     max-width: 1200px;
 }
 }
-.show-enter-active[data-v-3a53bd0f],.show-leave-active[data-v-3a53bd0f]{
+.show-enter-active[data-v-16670a7a],.show-leave-active[data-v-16670a7a]{
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.show-enter-from[data-v-3a53bd0f],.show-leave-to[data-v-3a53bd0f]{
+.show-enter-from[data-v-16670a7a],.show-leave-to[data-v-16670a7a]{
   top: -64px;
   opacity: 0;
 }
-.show-enter-to[data-v-3a53bd0f],.show-leave-from[data-v-3a53bd0f]{
+.show-enter-to[data-v-16670a7a],.show-leave-from[data-v-16670a7a]{
   top: -56px;
   opacity: 1;
 }
-.triangle[data-v-3a53bd0f]{
+.triangle[data-v-16670a7a]{
   width: 0;
   height: 0;
   border-style: solid;

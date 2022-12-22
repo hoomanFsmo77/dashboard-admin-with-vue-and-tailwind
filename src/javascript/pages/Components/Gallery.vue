@@ -46,9 +46,9 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
 import {galleryData} from "../../composables/Data/useExtraData.js";
-import Card from '../../components/reusable/Card.vue'
+import Card from '../../components/Card/Card.vue'
 import CodeEditor from 'simple-code-editor';
 import {codeEditorValue3} from "../../composables/Data/useExtraData.js";
 import {ref} from "vue";

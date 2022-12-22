@@ -177,13 +177,13 @@
 </template>
 
 <script setup>
-import Card from '../../components/reusable/Card.vue'
+import Card from '../../components/Card/Card.vue'
 import Table from '../../components/Table/Table.vue'
-import ActivityCard from '../../components/reusable/ActivityCard.vue'
+import ActivityCard from '../../components/ActivityCard.vue'
 import {chart1} from "../../composables/Data/useChartData.js";
 import {activityData} from "../../composables/Data/useStateData.js";
 import {tableData3} from "../../composables/Data/useTableData.js";
-import OrderSection from '../../components/Widgets/OrderSection.vue'
+import OrderSection from '../../components/Table/OrderSection.vue'
 import usePagination from "../../composables/usePagination.js";
 const {totalPages,paginationHandler,prevPage,nextPage,currentPage,itemInOne,searchedText}=usePagination(tableData3)
 

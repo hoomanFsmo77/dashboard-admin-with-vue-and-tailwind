@@ -91,10 +91,10 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
+import Breadcrumb from '../../components/Breadcrumb.vue'
 import {infoData,contactData} from "../../composables/Data/useStateData.js";
 import {codeEditorValue} from "../../composables/Data/useExtraData.js";
-import infoBox from '../../components/Widgets/infoBox.vue'
+import infoBox from '../../components/Card/infoBox.vue'
 import CodeEditor from 'simple-code-editor';
 
 </script>
