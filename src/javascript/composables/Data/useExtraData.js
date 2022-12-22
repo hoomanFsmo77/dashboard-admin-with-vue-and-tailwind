@@ -462,4 +462,11 @@ let codeEditorValue5="<template>\n" +
     "\n"
 
 let codeEditorValue6="<template>\n    <spring-spinner\n              :animation-duration=\"3000\"\n              :size=\"60\"\n              color=\"#ff1d5e\"\n          />\n</template>\n<script >\nimport {SpringSpinner  } from 'epic-spinners'\n</script>"
-export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3,codeEditorValue4,codeEditorValue5,codeEditorValue6}
+
+
+let codeEditorValue7="<template>\n<apexchart type=\"area\" height=\"350\" :options=\"chart13.chartOptions\" :series=\"chart13.series\"></apexchart>\n</template>\n<script >\nlet chart13={\n    series: [{\n        name: \"Data Set One\",\n        data: [30, 50, 40, 61, 42, 35, 40],\n    }, {\n        name: \"Data Set Two\",\n        data: [50, 40, 50, 40, 45, 40, 30],\n    }],\n    chartOptions: {\n        chart: {\n            height: 350,\n            type: 'area',\n            fontFamily:'Montserrat,sans-serif',\n            zoom: {\n                enabled: false\n            },\n            toolbar:{\n                show:false\n            }\n        },\n        legend:{\n            show:false\n        },\n        dataLabels: {\n            enabled: false\n        },\n        stroke: {\n            curve: 'smooth'\n        },\n        xaxis: {\n            type: 'datetime',\n            categories: [\"2018-09-19T00:00:00.000Z\", \"2018-09-19T01:30:00.000Z\", \"2018-09-19T02:30:00.000Z\", \"2018-09-19T03:30:00.000Z\", \"2018-09-19T04:30:00.000Z\", \"2018-09-19T05:30:00.000Z\", \"2018-09-19T06:30:00.000Z\"]\n        },\n        tooltip: {\n            x: {\n                format: 'dd/MM/yy HH:mm'\n            },\n        },\n    },\n}\n</script>\n"
+
+
+
+
+export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3,codeEditorValue4,codeEditorValue5,codeEditorValue6,codeEditorValue7}
