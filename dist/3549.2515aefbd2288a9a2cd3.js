@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[3549],{3549:(e,t,l)=>{l.r(t),l.d(t,{default:()=>s});const n={name:"File-uploads"};const s=(0,l(3744).Z)(n,[["render",function(e,t,l,n,s,u){return" File uploads "}]])}}]);

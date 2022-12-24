@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[3887],{3887:(e,t,n)=>{n.r(t),n.d(t,{default:()=>s});const u={name:"Nuxt"};const s=(0,n(3744).Z)(u,[["render",function(e,t,n,u,s,a){return" Nuxt.js "}]])}}]);
