@@ -19,10 +19,7 @@
           <p class="article">
             Theme has built in Vue js wrapper with dynamic import which you can find in <code>src/javascript/components/widgets/Calendar.vue</code>
           </p>
-          <div>
-            <button @click="collapseFlag=!collapseFlag" class="link">Show code example</button>
-            <CodeEditor class="v-collapse mt-2" v-collapsible="collapseFlag" width="0" min_width="100%" :read_only="true" :value="codeEditorValue2"></CodeEditor>
-          </div>
+          <CodeExample :value="codeEditorValue2"/>
           <div class="mt-2 w-[0px] min-w-[100%] overflow-auto">
             <Calender/>
           </div>
@@ -35,20 +32,10 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/Breadcrumb.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import Card from '../../components/Card/Card.vue'
-import {ref} from "vue";
-import CodeEditor from 'simple-code-editor';
+import CodeExample from '../../components/reusable/CodeExample.vue'
 import {codeEditorValue2} from "../../composables/Data/useExtraData.js";
-import Calender from '../../components/Calender.vue'
-const collapseFlag=ref(false)
-</script>
-<style scoped lang="scss">
-.v-collapse:not(.show) {
-  @apply hidden;
-}
-.collapsing{
-  @apply h-0 overflow-hidden transition-all duration-300 ease-in-out
-}
+import Calender from '../../components/reusable/Calender.vue'
 
-</style>
+</script>

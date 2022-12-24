@@ -65,7 +65,7 @@
 import '../../../style/components/Transition.scss'
 import Dropdown from "./Dropdown.vue";
 import useNavbar from "../../composables/useNavbar.js";
-import AppLink from "../AppLink.vue";
+import AppLink from "../reusable/AppLink.vue";
 import NavbarButton from "./NavbarButton.vue";
 /////////////////////////////////////////////////////
 const {show,toggleFocus} = useNavbar()

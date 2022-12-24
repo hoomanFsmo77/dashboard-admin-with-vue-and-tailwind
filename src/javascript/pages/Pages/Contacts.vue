@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/Breadcrumb.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import ContactBox from '../../components/Card/ContactBox.vue'
 import {contactData} from "../../composables/Data/useStateData.js";
 

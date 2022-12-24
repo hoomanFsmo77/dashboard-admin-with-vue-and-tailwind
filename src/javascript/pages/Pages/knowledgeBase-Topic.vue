@@ -91,7 +91,7 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/Breadcrumb.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import {infoData,contactData} from "../../composables/Data/useStateData.js";
 import {codeEditorValue} from "../../composables/Data/useExtraData.js";
 import infoBox from '../../components/Card/infoBox.vue'

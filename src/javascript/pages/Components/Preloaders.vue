@@ -16,10 +16,8 @@
           <p class="article">
             Epic spinners uses hardware accelerated (translate and opacity) CSS animations to create smooth and easily customizable animations.
           </p>
-          <div >
-            <button @click="collapseFlag=!collapseFlag" class="link font-500 !text-[0.9rem]">Show code example</button>
-            <CodeEditor class="v-collapse mt-2" v-collapsible="collapseFlag" width="0" min_width="100%" :read_only="true" :value="codeEditorValue6"></CodeEditor>
-          </div>
+          <CodeExample :value="codeEditorValue6"/>
+
         </div>
       </column>
     </row>
@@ -121,20 +119,11 @@
 </template>
 
 <script setup>
-import {ref} from "vue";
-import Breadcrumb from '../../components/Breadcrumb.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import Card from '../../components/Card/Card.vue'
-import CodeEditor from 'simple-code-editor';
+import CodeExample from '../../components/reusable/CodeExample.vue'
 import {codeEditorValue6} from "../../composables/Data/useExtraData.js";
 import { FlowerSpinner ,PixelSpinner,HollowDotsSpinner,IntersectingCirclesSpinner,OrbitSpinner,RadarSpinner,FulfillingBouncingCircleSpinner,FingerprintSpinner,FulfillingSquareSpinner ,SpringSpinner  } from 'epic-spinners'
-const collapseFlag=ref(false)
+
 
 </script>
-<style scoped lang="scss">
-.v-collapse:not(.show) {
-  @apply hidden;
-}
-.collapsing{
-  @apply h-0 overflow-hidden transition-all duration-300 ease-in-out
-}
-</style>

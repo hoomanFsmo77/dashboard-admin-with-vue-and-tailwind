@@ -243,8 +243,8 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/Breadcrumb.vue'
-import AppLink from '../../components/AppLink.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
+import AppLink from '../../components/reusable/AppLink.vue'
 import Card from '../../components/Card/Card.vue'
 import { Calendar, DatePicker } from 'v-calendar';
 import Editor from '@tinymce/tinymce-vue'

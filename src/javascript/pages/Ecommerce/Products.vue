@@ -95,8 +95,8 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/Breadcrumb.vue'
-import AppLink from '../../components/AppLink.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
+import AppLink from '../../components/reusable/AppLink.vue'
 import useTab from "../../composables/useTab.js";
 import {tableData3} from "../../composables/Data/useTableData.js";
 import SelectBox from '../../components/Form/SelectBox.vue'

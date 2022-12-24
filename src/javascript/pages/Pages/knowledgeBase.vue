@@ -156,11 +156,11 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/Breadcrumb.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import inputGroup from '../../components/Form/inputGroup.vue'
 import {infoData,contactData} from "../../composables/Data/useStateData.js";
 import infoBox from '../../components/Card/infoBox.vue'
-import UserProfile from '../../components/UserProfile.vue'
+import UserProfile from '../../components/reusable/UserProfile.vue'
 
 </script>
 

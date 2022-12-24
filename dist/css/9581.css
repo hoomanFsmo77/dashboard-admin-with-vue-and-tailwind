@@ -386,6 +386,7 @@ Original One Light Syntax theme from https://github.com/atom/one-light-syntax
   text-decoration: underline;
 }
 
+.v-collapse[data-v-55c5469b]:not(.show){display:none}.collapsing[data-v-55c5469b]{height:0;overflow:hidden;transition-property:all;transition-duration:300ms;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}
 /* sass-plugin-1:/Users/maronato/Developer/vue-toastification/src/scss/index.scss */
 .Vue-Toastification__container {
   z-index: 9999;
@@ -1046,4 +1047,3 @@ Original One Light Syntax theme from https://github.com/atom/one-light-syntax
   transition-duration: 400ms;
 }
 
-.v-collapse[data-v-24d2580c]:not(.show){display:none}.collapsing[data-v-24d2580c]{height:0;overflow:hidden;transition-property:all;transition-duration:300ms;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}

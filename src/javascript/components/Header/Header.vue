@@ -24,7 +24,7 @@ import NavItemUser from './NavItemUser.vue'
 import NavItemNotification from './NavItemNotification.vue'
 import NavItemStatistic from "./NavItemStatistic.vue";
 import NavItemSearch from "./NavItemSearch.vue";
-import AppLink from "../AppLink.vue";
+import AppLink from "../reusable/AppLink.vue";
 import useNavbar from "../../composables/useNavbar.js";
 ///////////////////////////////////////////////////////////////
 let emit=defineEmits(['sidebar'])

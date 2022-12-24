@@ -401,17 +401,17 @@
 
 <script setup>
 import {ref} from "vue";
-import Breadcrumb from '../../components/Breadcrumb.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import Card from '../../components/Card/Card.vue'
 import {tableData8,tableData5} from "../../composables/Data/useTableData.js";
-import ActivityCard from '../../components/ActivityCard.vue'
+import ActivityCard from '../../components/reusable/ActivityCard.vue'
 import {activityData} from "../../composables/Data/useStateData.js";
-import TodoItem from '../../components/TodoItem.vue'
+import TodoItem from '../../components/reusable/TodoItem.vue'
 import inputGroup from '../../components/Form/inputGroup.vue'
-import Tooltip from '../../components/Tooltip.vue'
+import Tooltip from '../../components/reusable/Tooltip.vue'
 import {tooltipData} from "../../composables/Data/useExtraData.js";
 import {tableData6,tableData9,tableData3} from "../../composables/Data/useTableData.js";
-import UserProfile from '../../components/UserProfile.vue'
+import UserProfile from '../../components/reusable/UserProfile.vue'
 import OrderSection from '../../components/Table/OrderSection.vue'
 const searchText=ref('')
 const todos=ref([])
