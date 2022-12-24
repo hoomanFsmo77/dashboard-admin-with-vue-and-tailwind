@@ -274,10 +274,10 @@
 </template>
 
 <script setup>
-import UserProfile from '../UserProfile.vue'
+import UserProfile from '../reusable/UserProfile.vue'
 import NavbarButton from '../Header/NavbarButton.vue'
 import Dropdown from '../Header/Dropdown.vue'
-import AppLink from '../AppLink.vue'
+import AppLink from '../reusable/AppLink.vue'
 import {useRouter} from 'vue-router'
 import useNavbar from "../../composables/useNavbar.js";
 let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'category', 'author', 'hasHead', 'price', 'orderId', 'review','count','inStock','productId','link','hasLink','type','city','orders','phone']);

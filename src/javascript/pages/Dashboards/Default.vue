@@ -305,7 +305,7 @@
 
 <script setup>
 import StaticCard from "../../components/Card/StaticCard1.vue";
-import ActivityCard from '../../components/ActivityCard.vue'
+import ActivityCard from '../../components/reusable/ActivityCard.vue'
 import Card from "../../components/Card/Card.vue";
 import SelectBox from '../../components/Form/SelectBox.vue';
 import inputBox from '../../components/Form/inputBox.vue';
@@ -315,8 +315,8 @@ import {chart1,chart2,chart3} from "../../composables/Data/useChartData.js";
 import {tableData1} from "../../composables/Data/useTableData.js";
 import {tooltipData} from "../../composables/Data/useExtraData.js";
 import usePagination from "../../composables/usePagination.js";
-import UserProfile from '../../components/UserProfile.vue'
-import Tooltip from '../../components/Tooltip.vue'
+import UserProfile from '../../components/reusable/UserProfile.vue'
+import Tooltip from '../../components/reusable/Tooltip.vue'
 const {totalPages,paginationHandler,prevPage,nextPage,currentPage,itemInOne,changeItemInOne,searchHandler,searchedText}=usePagination(tableData1)
 
 

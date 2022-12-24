@@ -35,10 +35,8 @@
               You can configure lightbox to your needs in <code>src/javascript/composables/Data/useExtraData.js</code>. Follow instructions in plugins
               <a href="https://github.com/NameWjp/vue3-photo-preview" class="link">documentation</a>.
             </p>
-            <div>
-              <button @click="collapseFlag=!collapseFlag" class="link font-500 !text-[0.9rem]">Show code example</button>
-              <CodeEditor class="v-collapse mt-2" v-collapsible="collapseFlag" width="0" min_width="100%" :read_only="true" :value="codeEditorValue3"></CodeEditor>
-            </div>
+            <CodeExample :value="codeEditorValue3"/>
+
           </Card>
       </column>
     </row>
@@ -46,20 +44,11 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/Breadcrumb.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import {galleryData} from "../../composables/Data/useExtraData.js";
 import Card from '../../components/Card/Card.vue'
-import CodeEditor from 'simple-code-editor';
+import CodeExample from '../../components/reusable/CodeExample.vue'
 import {codeEditorValue3} from "../../composables/Data/useExtraData.js";
-import {ref} from "vue";
 
-const collapseFlag=ref(false)
+
 </script>
-<style scoped lang="scss">
-.v-collapse:not(.show) {
-  @apply hidden;
-}
-.collapsing{
-  @apply h-0 overflow-hidden transition-all duration-300 ease-in-out
-}
-</style>

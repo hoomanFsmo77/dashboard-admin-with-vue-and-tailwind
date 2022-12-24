@@ -15,10 +15,8 @@
           <p class="article">
             Read more about toast in the official <a href="https://github.com/Maronato/vue-toastification" class="link font-500 text-[0.9rem]">Vue Toastification</a>
           </p>
-          <div>
-            <button @click="collapseFlag=!collapseFlag" class="link font-500 !text-[0.9rem]">Show code example</button>
-            <CodeEditor class="v-collapse mt-2" v-collapsible="collapseFlag" width="0" min_width="100%" :read_only="true" :value="codeEditorValue5"></CodeEditor>
-          </div>
+          <CodeExample :value="codeEditorValue5"/>
+
           <div class="flex flex-col gap-1 mt-1 items-start">
             <Toast type="success" button-class="btn btn-teal-full btn-sm">
               success message
@@ -40,21 +38,12 @@
 </template>
 
 <script setup>
-import {ref} from "vue";
-import Breadcrumb from '../../components/Breadcrumb.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import Card from '../../components/Card/Card.vue'
-import CodeEditor from 'simple-code-editor';
+import CodeExample from '../../components/reusable/CodeExample.vue'
 import {codeEditorValue5} from "../../composables/Data/useExtraData.js";
 import Toast from '../../components/Toast/Toast.vue'
-const collapseFlag=ref(false)
+
 
 
 </script>
-<style scoped lang="scss">
-.v-collapse:not(.show) {
-  @apply hidden;
-}
-.collapsing{
-  @apply h-0 overflow-hidden transition-all duration-300 ease-in-out
-}
-</style>

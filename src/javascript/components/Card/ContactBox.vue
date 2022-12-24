@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import UserProfile from '../UserProfile.vue'
+import UserProfile from '../reusable/UserProfile.vue'
 export default {
   name: "ContactBox",
   components:{UserProfile},

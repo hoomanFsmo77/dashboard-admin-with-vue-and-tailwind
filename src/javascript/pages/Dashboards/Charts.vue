@@ -533,7 +533,7 @@
 <script setup>
 import {chart4,chart7,chart8,chart9,chart10,chart11,chart12} from "../../composables/Data/useChartData.js";
 import Card from '../../components/Card/Card.vue'
-import UserProfile from '../../components/UserProfile.vue'
+import UserProfile from '../../components/reusable/UserProfile.vue'
 
 </script>
 

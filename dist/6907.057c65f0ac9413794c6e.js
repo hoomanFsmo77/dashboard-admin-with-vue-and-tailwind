@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[6907],{6907:(e,s,t)=>{t.r(s),t.d(s,{default:()=>a});const n={name:"Basic-forms"};const a=(0,t(3744).Z)(n,[["render",function(e,s,t,n,a,c){return" Basic forms "}]])}}]);

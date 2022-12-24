@@ -49,7 +49,7 @@
 import NavbarButton from "../Header/NavbarButton.vue";
 import useNavbar from "../../composables/useNavbar.js";
 import Dropdown from "../Header/Dropdown.vue";
-import AppLink from "../AppLink.vue";
+import AppLink from "../reusable/AppLink.vue";
 ////////////////////////////////////////////////
 let props=defineProps(['title','bodyClass','hasMenu'])
 const {show,toggleFocus} = useNavbar()

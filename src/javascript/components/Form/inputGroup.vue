@@ -1,17 +1,51 @@
 <template>
-  <div class="input-group flex gap-0 items-stretch">
-    <input :value="modelValue" @input="inputHandler($event)" type="text" class="input w-full" :placeholder="placeholder" :class="{'!rounded-r-[0px] !border-[1px] !border-primary-indigo/50 !border-r-[0px]':type==='outline'}"/>
-    <button @click="sendText" class="btn  h-full !rounded-l-[0]" :class="{'!btn-primary':type==='outline','btn-primary-full':type==='full'}">
-      <i :class="icon"></i>
-    </button>
-  </div>
+  <template v-if="form===undefined">
+    <div v-bind="$attrs" class="input-group flex gap-0 items-stretch " :class="{'flex-row-reverse':buttonReverse}">
+      <input :value="modelValue" @input="inputHandler($event)" type="text" class="input w-full" :placeholder="placeholder" :class="{'!rounded-r-[0px] !border-[1px] !border-primary-indigo/50 !border-r-[0px]':type==='outline','!rounded-l-[0px] !rounded-r-4 !border-r-[1px] !border-l-[0px]':buttonReverse}"/>
+      <button @click="sendText" class="btn  h-full !rounded-l-[0]" :class="{'!btn-primary':type==='outline','btn-primary-full':type==='full','!rounded-r-[0px] !rounded-l-4':buttonReverse}">
+        <i v-if="icon" :class="icon"></i>
+        {{buttonValue}}
+      </button>
+    </div>
+  </template>
+  <template v-if="form==='dropdown'">
+    <div v-bind="$attrs" class="input-group flex gap-0 items-stretch " :class="{'flex-row-reverse':buttonReverse}">
+      <input :value="modelValue" @input="inputHandler($event)" type="text" class="input w-full" :placeholder="placeholder" :class="{'!rounded-r-[0px] !border-[1px] !border-primary-indigo/50 !border-r-[0px]':type==='outline','!rounded-l-[0px] !rounded-r-4 !border-r-[1px] !border-l-[0px]':buttonReverse}"/>
+      <div class="relative">
+        <button @blur="show=false" @click="show=!show" class="btn items-center flex h-full !rounded-l-[0]" :class="{'!btn-primary':type==='outline','btn-primary-full':type==='full','!rounded-r-[0px] !rounded-l-4':buttonReverse}">
+          {{buttonValue}}
+          <i class="bi bi-caret-down-fill text-0.75 ml-0.25"></i>
+        </button>
+
+        <Transition name="show">
+          <Dropdown v-if="show" top="54px" width="150px">
+            <li v-for="item in dropdownList" class="dropdown-hover !text-[0.9rem] !text-gray-700">
+              <AppLink to="#!">
+                {{item}}
+              </AppLink>
+            </li>
+          </Dropdown>
+        </Transition>
+
+      </div>
+
+
+
+    </div>
+  </template>
+
 </template>
 
 <script setup>
 import {defineEmits,ref} from "vue";
+import useNavbar from "../../composables/useNavbar.js";
+import NavbarButton from '../../components/Header/NavbarButton.vue'
+import AppLink from '../../components/reusable/AppLink.vue'
+import Dropdown from '../../components/Header/Dropdown.vue'
+const {toggleFocus,show}=useNavbar()
 
 let searchText=ref('')
-let props=defineProps(['icon','placeholder','modelValue','type'])
+let props=defineProps(['icon','placeholder','modelValue','type','buttonValue','buttonReverse','form','dropdownList'])
 let emits=defineEmits(['update:modelValue','call'])
 
 const sendText = () => {

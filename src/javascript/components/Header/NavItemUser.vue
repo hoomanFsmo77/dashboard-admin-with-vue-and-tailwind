@@ -26,8 +26,8 @@
 <script setup>
 import useNavbar from "../../composables/useNavbar.js";
 import Dropdown from './Dropdown.vue'
-import AppLink from "../AppLink.vue";
-import UserProfile from "../UserProfile.vue";
+import AppLink from "../reusable/AppLink.vue";
+import UserProfile from "../reusable/UserProfile.vue";
 
 const {show}=useNavbar()
 

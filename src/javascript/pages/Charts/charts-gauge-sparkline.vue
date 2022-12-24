@@ -14,10 +14,7 @@
               <p class="article">
                 100% native and cool looking animated vue speedometer. See more at <a href="https://github.com/palerdot/vue-speedometer" class="link font-500">speedometer</a> homepage.
               </p>
-              <div class="mb-1">
-                <button @click="collapseFlag[0]=!collapseFlag[0]" class="link font-500 !text-[0.9rem]">Show code example</button>
-                <CodeEditor class="v-collapse mt-2" v-collapsible="collapseFlag[0]" width="0" min_width="100%" :read_only="true" :value="codeEditorValue8"></CodeEditor>
-              </div>
+              <CodeExample class="mb-1" :value="codeEditorValue8"/>
             </column>
           </row>
 
@@ -91,11 +88,7 @@
                   <a href="https://github.com/fnando/sparkline" class="link font-500">Sparkline homepage.</a>
                 </p>
                 <p class="article">Theme contains React Sparkline component. You can find it in <code>src/javascript/components/Sparkline.</code></p>
-                <div class="mb-1">
-                  <button @click="collapseFlag[1]=!collapseFlag[1]" class="link font-500 !text-[0.9rem]">Show code example</button>
-                  <CodeEditor class="v-collapse mt-2" v-collapsible="collapseFlag[1]" width="0" min_width="100%" :read_only="true" :value="codeEditorValue9"></CodeEditor>
-                </div>
-
+                <CodeExample class="mb-1" :value="codeEditorValue9"/>
               </column>
             </row>
           <row>
@@ -133,14 +126,12 @@
 </template>
 
 <script setup>
-import Breadcrumb from '../../components/Breadcrumb.vue'
+import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import Card from '../../components/Card/Card.vue'
 import VueSpeedometer from "vue-speedometer"
-import {ref} from "vue";
-import CodeEditor from 'simple-code-editor';
-import {codeEditorValue9} from "../../composables/Data/useExtraData.js";
-import Sparkline from '../../components/Sparkline.vue'
-const collapseFlag=ref([false,false])
+import CodeExample from '../../components/reusable/CodeExample.vue'
+import {codeEditorValue9,codeEditorValue8} from "../../composables/Data/useExtraData.js";
+import Sparkline from '../../components/reusable/Sparkline.vue'
 
 let btc = [
   {name: "Bitcoin", date: "2017-01-01", value: 967.6},
@@ -171,12 +162,3 @@ let eth = [
 
 
 </script>
-<style scoped lang="scss">
-.v-collapse:not(.show) {
-  @apply hidden;
-}
-.collapsing{
-  @apply h-0 overflow-hidden transition-all duration-300 ease-in-out;
-}
-
-</style>

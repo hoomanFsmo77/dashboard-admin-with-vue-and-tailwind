@@ -1,0 +1,13 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/javascript/components/reusable/CodeExample.vue?vue&type=style&index=0&id=61ffccc9&scoped=true&lang=scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.v-collapse[data-v-61ffccc9]:not(.show) {
+  display: none;
+}
+.collapsing[data-v-61ffccc9] {
+  height: 0;
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

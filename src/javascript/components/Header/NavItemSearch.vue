@@ -85,8 +85,8 @@
 import '../../../style/components/Transition.scss'
 import useNavbar from "../../composables/useNavbar.js";
 import Dropdown from "./Dropdown.vue";
-import AppLink from "../AppLink.vue";
-import UserProfile from "../UserProfile.vue";
+import AppLink from "../reusable/AppLink.vue";
+import UserProfile from "../reusable/UserProfile.vue";
 import InputBox from "../Form/inputBox.vue";
 ///////////////////////////////////////////////////////////////
 const {show,toggle,blur,focus}=useNavbar()
