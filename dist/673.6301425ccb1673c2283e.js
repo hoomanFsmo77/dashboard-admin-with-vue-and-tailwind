@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[673],{673:(e,n,t)=>{t.r(n),t.d(n,{default:()=>l});const a={name:"Changelog"};const l=(0,t(3744).Z)(a,[["render",function(e,n,t,a,l,s){return" Changelog "}]])}}]);
