@@ -9,6 +9,7 @@
           :value="modelValue"
           :id="id"
           v-bind="$attrs"
+          ref="el"
           :type="type ?? 'text'"
           :class="{'!rounded-l-[0px]':icon,'px-0.5 py-0.75':size==='lg','px-0.25 py-0.25':size==='sm','!py-[0.35rem]':size==='default','!rounded-r-[0px] !rounded-l-4':iconReverse}"
           class="input group-focus/item:ring-4 peer-focus:ring-4 "
@@ -78,11 +79,14 @@
   </template>
 </template>
 
-<script>
-export default {
-  name: "inputBox",
-  props:['placeholder','label','id','hint','icon','type','form','labelClass','modelValue','disabled','success','error','errorMessage','size','iconReverse','iconBoth','iconRight','mixedType']
-}
+<script setup>
+import { useIMask} from 'vue-imask';
+let props=defineProps(['placeholder','label','id','hint','icon','type','form','labelClass','modelValue','disabled','success','error','errorMessage','size','iconReverse','iconBoth','iconRight','mixedType','pattern'])
+
+const { el, masked } = useIMask({
+  mask: props.pattern
+});
+
 </script>
 
 <style scoped>

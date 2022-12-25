@@ -74,11 +74,7 @@
                   </div>
                   <div class="h-0 overflow-hidden ">
                     <div class="flex items-center gap-0.5 my-0.5">
-                      <v-date-picker class="w-[50%]" v-model="date">
-                        <template #default="{ inputValue, inputEvents }">
-                          <input class="input w-full text-[0.8rem]" :value="inputValue" v-on="inputEvents" />
-                        </template>
-                      </v-date-picker>
+                      <Datapicker :single="true" class="w-[50%] !text-[0.8rem]"/>
                       at
                       <input type="text" class="input w-[15%] text-[0.8rem] text-center" value="8" >
                       :
@@ -145,11 +141,10 @@
 import Card from '../../components/Card/Card.vue'
 import SelectBox from '../../components/Form/SelectBox.vue'
 import inputBox from '../../components/Form/inputBox.vue'
-import { Calendar, DatePicker } from 'v-calendar';
+import Datapicker from '../../components/reusable/Datapicker.vue'
 import usePost from "../../composables/usePost.js";
 import Editor from '@tinymce/tinymce-vue'
 import {text} from "../../composables/Data/useExtraData.js";
-
 const {closeHint,removeTag,addTag,increaseWidth,setValue,openSection,date,show,visibility,status,showHint,tagInput,input,tags}=usePost()
 
 </script>

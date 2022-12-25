@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[4926],{4926:(e,t,a)=>{a.r(t),a.d(t,{default:()=>l});const n={name:"Datatable"};const l=(0,a(3744).Z)(n,[["render",function(e,t,a,n,l,s){return" Datatable "}]])}}]);

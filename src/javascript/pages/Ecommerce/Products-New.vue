@@ -173,11 +173,7 @@
                 </div>
                 <div class="h-0 overflow-hidden ">
                   <div class="flex items-center gap-0.5 my-0.5">
-                    <v-date-picker class="w-[50%]" v-model="date">
-                      <template #default="{ inputValue, inputEvents }">
-                        <input class="input w-full text-[0.8rem]" :value="inputValue" v-on="inputEvents" />
-                      </template>
-                    </v-date-picker>
+                    <Datapicker class="w-[50%] text-[0.8rem]" :single="true"/>
                     at
                     <input type="text" class="input w-[15%] text-[0.8rem] text-center" value="8" >
                     :
@@ -246,7 +242,7 @@
 import Breadcrumb from '../../components/reusable/Breadcrumb.vue'
 import AppLink from '../../components/reusable/AppLink.vue'
 import Card from '../../components/Card/Card.vue'
-import { Calendar, DatePicker } from 'v-calendar';
+import Datapicker from '../../components/reusable/Datapicker.vue'
 import Editor from '@tinymce/tinymce-vue'
 import {text} from "../../composables/Data/useExtraData.js";
 import SelectBox from '../../components/Form/SelectBox.vue'

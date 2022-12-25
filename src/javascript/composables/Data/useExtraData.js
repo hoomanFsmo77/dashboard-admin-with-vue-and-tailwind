@@ -495,4 +495,49 @@ let codeEditorValue9="<template>\n" +
     "\n" +
     "</script>\n"
 
-export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3,codeEditorValue4,codeEditorValue5,codeEditorValue6,codeEditorValue7,codeEditorValue8,codeEditorValue9}
+
+let codeEditorValue10="<template>\n" +
+    "  <Slider\n" +
+    "      v-model=\"value\"\n" +
+    "      :format=\"format\"\n" +
+    "      :min=\"min\"\n" +
+    "      :max=\"max\"\n" +
+    "      :orientation=\"orientation ?? 'horizontal'\"\n" +
+    "      v-bind=\"$attrs\"\n" +
+    "  />\n" +
+    "</template>\n" +
+    "\n" +
+    "<script setup>\n" +
+    "import Slider from '@vueform/slider'\n" +
+    "import {ref,onMounted} from \"vue\";\n" +
+    "let props=defineProps(['min','max','value','format','color','shadow','orientation'])\n" +
+    "let value=ref([0,0,0])\n" +
+    "let color=ref(props.color ?? null)\n" +
+    "let shadow=ref(props.shadow ?? null)\n" +
+    "onMounted(()=>{\n" +
+    "  value.value= props.value\n" +
+    "})\n" +
+    "const format = value => {\n" +
+    "  return `${value}${props.format}`\n" +
+    "}\n" +
+    "\n" +
+    "\n" +
+    "</script>\n" +
+    "\n" +
+    "<style lang=\"scss\">\n" +
+    ".slider-connect{\n" +
+    "  background-color: v-bind(color);\n" +
+    "}\n" +
+    ".slider-tooltip{\n" +
+    "  background-color: v-bind(color);\n" +
+    "  border-color: v-bind(color);\n" +
+    "}\n" +
+    ".slider-handle:focus{\n" +
+    "  box-shadow: 0 0 0 4px v-bind(shadow);\n" +
+    "}\n" +
+    "</style>"
+
+
+let codeEditorValue11="<template>\n    <Datapicker :is-range=\"true\"/>\n</template>\n<script >\nimport Datapicker from '../../components/reusable/Datapicker.vue'\n</script>"
+
+export {tooltipData,text,galleryData,tooltipData2,codeEditorValue,codeEditorValue2,codeEditorValue3,codeEditorValue4,codeEditorValue5,codeEditorValue6,codeEditorValue7,codeEditorValue8,codeEditorValue9,codeEditorValue10,codeEditorValue11}
