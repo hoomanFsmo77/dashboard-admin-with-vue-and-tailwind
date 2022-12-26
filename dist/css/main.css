@@ -3359,6 +3359,11 @@ code {
   padding-bottom: 2.5rem;
 }
 
+.\!py-0\.75 {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
 .\!pt-1\.2 {
   padding-top: 1.2rem !important;
 }
@@ -4112,9 +4117,23 @@ code {
   padding-left: 1rem;
 }
 
+.odd\:bg-gray-100\/50:nth-child(odd) {
+  background-color: rgba(243, 244, 246, 0.5);
+}
+
+.odd\:bg-gray-100\/80:nth-child(odd) {
+  background-color: rgba(243, 244, 246, 0.8);
+}
+
 .even\:bg-gray-100:nth-child(even) {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246/var(--tw-bg-opacity));
+}
+
+.even\:transition-all:nth-child(even) {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .hover\:translate-y-\[-5px\]:hover {
@@ -4164,6 +4183,10 @@ code {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.even\:hover\:bg-gray-100\/80:hover:nth-child(even) {
+  background-color: rgba(243, 244, 246, 0.8);
 }
 
 .focus\:border-indigo-600:focus {
@@ -4604,17 +4627,50 @@ code {
   color: rgb(255 255 255/var(--tw-text-opacity)) !important;
 }
 
+.\[\&_th\]\:px-0\.5 th {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.\[\&_th\]\:py-0\.75 th {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .\[\&_th\]\:text-left th {
   text-align: left;
+}
+
+.\[\&_th\]\:text-center th {
+  text-align: center;
 }
 
 .\[\&_th\]\:text-\[0\.9rem\] th {
   font-size: 0.9rem;
 }
 
+.\[\&_th\]\:\!text-\[0\.9rem\] th {
+  font-size: 0.9rem !important;
+}
+
 .\[\&_th\]\:text-primary-dark th {
   --tw-text-opacity: 1;
   color: rgb(51 51 51/var(--tw-text-opacity));
+}
+
+.\[\&_th\]\:\!text-primary-dark th {
+  --tw-text-opacity: 1 !important;
+  color: rgb(51 51 51/var(--tw-text-opacity)) !important;
+}
+
+.\[\&_td\]\:px-0\.5 td {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.\[\&_td\]\:py-0\.75 td {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .\[\&_td\]\:text-left td {
@@ -4627,6 +4683,11 @@ code {
 
 .\[\&_td\]\:font-500 td {
   font-weight: 500;
+}
+
+.\[\&_td\]\:text-primary-dark td {
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51/var(--tw-text-opacity));
 }
 /*!*******************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/style/App.scss ***!
