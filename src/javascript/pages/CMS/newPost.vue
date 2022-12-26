@@ -10,12 +10,8 @@
           <button class="btn-primary btn my-1.3">Add Media</button>
           <div id="editor">
             <Editor
-                api-key="1sqqkdh417xv6ib0rp0mw51o1frcz75habn1u7zh3tmdcgof"
-                :initial-value="text"
-                style="height: 1150px"
-                :init="{
-                  plugins: 'lists link image table code help wordcount',
-                  }"
+                :value="text"
+                height="1150px"
             />
           </div>
         </div>
@@ -143,7 +139,7 @@ import SelectBox from '../../components/Form/SelectBox.vue'
 import inputBox from '../../components/Form/inputBox.vue'
 import Datapicker from '../../components/reusable/Datapicker.vue'
 import usePost from "../../composables/usePost.js";
-import Editor from '@tinymce/tinymce-vue'
+import Editor from '../../components/reusable/Editor.vue'
 import {text} from "../../composables/Data/useExtraData.js";
 const {closeHint,removeTag,addTag,increaseWidth,setValue,openSection,date,show,visibility,status,showHint,tagInput,input,tags}=usePost()
 
