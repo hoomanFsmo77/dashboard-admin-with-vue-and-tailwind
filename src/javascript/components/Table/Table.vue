@@ -1,6 +1,6 @@
 <template>
     <table class="w-full" >
-      <thead class=" bg-primary-dark text-white text-left font-500" v-if="hasHead">
+      <thead :class="headTheme" class=" bg-primary-dark text-white text-left font-500" v-if="hasHead">
       <tr class=" w-full">
         <TableHead
             v-for="item in th"
@@ -8,7 +8,6 @@
             :width="item.width"
             @sort="sortHandler($event)"
             :table-data="td"
-
         />
       </tr>
       </thead>
@@ -39,6 +38,7 @@
                   :orders="item.orders"
                   :link="link"
                   :class="{'even:bg-gray-100':!hasHead}"
+                  :company="item.company"
         />
       </tbody>
     </table>
@@ -48,7 +48,7 @@
 import TableRow from './TableRow.vue';
 import TableHead from './TableHead.vue'
 import {ref,watch} from "vue";
-let props=defineProps(['th','td','currentPage','itemInOne','searchedText','hasHead','hasLink','link','type'])
+let props=defineProps(['th','td','currentPage','itemInOne','searchedText','hasHead','hasLink','link','type','headTheme'])
 let finalArray=ref([])
 let target=ref(props.td)
 

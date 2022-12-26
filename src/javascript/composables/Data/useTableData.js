@@ -1037,5 +1037,74 @@ let tableData11={
 
     ]
 }
+let tableData12={
+    th:[
+        {title:'name'},{title:'company'},{title:'email'},{title:'phone'},{title:'city'},{title:'orders'}
+    ],
+    td:[
+        {
+            image:'./assets/profile_1.svg', name:'Kelley Carey', city:'Sharon', email:'kelleycarey@tetak.com', phone:'+1 (888) 443-3225', status:'Active', statusClass:'green', statusCode:1, orders:3, price:758.50,company:'Tetak'
+        },
+        {
+            image:'./assets/profile_2.svg', name:'gvegr Carey', city:'Robinson', email:'kellenyafrey@tetak.com', phone:'+1 (888) 542-3235', status:'Active', statusClass:'green', statusCode:1, orders:14, price:612.50,company:'Robinson'
+        },
+        {
+            image:'./assets/profile_3.svg', name:'Best Santiago', city:'Yonah', email:'bestsantiago@pivitol.com', phone:'+1 (528) 443-6346', status:'Active', statusClass:'green', statusCode:1, orders:5, price:125.00,company:'Robinson'
+        },{
+            image:'./assets/profile_3.svg', name:'Best Santiago', city:'Yonah', email:'bestsantiago@pivitol.com', phone:'+1 (528) 443-6346', status:'Active', statusClass:'green', statusCode:1, orders:5, price:125.00,company:'Tetak'
+        },
+        {
+            image:'./assets/profile_4.svg', name:'Ann Farley', city:'Belfair', email:'bestsantiago@pivitol.com', phone:'+1 (929) 553-3590', status:'Active', statusClass:'green', statusCode:1, orders:18, price:1258.50,company:'Yonah'
+        },
+        {
+            image:'./assets/profile_5.svg', name:'Bettie Acevedo', city:'Silkworth', email:'bettieacevedo@uni.com', phone:'+1 (893) 443-2816', status:'Inactive', statusClass:'red', statusCode:2, orders:47, price:345.22,company:'Atomica'
+        },
+        {
+            image:'./assets/profile_6.svg', name:'Valarie Mclean', city:'Blanford', email:'valariemclean@gallaxia.com', phone:'+1 (939) 481-2070', status:'Inactive', statusClass:'red', statusCode:2, orders:56, price:2893.50,company:'Uni'
+        },
+        {
+            image:'./assets/profile_3.svg', name:'Best Santiago', city:'Yonah', email:'bestsantiago@pivitol.com', phone:'+1 (528) 443-6346', status:'Active', statusClass:'green', statusCode:1, orders:5, price:125.00,company:'Atomica'
+        },
+        {
+            image:'./assets/profile_1.svg', name:'Kelley Carey', city:'Sharon', email:'kelleycarey@tetak.com', phone:'+1 (888) 443-3225', status:'Active', statusClass:'green', statusCode:1, orders:3, price:758.50,company:'Uni'
+        },
+        {
+            image:'./assets/profile_4.svg', name:'Ann Farley', city:'Belfair', email:'bestsantiago@pivitol.com', phone:'+1 (929) 553-3590', status:'Inactive', statusClass:'red', statusCode:2, orders:18, price:1258.50,company:'Uni'
+        },
+        {
+            image:'./assets/profile_5.svg', name:'Bettie Acevedo', city:'Silkworth', email:'bettieacevedo@uni.com', phone:'+1 (893) 443-2816', status:'Inactive', statusClass:'red', statusCode:2, orders:47, price:345.22,company:'Futuris'
+        },
+        {
+            image:'./assets/profile_6.svg', name:'Valarie Mclean', city:'Blanford', email:'valariemclean@gallaxia.com', phone:'+1 (939) 481-2070', status:'Active', statusClass:'green', statusCode:1, orders:56, price:2893.50
+        },
+        {
+            image:'./assets/profile_2.svg', name:'gvegr Carey', city:'Robinson', email:'kellenyafrey@tetak.com', phone:'+1 (888) 542-3235', status:'Active', statusClass:'green', statusCode:1, orders:14, price:612.50
+        },
+        {
+            image:'./assets/profile_3.svg', name:'Best Santiago', city:'Yonah', email:'bestsantiago@pivitol.com', phone:'+1 (528) 443-6346', status:'Active', statusClass:'green', statusCode:1, orders:5, price:125.00
+        },
+        {
+            image:'./assets/profile_5.svg', name:'Bettie Acevedo', city:'Silkworth', email:'bettieacevedo@uni.com', phone:'+1 (893) 443-2816', status:'Inactive', statusClass:'red', statusCode:2, orders:47, price:345.22
+        },
+        {
+            image:'./assets/profile_3.svg', name:'Best Santiago', city:'Yonah', email:'bestsantiago@pivitol.com', phone:'+1 (528) 443-6346', status:'Active', statusClass:'green', statusCode:1, orders:5, price:125.00,company:'Futuris'
+        },
+        {
+            image:'./assets/profile_5.svg', name:'Bettie Acevedo', city:'Silkworth', email:'bettieacevedo@uni.com', phone:'+1 (893) 443-2816', status:'Inactive', statusClass:'red', statusCode:2, orders:47, price:345.22
+        },
+        {
+            image:'./assets/profile_6.svg', name:'Valarie Mclean', city:'Blanford', email:'valariemclean@gallaxia.com', phone:'+1 (939) 481-2070', status:'Active', statusClass:'green', statusCode:1, orders:56, price:2893.50,company:'Gallaxia'
+        },
+        {
+            image:'./assets/profile_3.svg', name:'Best Santiago', city:'Yonah', email:'bestsantiago@pivitol.com', phone:'+1 (528) 443-6346', status:'Active', statusClass:'green', statusCode:1, orders:5, price:125.00
+        },
+        {
+            image:'./assets/profile_4.svg', name:'Ann Farley', city:'Belfair', email:'bestsantiago@pivitol.com', phone:'+1 (929) 553-3590', status:'Inactive', statusClass:'red', statusCode:2, orders:18, price:1258.50,company:'Gallaxia'
+        },
 
-export {tableData3,tableData4,tableData5,tableData6,tableData7,tableData1,tableData2,tableData8,tableData9,tableData10,tableData11}
+
+
+    ]
+}
+
+export {tableData3,tableData4,tableData5,tableData6,tableData7,tableData1,tableData2,tableData8,tableData9,tableData10,tableData11,tableData12}

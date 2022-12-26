@@ -30,6 +30,8 @@ export default (emit,tableData)=>{
         which==='customer' && sortData('name')
         which==='city' && sortData('city')
         which==='orders' && sortData('orders')
+        which==='company' && sortData('company')
+        which==='email' && sortData('email')
         which==='spent' && sortData('price')
         which==='last ordered' && sortDate()
 

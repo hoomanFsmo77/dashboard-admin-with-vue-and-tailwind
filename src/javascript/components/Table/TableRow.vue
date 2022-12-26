@@ -271,6 +271,32 @@
 
     </td>
   </tr>
+
+<!--  ////// type data-->
+  <tr class="table-hover" v-if="type==='data'">
+    <td class="p-1">
+      <span class="text-[0.9rem] ">{{name}}</span>
+    </td>
+    <td>
+      <span class="text-[0.9rem] ">{{company}}</span>
+    </td>
+    <td>
+      <span class="text-[0.9rem] ">{{email}}</span>
+    </td>
+    <td>
+      <span class="text-[0.9rem] ">{{phone}}</span>
+    </td>
+    <td>
+      <span class="text-[0.9rem] ">{{city}}</span>
+
+    </td>
+    <td >
+      <span class="text-[0.9rem] ">{{orders}}</span>
+
+    </td>
+
+  </tr>
+
 </template>
 
 <script setup>
@@ -280,7 +306,7 @@ import Dropdown from '../Header/Dropdown.vue'
 import AppLink from '../reusable/AppLink.vue'
 import {useRouter} from 'vue-router'
 import useNavbar from "../../composables/useNavbar.js";
-let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'category', 'author', 'hasHead', 'price', 'orderId', 'review','count','inStock','productId','link','hasLink','type','city','orders','phone']);
+let props = defineProps(['image', 'name', 'email', 'companyName1', 'companyName2', 'statusClass', 'status', 'progress', 'date', 'category', 'author', 'hasHead', 'price', 'orderId', 'review','count','inStock','productId','link','hasLink','type','city','orders','phone','company']);
 const {show, toggleFocus} = useNavbar();
 const router=useRouter();
 const redirectToDetail = () => {
