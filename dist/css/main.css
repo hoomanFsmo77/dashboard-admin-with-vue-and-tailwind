@@ -1764,6 +1764,22 @@ code {
   top: -73px;
 }
 
+.right-\[14\%\] {
+  right: 14%;
+}
+
+.right-\[0\%\] {
+  right: 0%;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.bottom-\[-24px\] {
+  bottom: -24px;
+}
+
 .\!z-50 {
   z-index: 50 !important;
 }
@@ -2689,6 +2705,10 @@ code {
 
 .\!border-b-\[0px\] {
   border-bottom-width: 0px !important;
+}
+
+.border-solid {
+  border-style: solid;
 }
 
 .border-none {
