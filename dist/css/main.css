@@ -1651,6 +1651,22 @@ code {
   --tw-text-opacity: 1;
   color: rgb(51 51 51/var(--tw-text-opacity));
 }
+
+.content-header {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51/var(--tw-text-opacity));
+}
+
+.content-highlight {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51/var(--tw-text-opacity));
+}
 /*!**************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/style/Tailwind.config/Tailwind.utilities.scss ***!
   \**************************************************************************************************************************************************************************************/
@@ -1664,6 +1680,10 @@ code {
 
 .invisible {
   visibility: hidden;
+}
+
+.static {
+  position: static;
 }
 
 .absolute {
@@ -2439,6 +2459,10 @@ code {
 
 .\!list-decimal {
   list-style-type: decimal !important;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .grid-cols-\[0_1fr\] {
@@ -3453,6 +3477,10 @@ code {
   padding-left: 3rem;
 }
 
+.pl-0\.25 {
+  padding-left: 0.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -4406,6 +4434,21 @@ code {
     padding-left: 3rem !important;
     padding-right: 3rem !important;
   }
+  .md\:pl-0\.75 {
+    padding-left: 0.75rem;
+  }
+  .md\:pl-0 {
+    padding-left: 0;
+  }
+  .md\:pl-1\.5 {
+    padding-left: 1.5rem;
+  }
+  .md\:pl-1 {
+    padding-left: 1rem;
+  }
+  .md\:pl-2 {
+    padding-left: 2rem;
+  }
   .md\:text-right {
     text-align: right;
   }
@@ -4566,6 +4609,10 @@ code {
   margin-bottom: 0.25rem;
 }
 
+.\[\&_li\]\:flex li {
+  display: flex;
+}
+
 .\[\&_li\]\:cursor-pointer li {
   cursor: pointer;
 }
@@ -4676,6 +4723,10 @@ code {
 .\[\&_td\]\:text-primary-dark td {
   --tw-text-opacity: 1;
   color: rgb(51 51 51/var(--tw-text-opacity));
+}
+
+.\[\&-li\]\:flex-li {
+  display: flex;
 }
 /*!*******************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/style/App.scss ***!

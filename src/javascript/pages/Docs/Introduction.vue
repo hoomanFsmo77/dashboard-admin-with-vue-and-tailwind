@@ -22,7 +22,7 @@
             Theme uses <span class="!font-700">Tailwindcss v3</span> which is based on utility classes and is easy to apply style. Check out documentation <a target="_blank" href="https://tailwindcss.com/" class="link ">here</a>.
           </p>
           <div class="divider !my-2"></div>
-          <h5 class="card-header tracking-widest uppercase mb-1.5">Theme info</h5>
+          <h5 class="content-header">Theme info</h5>
           <div class="text-[0.9rem] mb-0.85">
             <span class="text-gray-600 uppercase tracking-wide mr-0.5">Item Name:</span>
             <span>Hooman [Vue]</span>
@@ -47,7 +47,3 @@ import Card from '../../components/Card/Card.vue'
 
 
 </script>
-
-<style scoped>
-
-</style>

@@ -80,7 +80,6 @@ const Datatable=()=>import('./pages/Tables/Datatable.vue')
 import docsIndex from './pages/Docs/index.vue'
 const Introduction=()=>import('./pages/Docs/Introduction.vue')
 const Directory_structure=()=>import('./pages/Docs/Directory-structure.vue')
-const Nuxt=()=>import('./pages/Docs/Nuxt.vue')
 const CSS_components=()=>import('./pages/Docs/CSS-components.vue')
 const Customizing_CSS=()=>import('./pages/Docs/Customizing-CSS.vue')
 const Credits=()=>import('./pages/Docs/Credits.vue')
@@ -338,10 +337,6 @@ const routes=[
                         path:'Directory_structure',
                         name:'Directory_structure',
                         component:Directory_structure,
-                    },{
-                        path:'Nuxt',
-                        name:'Nuxt',
-                        component:Nuxt,
                     },{
                         path:'CSS_components',
                         name:'CSS_components',

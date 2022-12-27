@@ -149,16 +149,9 @@ let sidebarDocsData=[
         isOpen:false,
         hasSub:false,
         to:{name:'Directory_structure'}
-    },{
-        id:13,
-        title:'Nuxt.js',
-        icon:'bi bi-keyboard',
-        isOpen:false,
-        hasSub:false,
-        to:{name:'Nuxt'}
     },
     {
-        id:14,
+        id:13,
         title:'Css',
         icon:'bi bi-pen-fill',
         isOpen:false,
@@ -169,7 +162,7 @@ let sidebarDocsData=[
         ]
     },
     {
-        id:15,
+        id:14,
         title:'Credits',
         icon:'bi bi-bricks',
         isOpen:false,
