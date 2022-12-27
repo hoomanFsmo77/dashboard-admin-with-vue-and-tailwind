@@ -5,7 +5,7 @@
   >
     <Sidebar :is-active="isActive"/>
     <main class="route-content">
-      <div class="route-preloader" :class="{'hidden z-50':!isLoading}">
+      <div class="route-preloader" :class="{'hidden':!isLoading}">
         <OrbitSpinner
             class="mt-5"
             :animation-duration="1500"

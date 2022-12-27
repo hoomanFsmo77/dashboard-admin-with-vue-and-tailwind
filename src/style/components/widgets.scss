@@ -54,7 +54,7 @@
     @apply capitalize text-blue-600 font-500 text-[0.9rem] cursor-pointer p-0.75 transition-all hover:text-blue-800 text-center md:block flex items-center;
   }
   .route-preloader{
-    @apply absolute  w-full h-full top-0  left-0 bg-[rgba(255,255,255,0.7)] flex justify-center;
+    @apply absolute  w-full h-full top-0 z-[9999999999] left-0 bg-[rgba(255,255,255,0.7)] flex justify-center;
   }
   .route-content{
     @apply flex flex-col justify-between bg-[#f8f9fa] relative z-[1];
