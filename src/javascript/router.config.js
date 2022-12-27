@@ -83,7 +83,6 @@ const Directory_structure=()=>import('./pages/Docs/Directory-structure.vue')
 const CSS_components=()=>import('./pages/Docs/CSS-components.vue')
 const Customizing_CSS=()=>import('./pages/Docs/Customizing-CSS.vue')
 const Credits=()=>import('./pages/Docs/Credits.vue')
-const Changelog=()=>import('./pages/Docs/Changelog.vue')
 
 
 
@@ -342,17 +341,13 @@ const routes=[
                         name:'CSS_components',
                         component:CSS_components,
                     },{
-                        path:'Customizing_CSS',
+                        path:'Customizing_Css',
                         name:'Customizing_CSS',
                         component:Customizing_CSS,
                     },{
                         path:'Credits',
                         name:'Credits',
                         component:Credits,
-                    },{
-                        path:'Changelog',
-                        name:'Changelog',
-                        component:Changelog,
                     }
                 ]
             },

@@ -168,14 +168,7 @@ let sidebarDocsData=[
         isOpen:false,
         hasSub:false,
         to:{name:'Credits'}
-    },{
-        id:15,
-        title:'Changelog',
-        icon:'bi bi-file-earmark-plus',
-        isOpen:false,
-        hasSub:false,
-        to:{name:'Changelog'}
-    },
+    }
 
 
 ]
