@@ -326,6 +326,9 @@ const routes=[
                 path:'/docs',
                 name:'docs',
                 component: docsIndex,
+                redirect:{
+                  name:'Introduction'
+                },
                 children: [
                     {
                         path:'Introduction',

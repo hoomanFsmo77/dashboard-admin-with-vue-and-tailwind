@@ -125,7 +125,7 @@
     @apply w-2 h-2 flex justify-center items-center rounded-full bg-sky-200 text-sky-600;
   }
   .link{
-    @apply text-blue-500 hover:underline
+    @apply text-blue-500 hover:underline font-500
   }
   .checkbox{
     @apply appearance-none w-[14px] h-[14px] p-[6px] border-[1px] border-gray-400 rounded-4 focus:ring-4 focus:ring-primary-indigo/50 checked:bg-primary-indigo checked:text-white
@@ -245,6 +245,9 @@
     &::-moz-range-thumb{
       @apply appearance-none w-1 h-1 bg-primary-indigo rounded-full border-none outline-none
     }
+  }
+  .content{
+    @apply text-primary-dark font-500 text-[0.9rem] mb-1.5
   }
 
 }
