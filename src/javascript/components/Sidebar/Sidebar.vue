@@ -1,5 +1,5 @@
 <template>
-    <aside :class="isUnder1200 && {'translate-x-0':props.isActive}" class="sidebar">
+    <aside :class="isUnder1200 && {'translate-x-0':props.isActive}" class="sidebar relative z-10">
       <h6 class="text-gray-400 px-1.5 pt-2 pb-1 font-700">Main</h6>
       <ul>
         <SidebarItem ref="side_item" v-for="(item,index) in sidebarMainData" :key="index"
