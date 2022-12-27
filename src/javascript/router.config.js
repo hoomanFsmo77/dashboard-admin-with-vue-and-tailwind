@@ -338,7 +338,7 @@ const routes=[
                         name:'Directory_structure',
                         component:Directory_structure,
                     },{
-                        path:'CSS_components',
+                        path:'Css_components',
                         name:'CSS_components',
                         component:CSS_components,
                     },{
